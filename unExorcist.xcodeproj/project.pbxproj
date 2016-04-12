@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
+		1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
+		1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6391BAE8B9100D724B2 /* Main.storyboard */; };
+		1826F6401BAE8B9100D724B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1826F63F1BAE8B9100D724B2 /* Assets.xcassets */; };
+		1826F6431BAE8B9100D724B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6411BAE8B9100D724B2 /* LaunchScreen.storyboard */; };
+		1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F64D1BAE8B9100D724B2 /* unExorcistTests.swift */; };
+		1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */; };
+		1826F66A1BB8C20200D724B2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1826F6691BB8C20200D724B2 /* StoreKit.framework */; };
+		184F112D1C5DA91500D584EB /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
+		184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
+		188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188ACD7F1CB51DD100865E0F /* InfoPlist.strings */; };
+		188ACD841CB7A3E400865E0F /* EffectMoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */; };
+		1890F4651CA5139C0081BEE5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4641CA5139C0081BEE5 /* GameViewController.swift */; };
+		1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4A41CA514C00081BEE5 /* GameScene.swift */; };
+		1890F4A71CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
+		1890F4A81CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
+		1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
+		1890F4AC1CA52B160081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
+		1890F4AD1CA52B160081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
+		1890F4AE1CA52B170081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
+		1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
+		1890F4B01CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
+		1890F4B11CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
+		1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
+		1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1890F4B41CA52B240081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
+		1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1890F4B71CA534EE0081BEE5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4B61CA534EE0081BEE5 /* GameKit.framework */; };
+		1890F4BA1CA8D7920081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
+		1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
+		1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
+		1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */; };
+		1890F4BF1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */; };
+		1890F4C01CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */; };
+		1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */; };
+		1890F4D01CA931910081BEE5 /* BasicPorperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */; };
+		1890F4D11CA931910081BEE5 /* BasicPorperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */; };
+		1890F4D31CA9338D0081BEE5 /* Player.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4D21CA9338D0081BEE5 /* Player.xcassets */; };
+		1890F4D41CA9338D0081BEE5 /* Player.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4D21CA9338D0081BEE5 /* Player.xcassets */; };
+		1890F4D51CA9338D0081BEE5 /* Player.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4D21CA9338D0081BEE5 /* Player.xcassets */; };
+		1890F4D71CAA2E310081BEE5 /* BasicNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4D61CAA2E310081BEE5 /* BasicNode.swift */; };
+		1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4D61CAA2E310081BEE5 /* BasicNode.swift */; };
+		1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4D61CAA2E310081BEE5 /* BasicNode.swift */; };
+		1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DA1CAA33CB0081BEE5 /* AttackRule.swift */; };
+		1890F4DD1CAA33CB0081BEE5 /* AttackRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DA1CAA33CB0081BEE5 /* AttackRule.swift */; };
+		1890F4DE1CAA33CB0081BEE5 /* AttackRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DA1CAA33CB0081BEE5 /* AttackRule.swift */; };
+		1890F4DF1CAA33CB0081BEE5 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DB1CAA33CB0081BEE5 /* GameRules.swift */; };
+		1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DB1CAA33CB0081BEE5 /* GameRules.swift */; };
+		1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4DB1CAA33CB0081BEE5 /* GameRules.swift */; };
+		1890F4E31CAA35B00081BEE5 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E21CAA35B00081BEE5 /* Movement.swift */; };
+		1890F4E41CAA35B00081BEE5 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E21CAA35B00081BEE5 /* Movement.swift */; };
+		1890F4E51CAA35B00081BEE5 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E21CAA35B00081BEE5 /* Movement.swift */; };
+		1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E61CAB7C420081BEE5 /* EntityManager.swift */; };
+		1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E61CAB7C420081BEE5 /* EntityManager.swift */; };
+		1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4E61CAB7C420081BEE5 /* EntityManager.swift */; };
+		1890F4F31CABCD440081BEE5 /* playerProperty.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4F21CABCD440081BEE5 /* playerProperty.csv */; };
+		1890F4F41CABCD440081BEE5 /* playerProperty.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4F21CABCD440081BEE5 /* playerProperty.csv */; };
+		1890F4F51CABCD440081BEE5 /* playerProperty.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4F21CABCD440081BEE5 /* playerProperty.csv */; };
+		1890F4F81CAE44FF0081BEE5 /* DamageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */; };
+		1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */; };
+		1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */; };
+		1890F4FD1CAE79330081BEE5 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4FC1CAE79330081BEE5 /* MyActions.sks */; };
+		1890F4FE1CAE79330081BEE5 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4FC1CAE79330081BEE5 /* MyActions.sks */; };
+		1890F4FF1CAE79330081BEE5 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4FC1CAE79330081BEE5 /* MyActions.sks */; };
+		1890F5011CAE79640081BEE5 /* Emitter.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F5001CAE79640081BEE5 /* Emitter.xcassets */; };
+		1890F5021CAE79640081BEE5 /* Emitter.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F5001CAE79640081BEE5 /* Emitter.xcassets */; };
+		1890F5031CAE79640081BEE5 /* Emitter.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1890F5001CAE79640081BEE5 /* Emitter.xcassets */; };
+		1890F5051CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
+		1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
+		1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
+		18A69A7D1C760C0100522059 /* save.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18A69A7C1C760C0100522059 /* save.csv */; };
+		18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18ACB6921C5DDB220023696A /* mapDataCN.csv */; };
+		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
+		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
+		18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
+		18F5E67B1BC228CF002502DE /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
+		18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
+		18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1826F64A1BAE8B9100D724B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1826F62A1BAE8B9100D724B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1826F6311BAE8B9100D724B2;
+			remoteInfo = unExorcist;
+		};
+		1826F6551BAE8B9100D724B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1826F62A1BAE8B9100D724B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1826F6311BAE8B9100D724B2;
+			remoteInfo = unExorcist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18061C011C5BAF78000D44F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */,
+				1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1826F63A1BAE8B9100D724B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1826F63F1BAE8B9100D724B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1826F6421BAE8B9100D724B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1826F6441BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1826F6491BAE8B9100D724B2 /* unExorcistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unExorcistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1826F64D1BAE8B9100D724B2 /* unExorcistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unExorcistTests.swift; sourceTree = "<group>"; };
+		1826F64F1BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1826F6541BAE8B9100D724B2 /* unExorcistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unExorcistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unExorcistUITests.swift; sourceTree = "<group>"; };
+		1826F65A1BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1826F6691BB8C20200D724B2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		184F112C1C5DA91500D584EB /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		184F112E1C5DA9F900D584EB /* RealmData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		188ACD791CB51DB100865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		188ACD7A1CB51DB100865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		188ACD7B1CB51DB800865E0F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		188ACD7C1CB51DB900865E0F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		188ACD7E1CB51DD100865E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		188ACD801CB51DD600865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		188ACD811CB51DD800865E0F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectMoveBehavior.swift; sourceTree = "<group>"; };
+		1890F4641CA5139C0081BEE5 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1890F4A41CA514C00081BEE5 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1890F4A61CA515CB0081BEE5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		1890F4AA1CA52B160081BEE5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		1890F4B61CA534EE0081BEE5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroEntity.swift; sourceTree = "<group>"; };
+		1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackComponent.swift; sourceTree = "<group>"; };
+		1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicPorperty.swift; sourceTree = "<group>"; };
+		1890F4D21CA9338D0081BEE5 /* Player.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Player.xcassets; sourceTree = "<group>"; };
+		1890F4D61CAA2E310081BEE5 /* BasicNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNode.swift; sourceTree = "<group>"; };
+		1890F4DA1CAA33CB0081BEE5 /* AttackRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackRule.swift; sourceTree = "<group>"; };
+		1890F4DB1CAA33CB0081BEE5 /* GameRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
+		1890F4E21CAA35B00081BEE5 /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
+		1890F4E61CAB7C420081BEE5 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		1890F4F21CABCD440081BEE5 /* playerProperty.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = playerProperty.csv; sourceTree = "<group>"; };
+		1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageComponent.swift; sourceTree = "<group>"; };
+		1890F4FC1CAE79330081BEE5 /* MyActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyActions.sks; sourceTree = "<group>"; };
+		1890F5001CAE79640081BEE5 /* Emitter.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Emitter.xcassets; sourceTree = "<group>"; };
+		1890F5041CB35BB90081BEE5 /* TargetComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetComponent.swift; sourceTree = "<group>"; };
+		18A69A7C1C760C0100522059 /* save.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = save.csv; sourceTree = "<group>"; };
+		18ACB6921C5DDB220023696A /* mapDataCN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapDataCN.csv; sourceTree = "<group>"; };
+		18F587301BDBBD320094D2E1 /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		18F587321BDBBD670094D2E1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
+		18F587351BDBBD760094D2E1 /* Base64codeFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64codeFunc.h; sourceTree = "<group>"; };
+		18F587361BDBBD760094D2E1 /* Base64codeFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64codeFunc.m; sourceTree = "<group>"; };
+		18F5E67A1BC228CF002502DE /* WorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
+		18FD2FC01C049F4100902E9C /* AesEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AesEncode.h; sourceTree = "<group>"; };
+		18FD2FC11C049F7F00902E9C /* AesEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AesEncode.m; sourceTree = "<group>"; };
+		18FD2FC31C04A98300902E9C /* stringAes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringAes.h; sourceTree = "<group>"; };
+		18FD2FC41C04A9A300902E9C /* stringAes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stringAes.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1826F62F1BAE8B9100D724B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4AC1CA52B160081BEE5 /* Realm.framework in Frameworks */,
+				1890F4B41CA52B240081BEE5 /* RealmSwift.framework in Frameworks */,
+				1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
+				1890F4B71CA534EE0081BEE5 /* GameKit.framework in Frameworks */,
+				1826F66A1BB8C20200D724B2 /* StoreKit.framework in Frameworks */,
+				1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6461BAE8B9100D724B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4B01CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
+				1890F4AD1CA52B160081BEE5 /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6511BAE8B9100D724B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4B11CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
+				1890F4AE1CA52B170081BEE5 /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1826F6291BAE8B9100D724B2 = {
+			isa = PBXGroup;
+			children = (
+				1890F4B61CA534EE0081BEE5 /* GameKit.framework */,
+				1826F6341BAE8B9100D724B2 /* unExorcist */,
+				1826F64C1BAE8B9100D724B2 /* unExorcistTests */,
+				1826F6571BAE8B9100D724B2 /* unExorcistUITests */,
+				1826F6331BAE8B9100D724B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1826F6331BAE8B9100D724B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1826F6321BAE8B9100D724B2 /* unExorcist.app */,
+				1826F6491BAE8B9100D724B2 /* unExorcistTests.xctest */,
+				1826F6541BAE8B9100D724B2 /* unExorcistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1826F6341BAE8B9100D724B2 /* unExorcist */ = {
+			isa = PBXGroup;
+			children = (
+				184F11261C5BB0E400D584EB /* FrameWork */,
+				18F5872F1BDBBCDE0094D2E1 /* DataCache */,
+				184F11271C5BB0FE00D584EB /* Encrypt */,
+				184F11291C5DA89C00D584EB /* Resource */,
+				1890F4631CA510CC0081BEE5 /* Game */,
+				18F5E6751BC22437002502DE /* world */,
+				1826F63F1BAE8B9100D724B2 /* Assets.xcassets */,
+				1890F4D21CA9338D0081BEE5 /* Player.xcassets */,
+				1890F5001CAE79640081BEE5 /* Emitter.xcassets */,
+				1826F6351BAE8B9100D724B2 /* AppDelegate.swift */,
+				1826F6391BAE8B9100D724B2 /* Main.storyboard */,
+				1826F6411BAE8B9100D724B2 /* LaunchScreen.storyboard */,
+				1826F6441BAE8B9100D724B2 /* Info.plist */,
+				188ACD7F1CB51DD100865E0F /* InfoPlist.strings */,
+			);
+			path = unExorcist;
+			sourceTree = "<group>";
+		};
+		1826F64C1BAE8B9100D724B2 /* unExorcistTests */ = {
+			isa = PBXGroup;
+			children = (
+				1826F64D1BAE8B9100D724B2 /* unExorcistTests.swift */,
+				1826F64F1BAE8B9100D724B2 /* Info.plist */,
+			);
+			path = unExorcistTests;
+			sourceTree = "<group>";
+		};
+		1826F6571BAE8B9100D724B2 /* unExorcistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */,
+				1826F65A1BAE8B9100D724B2 /* Info.plist */,
+			);
+			path = unExorcistUITests;
+			sourceTree = "<group>";
+		};
+		184F11261C5BB0E400D584EB /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				184F112C1C5DA91500D584EB /* CSV.swift */,
+				1890F4AA1CA52B160081BEE5 /* Realm.framework */,
+				1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */,
+				1826F6691BB8C20200D724B2 /* StoreKit.framework */,
+			);
+			name = FrameWork;
+			sourceTree = "<group>";
+		};
+		184F11271C5BB0FE00D584EB /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				18F587351BDBBD760094D2E1 /* Base64codeFunc.h */,
+				18F587361BDBBD760094D2E1 /* Base64codeFunc.m */,
+				18FD2FC01C049F4100902E9C /* AesEncode.h */,
+				18FD2FC11C049F7F00902E9C /* AesEncode.m */,
+				18FD2FC31C04A98300902E9C /* stringAes.h */,
+				18FD2FC41C04A9A300902E9C /* stringAes.m */,
+			);
+			name = Encrypt;
+			sourceTree = "<group>";
+		};
+		184F11291C5DA89C00D584EB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18ACB6921C5DDB220023696A /* mapDataCN.csv */,
+				1890F4F21CABCD440081BEE5 /* playerProperty.csv */,
+				18A69A7C1C760C0100522059 /* save.csv */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		188ACD821CB7A39D00865E0F /* Agent */ = {
+			isa = PBXGroup;
+			children = (
+				188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */,
+			);
+			name = Agent;
+			sourceTree = "<group>";
+		};
+		1890F4631CA510CC0081BEE5 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1890F4B81CA8D7350081BEE5 /* Entity */,
+				1890F4C11CA8D9770081BEE5 /* Rules */,
+				1890F4A41CA514C00081BEE5 /* GameScene.swift */,
+				1890F4641CA5139C0081BEE5 /* GameViewController.swift */,
+				1890F4A61CA515CB0081BEE5 /* GameScene.sks */,
+				1890F4FB1CAE79120081BEE5 /* SKAction */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		1890F4B81CA8D7350081BEE5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1890F4E61CAB7C420081BEE5 /* EntityManager.swift */,
+				1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */,
+				188ACD821CB7A39D00865E0F /* Agent */,
+				1890F4F61CAE32C70081BEE5 /* Component */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		1890F4C11CA8D9770081BEE5 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				1890F4DA1CAA33CB0081BEE5 /* AttackRule.swift */,
+				1890F4DB1CAA33CB0081BEE5 /* GameRules.swift */,
+			);
+			name = Rules;
+			sourceTree = "<group>";
+		};
+		1890F4F61CAE32C70081BEE5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */,
+				1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */,
+				1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */,
+				1890F4D61CAA2E310081BEE5 /* BasicNode.swift */,
+				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
+				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		1890F4FB1CAE79120081BEE5 /* SKAction */ = {
+			isa = PBXGroup;
+			children = (
+				1890F4FC1CAE79330081BEE5 /* MyActions.sks */,
+			);
+			name = SKAction;
+			sourceTree = "<group>";
+		};
+		18F5872F1BDBBCDE0094D2E1 /* DataCache */ = {
+			isa = PBXGroup;
+			children = (
+				18F587301BDBBD320094D2E1 /* DataCache.swift */,
+				18F587321BDBBD670094D2E1 /* CoreDataManager.swift */,
+				184F112E1C5DA9F900D584EB /* RealmData.swift */,
+				18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */,
+			);
+			name = DataCache;
+			sourceTree = "<group>";
+		};
+		18F5E6751BC22437002502DE /* world */ = {
+			isa = PBXGroup;
+			children = (
+				1826F6371BAE8B9100D724B2 /* ViewController.swift */,
+				18F5E67A1BC228CF002502DE /* WorldViewController.swift */,
+			);
+			name = world;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1826F6311BAE8B9100D724B2 /* unExorcist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1826F65D1BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcist" */;
+			buildPhases = (
+				1826F62E1BAE8B9100D724B2 /* Sources */,
+				1826F62F1BAE8B9100D724B2 /* Frameworks */,
+				1826F6301BAE8B9100D724B2 /* Resources */,
+				18061C011C5BAF78000D44F0 /* Embed Frameworks */,
+				18061C021C5BAFA0000D44F0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unExorcist;
+			productName = unExorcist;
+			productReference = 1826F6321BAE8B9100D724B2 /* unExorcist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1826F6481BAE8B9100D724B2 /* unExorcistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1826F6601BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcistTests" */;
+			buildPhases = (
+				1826F6451BAE8B9100D724B2 /* Sources */,
+				1826F6461BAE8B9100D724B2 /* Frameworks */,
+				1826F6471BAE8B9100D724B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1826F64B1BAE8B9100D724B2 /* PBXTargetDependency */,
+			);
+			name = unExorcistTests;
+			productName = unExorcistTests;
+			productReference = 1826F6491BAE8B9100D724B2 /* unExorcistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1826F6531BAE8B9100D724B2 /* unExorcistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1826F6631BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcistUITests" */;
+			buildPhases = (
+				1826F6501BAE8B9100D724B2 /* Sources */,
+				1826F6511BAE8B9100D724B2 /* Frameworks */,
+				1826F6521BAE8B9100D724B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1826F6561BAE8B9100D724B2 /* PBXTargetDependency */,
+			);
+			name = unExorcistUITests;
+			productName = unExorcistUITests;
+			productReference = 1826F6541BAE8B9100D724B2 /* unExorcistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1826F62A1BAE8B9100D724B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Terry;
+				TargetAttributes = {
+					1826F6311BAE8B9100D724B2 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = T525M2T996;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+					1826F6481BAE8B9100D724B2 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 1826F6311BAE8B9100D724B2;
+					};
+					1826F6531BAE8B9100D724B2 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 1826F6311BAE8B9100D724B2;
+					};
+				};
+			};
+			buildConfigurationList = 1826F62D1BAE8B9100D724B2 /* Build configuration list for PBXProject "unExorcist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 1826F6291BAE8B9100D724B2;
+			productRefGroup = 1826F6331BAE8B9100D724B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1826F6311BAE8B9100D724B2 /* unExorcist */,
+				1826F6481BAE8B9100D724B2 /* unExorcistTests */,
+				1826F6531BAE8B9100D724B2 /* unExorcistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1826F6301BAE8B9100D724B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1826F6431BAE8B9100D724B2 /* LaunchScreen.storyboard in Resources */,
+				1890F4D31CA9338D0081BEE5 /* Player.xcassets in Resources */,
+				1826F6401BAE8B9100D724B2 /* Assets.xcassets in Resources */,
+				18A69A7D1C760C0100522059 /* save.csv in Resources */,
+				1890F4FD1CAE79330081BEE5 /* MyActions.sks in Resources */,
+				1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */,
+				1890F5011CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				1890F4A71CA515CB0081BEE5 /* GameScene.sks in Resources */,
+				1890F4F31CABCD440081BEE5 /* playerProperty.csv in Resources */,
+				188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */,
+				18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6471BAE8B9100D724B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4D41CA9338D0081BEE5 /* Player.xcassets in Resources */,
+				1890F5021CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				1890F4A81CA515CB0081BEE5 /* GameScene.sks in Resources */,
+				1890F4F41CABCD440081BEE5 /* playerProperty.csv in Resources */,
+				1890F4FE1CAE79330081BEE5 /* MyActions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6521BAE8B9100D724B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4D51CA9338D0081BEE5 /* Player.xcassets in Resources */,
+				1890F5031CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */,
+				1890F4F51CABCD440081BEE5 /* playerProperty.csv in Resources */,
+				1890F4FF1CAE79330081BEE5 /* MyActions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18061C021C5BAFA0000D44F0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1826F62E1BAE8B9100D724B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4BA1CA8D7920081BEE5 /* HeroEntity.swift in Sources */,
+				184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */,
+				18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */,
+				184F112D1C5DA91500D584EB /* CSV.swift in Sources */,
+				1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */,
+				1890F4DF1CAA33CB0081BEE5 /* GameRules.swift in Sources */,
+				1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */,
+				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
+				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
+				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
+				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
+				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
+				18F5E67B1BC228CF002502DE /* WorldViewController.swift in Sources */,
+				1890F4E31CAA35B00081BEE5 /* Movement.swift in Sources */,
+				1890F5051CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
+				18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */,
+				188ACD841CB7A3E400865E0F /* EffectMoveBehavior.swift in Sources */,
+				1890F4D71CAA2E310081BEE5 /* BasicNode.swift in Sources */,
+				1890F4651CA5139C0081BEE5 /* GameViewController.swift in Sources */,
+				18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */,
+				1890F4F81CAE44FF0081BEE5 /* DamageComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6451BAE8B9100D724B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */,
+				1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */,
+				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
+				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
+				1890F4BF1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
+				1890F4E41CAA35B00081BEE5 /* Movement.swift in Sources */,
+				1890F4DD1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				1890F4D01CA931910081BEE5 /* BasicPorperty.swift in Sources */,
+				1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1826F6501BAE8B9100D724B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */,
+				1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */,
+				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
+				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
+				1890F4C01CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
+				1890F4E51CAA35B00081BEE5 /* Movement.swift in Sources */,
+				1890F4DE1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				1890F4D11CA931910081BEE5 /* BasicPorperty.swift in Sources */,
+				1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1826F64B1BAE8B9100D724B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1826F6311BAE8B9100D724B2 /* unExorcist */;
+			targetProxy = 1826F64A1BAE8B9100D724B2 /* PBXContainerItemProxy */;
+		};
+		1826F6561BAE8B9100D724B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1826F6311BAE8B9100D724B2 /* unExorcist */;
+			targetProxy = 1826F6551BAE8B9100D724B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1826F6391BAE8B9100D724B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1826F63A1BAE8B9100D724B2 /* Base */,
+				188ACD791CB51DB100865E0F /* zh-Hans */,
+				188ACD7B1CB51DB800865E0F /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1826F6411BAE8B9100D724B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1826F6421BAE8B9100D724B2 /* Base */,
+				188ACD7A1CB51DB100865E0F /* zh-Hans */,
+				188ACD7C1CB51DB900865E0F /* zh-Hant */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		188ACD7F1CB51DD100865E0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188ACD7E1CB51DD100865E0F /* Base */,
+				188ACD801CB51DD600865E0F /* zh-Hans */,
+				188ACD811CB51DD800865E0F /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1826F65B1BAE8B9100D724B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1826F65C1BAE8B9100D724B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1826F65E1BAE8B9100D724B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "unExorcist/unExorcist-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1826F65F1BAE8B9100D724B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "unExorcist/unExorcist-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1826F6611BAE8B9100D724B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
+			};
+			name = Debug;
+		};
+		1826F6621BAE8B9100D724B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
+			};
+			name = Release;
+		};
+		1826F6641BAE8B9100D724B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = unExorcist;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1826F6651BAE8B9100D724B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
+				INFOPLIST_FILE = unExorcistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = unExorcist;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1826F62D1BAE8B9100D724B2 /* Build configuration list for PBXProject "unExorcist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1826F65B1BAE8B9100D724B2 /* Debug */,
+				1826F65C1BAE8B9100D724B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1826F65D1BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1826F65E1BAE8B9100D724B2 /* Debug */,
+				1826F65F1BAE8B9100D724B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1826F6601BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1826F6611BAE8B9100D724B2 /* Debug */,
+				1826F6621BAE8B9100D724B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1826F6631BAE8B9100D724B2 /* Build configuration list for PBXNativeTarget "unExorcistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1826F6641BAE8B9100D724B2 /* Debug */,
+				1826F6651BAE8B9100D724B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1826F62A1BAE8B9100D724B2 /* Project object */;
+}

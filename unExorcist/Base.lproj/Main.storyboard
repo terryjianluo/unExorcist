@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="unExorcist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-43-UiW">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="EH2-op-wlE" kind="modal" id="Igf-RD-U8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-HZ-z91">
+                                <rect key="frame" x="280" y="335" width="41" height="30"/>
+                                <state key="normal" title="Editor"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Utr-43-UiW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kko-wp-BDx"/>
+                            <constraint firstItem="l1f-HZ-z91" firstAttribute="top" secondItem="Utr-43-UiW" secondAttribute="bottom" constant="20" id="Zaq-vI-zMi"/>
+                            <constraint firstItem="l1f-HZ-z91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r9x-UX-by7"/>
+                            <constraint firstItem="Utr-43-UiW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yjp-dx-NCr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="171"/>
+        </scene>
+        <!--World View Controller-->
+        <scene sceneID="0cA-wR-575">
+            <objects>
+                <viewController id="HRv-Xb-YlH" customClass="WorldViewController" customModule="unExorcist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlS-IU-Lik"/>
+                        <viewControllerLayoutGuide type="bottom" id="qih-7R-L9W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LfQ-qL-rg7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me7-ne-tR3">
+                                <rect key="frame" x="272" y="28" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-sK-t1Y">
+                                <rect key="frame" x="20" y="72" width="560" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.37647058823529411" green="0.67843137254901964" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-t2-lEv">
+                                <rect key="frame" x="20" y="199" width="560" height="201"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hU-cO-tOv">
+                                <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dBy-t2-lEv" firstAttribute="top" secondItem="bCf-sK-t1Y" secondAttribute="bottom" id="8Fc-n8-VaO"/>
+                            <constraint firstItem="0hU-cO-tOv" firstAttribute="leading" secondItem="LfQ-qL-rg7" secondAttribute="leadingMargin" id="BZk-GJ-yg2"/>
+                            <constraint firstItem="me7-ne-tR3" firstAttribute="centerX" secondItem="LfQ-qL-rg7" secondAttribute="centerX" id="ITw-EX-L3y"/>
+                            <constraint firstItem="qih-7R-L9W" firstAttribute="top" secondItem="0hU-cO-tOv" secondAttribute="bottom" constant="20" id="M6n-t3-bys"/>
+                            <constraint firstItem="bCf-sK-t1Y" firstAttribute="top" secondItem="me7-ne-tR3" secondAttribute="bottom" constant="8" id="ZJy-fp-OED"/>
+                            <constraint firstItem="bCf-sK-t1Y" firstAttribute="centerX" secondItem="LfQ-qL-rg7" secondAttribute="centerX" id="cdo-MP-9pN"/>
+                            <constraint firstItem="me7-ne-tR3" firstAttribute="top" secondItem="DlS-IU-Lik" secondAttribute="bottom" constant="8" id="d4N-01-Kg6"/>
+                            <constraint firstItem="bCf-sK-t1Y" firstAttribute="leading" secondItem="LfQ-qL-rg7" secondAttribute="leadingMargin" id="pll-46-1tG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneTextView" destination="dBy-t2-lEv" id="Aio-uu-hLY"/>
+                        <outlet property="sceneTitle" destination="me7-ne-tR3" id="AaD-dO-gAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdl-Uz-1AR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="171"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="v6Z-cA-JDV">
+            <objects>
+                <viewController id="EH2-op-wlE" customClass="GameViewController" customModule="unExorcist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SkM-bg-Kdz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cpt-CZ-c99"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hjs-ji-wns" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zor-n5-iqp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnY-fJ-ACm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="922"/>
+        </scene>
+    </scenes>
+</document>
