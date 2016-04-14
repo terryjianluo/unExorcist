@@ -20,7 +20,7 @@ class EffectMoveBehavior:GKBehavior {
             // 4
             setWeight(0.5, forGoal: GKGoal(toSeekAgent: seek))
             // 5
-            setWeight(1.0, forGoal: GKGoal(toAvoidAgents: avoid, maxPredictionTime: 1.0))
+            //setWeight(1.0, forGoal: GKGoal(toAvoidAgents: avoid, maxPredictionTime: 1.0))
         }
     }
     

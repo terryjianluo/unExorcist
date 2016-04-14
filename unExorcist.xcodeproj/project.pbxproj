@@ -19,6 +19,9 @@
 		184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
 		188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188ACD7F1CB51DD100865E0F /* InfoPlist.strings */; };
 		188ACD841CB7A3E400865E0F /* EffectMoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */; };
+		188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD891CBF8FC900865E0F /* EffectEntity.swift */; };
+		188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD891CBF8FC900865E0F /* EffectEntity.swift */; };
+		188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD891CBF8FC900865E0F /* EffectEntity.swift */; };
 		1890F4651CA5139C0081BEE5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4641CA5139C0081BEE5 /* GameViewController.swift */; };
 		1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4A41CA514C00081BEE5 /* GameScene.swift */; };
 		1890F4A71CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
@@ -79,6 +82,7 @@
 		1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
 		18A69A7D1C760C0100522059 /* save.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18A69A7C1C760C0100522059 /* save.csv */; };
 		18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18ACB6921C5DDB220023696A /* mapDataCN.csv */; };
+		18B703391CBF9CA900B5EAFF /* AtkEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B703381CBF9CA900B5EAFF /* AtkEffect.swift */; };
 		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
 		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
 		18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
@@ -144,6 +148,7 @@
 		188ACD801CB51DD600865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		188ACD811CB51DD800865E0F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectMoveBehavior.swift; sourceTree = "<group>"; };
+		188ACD891CBF8FC900865E0F /* EffectEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectEntity.swift; sourceTree = "<group>"; };
 		1890F4641CA5139C0081BEE5 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1890F4A41CA514C00081BEE5 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		1890F4A61CA515CB0081BEE5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 		1890F5041CB35BB90081BEE5 /* TargetComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetComponent.swift; sourceTree = "<group>"; };
 		18A69A7C1C760C0100522059 /* save.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = save.csv; sourceTree = "<group>"; };
 		18ACB6921C5DDB220023696A /* mapDataCN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapDataCN.csv; sourceTree = "<group>"; };
+		18B703381CBF9CA900B5EAFF /* AtkEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtkEffect.swift; sourceTree = "<group>"; };
 		18F587301BDBBD320094D2E1 /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		18F587321BDBBD670094D2E1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -333,6 +339,7 @@
 			children = (
 				1890F4E61CAB7C420081BEE5 /* EntityManager.swift */,
 				1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */,
+				188ACD891CBF8FC900865E0F /* EffectEntity.swift */,
 				188ACD821CB7A39D00865E0F /* Agent */,
 				1890F4F61CAE32C70081BEE5 /* Component */,
 			);
@@ -355,6 +362,7 @@
 				1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */,
 				1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */,
 				1890F4D61CAA2E310081BEE5 /* BasicNode.swift */,
+				18B703381CBF9CA900B5EAFF /* AtkEffect.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
@@ -581,10 +589,12 @@
 				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
 				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				18B703391CBF9CA900B5EAFF /* AtkEffect.swift in Sources */,
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
 				18F5E67B1BC228CF002502DE /* WorldViewController.swift in Sources */,
+				188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */,
 				1890F4E31CAA35B00081BEE5 /* Movement.swift in Sources */,
 				1890F5051CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
 				18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */,
@@ -603,6 +613,7 @@
 				1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */,
 				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
@@ -621,6 +632,7 @@
 				1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */,
 				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,

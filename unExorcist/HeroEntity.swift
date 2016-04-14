@@ -22,6 +22,8 @@ class HeroEntity:GKEntity{
         addComponent(attackComponent)
         let damageComponent = DamageComponent(selfEntity: self)
         addComponent(damageComponent)
+        let effect = 
+        addComponent(effect)
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {

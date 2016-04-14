@@ -32,7 +32,7 @@ class Movement: GKAgent2D, GKAgentDelegate {
             return
         }
         
-        position = float2(spriteComponent.node.position)
+        //position = float2(spriteComponent.node.position)
     }
     
     // 5

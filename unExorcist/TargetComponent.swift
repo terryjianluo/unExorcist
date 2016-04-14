@@ -30,8 +30,6 @@ class TargetComponent:GKComponent{
                 target = entity
             }
         }
-        
-        
         return target
     }
     
