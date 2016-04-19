@@ -73,12 +73,10 @@ class AttackComponent: GKComponent{
             let effect = atkEmitter()
             entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
             entity?.componentForClass(EffectContainer)?.addEffect(effect)
-            //print("agent position >>>>>>> \(effect.parentEntity.target.agent.position)")
-            print("agent position >>>>>>> \(myEntity.agent.position)")
             
-            let damage = self.damageOutput()
-            entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage)
-            print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
+            //let damage = self.damageOutput()
+            //entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage)
+            //print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
         }else{
             //out of range
             print("Out of range || distance \(distance)")

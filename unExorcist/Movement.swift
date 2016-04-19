@@ -24,7 +24,6 @@ class Movement: GKAgent2D ,GKAgentDelegate{
     
     func move(){
         let seek = GKGoal(toSeekAgent: myTarget.agent)
-        print("test target ----- \(myTarget.agent.position) \(self.position)")
         self.behavior = GKBehavior(goal: seek, weight: 1)
         
         self.maxSpeed = 10

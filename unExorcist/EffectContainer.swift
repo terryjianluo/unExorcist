@@ -8,6 +8,8 @@
 
 import Foundation
 import GameplayKit
+import UIKit
+import SpriteKit
 
 class EffectContainer:GKComponent {
     
@@ -23,7 +25,25 @@ class EffectContainer:GKComponent {
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         for effect in effects {
-            effect.updateWithDeltaTime(seconds)
+            
+            if CGPathContainsPoint(pointAnylazy(effect), nil, effect.componentForClass(BasicNode)!.node.position, false) {
+                effects.remove(effect)
+                effect.componentForClass(BasicNode)!.node.removeFromParent()
+                let damage = entity?.componentForClass(AttackComponent)?.damageOutput()
+                entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage!)
+                print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
+            }else{
+                effect.updateWithDeltaTime(seconds)
+            }
         }
+    }
+    
+    func pointAnylazy(effectEntity:EffectEntity) -> CGPath {
+        let pathRef = CGPathCreateMutable()
+        let position = (effectEntity.parentEntity.target.componentForClass(BasicNode)?.node.position)!
+        CGPathAddArc(pathRef, nil, position.x, position.y, 5, 0, CGFloat(2*M_PI), false)
+        CGPathCloseSubpath(pathRef)
+        
+        return pathRef
     }
 }
