@@ -11,24 +11,30 @@ import SpriteKit
 import GameplayKit
 
 class HeroEntity:GKEntity{
-
+    
+    let agent = GKAgent2D()
+    var target:HeroEntity!
+    
     init(id:String,team:String) {
         super.init()
         let spriteComponent = BasicNode(code: id)
         let propertyComponent = BasicProperty(id: id,team:team)
         addComponent(spriteComponent)
         addComponent(propertyComponent)
-        let attackComponent = AttackComponent(selfEntity: self)
-        addComponent(attackComponent)
-        let damageComponent = DamageComponent(selfEntity: self)
-        addComponent(damageComponent)
-        let effect = 
+        let effect = EffectContainer()
         addComponent(effect)
+        let attackComponent = AttackComponent(selfEntity:self)
+        addComponent(attackComponent)
+        let damageComponent = DamageComponent()
+        addComponent(damageComponent)
+        addComponent(agent)
+        target = self
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         super.updateWithDeltaTime(seconds)
         self.componentForClass(AttackComponent)?.damageOutput()
     }
+    
     
 }

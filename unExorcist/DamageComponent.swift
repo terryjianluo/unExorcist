@@ -12,20 +12,18 @@ import GameplayKit
 
 class DamageComponent: GKComponent{
     
-    let myEntity:HeroEntity
-    
-    
     var lastAtk = NSTimeInterval(0)
     
-    init(selfEntity:HeroEntity) {
+    /*init(selfEntity:HeroEntity) {
+        super.init()
         myEntity = selfEntity
-    }
+    }*/
     
     func damage(damageInput:[String:Double]){
-        var myHP = myEntity.componentForClass(BasicProperty)?.HP
-        let myDodge = myEntity.componentForClass(BasicProperty)?.dodge
-        let myDef = myEntity.componentForClass(BasicProperty)?.DEF
-        let myMr = myEntity.componentForClass(BasicProperty)?.MR
+        var myHP = entity!.componentForClass(BasicProperty)?.HP
+        let myDodge = entity!.componentForClass(BasicProperty)?.dodge
+        let myDef = entity!.componentForClass(BasicProperty)?.DEF
+        let myMr = entity!.componentForClass(BasicProperty)?.MR
         let reducePhy = 100/(100 + myDef!)
         let reduceSpell = 100/(100 + myMr!)
         
@@ -56,10 +54,10 @@ class DamageComponent: GKComponent{
         
         if myHP > 0{
             let hp = Int(myHP!)
-            myEntity.componentForClass(BasicProperty)?.HP = Double(hp)
+            entity!.componentForClass(BasicProperty)?.HP = Double(hp)
         }else{
             //die
-            myEntity.componentForClass(BasicProperty)?.HP = 0
+            entity!.componentForClass(BasicProperty)?.HP = 0
         }
         
     }

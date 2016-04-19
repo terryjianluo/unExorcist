@@ -15,6 +15,7 @@ class BasicNode:GKComponent{
     var node:SKSpriteNode!
     
     init(code:String) {
+        super.init()
         self.node = SKSpriteNode(imageNamed: code)
     }
     

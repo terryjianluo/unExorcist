@@ -82,7 +82,38 @@
 		1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
 		18A69A7D1C760C0100522059 /* save.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18A69A7C1C760C0100522059 /* save.csv */; };
 		18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18ACB6921C5DDB220023696A /* mapDataCN.csv */; };
-		18B703391CBF9CA900B5EAFF /* AtkEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B703381CBF9CA900B5EAFF /* AtkEffect.swift */; };
+		18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
+		18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
+		18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
+		18B703401CBFD5AF00B5EAFF /* EffectMoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */; };
+		18B703411CBFD5B100B5EAFF /* EffectMoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ACD831CB7A3E400865E0F /* EffectMoveBehavior.swift */; };
+		18B703421CBFD62D00B5EAFF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
+		18B703431CBFD62E00B5EAFF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
+		18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
+		18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
+		18B703461CBFD63800B5EAFF /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
+		18B703471CBFD63800B5EAFF /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
+		18B703481CBFD64300B5EAFF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4A41CA514C00081BEE5 /* GameScene.swift */; };
+		18B703491CBFD64400B5EAFF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4A41CA514C00081BEE5 /* GameScene.swift */; };
+		18B7034A1CBFD64700B5EAFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4641CA5139C0081BEE5 /* GameViewController.swift */; };
+		18B7034B1CBFD64800B5EAFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4641CA5139C0081BEE5 /* GameViewController.swift */; };
+		18B7034C1CBFD69400B5EAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
+		18B7034D1CBFD69500B5EAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
+		18B7034E1CBFD69800B5EAFF /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
+		18B7034F1CBFD69900B5EAFF /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
+		18B703501CBFD69D00B5EAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
+		18B703511CBFD69E00B5EAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
+		18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
+		18B703531CC36F3100B5EAFF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
+		18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
+		18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
+		18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
+		18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
+		18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
+		18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
+		18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
+		18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
+		18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
 		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
 		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
 		18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
@@ -171,7 +202,8 @@
 		1890F5041CB35BB90081BEE5 /* TargetComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetComponent.swift; sourceTree = "<group>"; };
 		18A69A7C1C760C0100522059 /* save.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = save.csv; sourceTree = "<group>"; };
 		18ACB6921C5DDB220023696A /* mapDataCN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapDataCN.csv; sourceTree = "<group>"; };
-		18B703381CBF9CA900B5EAFF /* AtkEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtkEffect.swift; sourceTree = "<group>"; };
+		18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOEComponent.swift; sourceTree = "<group>"; };
+		18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectContainer.swift; sourceTree = "<group>"; };
 		18F587301BDBBD320094D2E1 /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		18F587321BDBBD670094D2E1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -359,10 +391,11 @@
 			isa = PBXGroup;
 			children = (
 				1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */,
+				18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */,
 				1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */,
 				1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */,
 				1890F4D61CAA2E310081BEE5 /* BasicNode.swift */,
-				18B703381CBF9CA900B5EAFF /* AtkEffect.swift */,
+				18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
@@ -587,9 +620,10 @@
 				1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */,
 				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
 				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
+				18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */,
+				18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */,
 				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
-				18B703391CBF9CA900B5EAFF /* AtkEffect.swift in Sources */,
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
@@ -610,18 +644,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B7034A1CBFD64700B5EAFF /* GameViewController.swift in Sources */,
 				1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */,
+				18B703481CBFD64300B5EAFF /* GameScene.swift in Sources */,
+				18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */,
 				1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */,
+				18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */,
 				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
+				18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */,
+				18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */,
+				18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
+				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
+				18B7034E1CBFD69800B5EAFF /* WorldViewController.swift in Sources */,
+				18B703421CBFD62D00B5EAFF /* DataCache.swift in Sources */,
 				1890F4BF1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E41CAA35B00081BEE5 /* Movement.swift in Sources */,
 				1890F4DD1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				18B703461CBFD63800B5EAFF /* RealmData.swift in Sources */,
 				1890F4D01CA931910081BEE5 /* BasicPorperty.swift in Sources */,
+				18B703401CBFD5AF00B5EAFF /* EffectMoveBehavior.swift in Sources */,
+				18B7034C1CBFD69400B5EAFF /* ViewController.swift in Sources */,
 				1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */,
+				18B703501CBFD69D00B5EAFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,18 +678,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B7034B1CBFD64800B5EAFF /* GameViewController.swift in Sources */,
 				1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */,
+				18B703491CBFD64400B5EAFF /* GameScene.swift in Sources */,
+				18B703531CC36F3100B5EAFF /* CSV.swift in Sources */,
 				1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */,
+				18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */,
 				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
+				18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */,
+				18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */,
+				18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
+				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
+				18B7034F1CBFD69900B5EAFF /* WorldViewController.swift in Sources */,
+				18B703431CBFD62E00B5EAFF /* DataCache.swift in Sources */,
 				1890F4C01CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E51CAA35B00081BEE5 /* Movement.swift in Sources */,
 				1890F4DE1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				18B703471CBFD63800B5EAFF /* RealmData.swift in Sources */,
 				1890F4D11CA931910081BEE5 /* BasicPorperty.swift in Sources */,
+				18B703411CBFD5B100B5EAFF /* EffectMoveBehavior.swift in Sources */,
+				18B7034D1CBFD69500B5EAFF /* ViewController.swift in Sources */,
 				1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */,
+				18B703511CBFD69E00B5EAFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

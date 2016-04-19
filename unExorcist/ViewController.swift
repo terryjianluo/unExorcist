@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        CoreDataManager().csv2Realm("playerProperty")
+        //CoreDataManager().csv2Realm("playerProperty")
         let a = CoreDataManager().PropertyDictionary("P0001", dataModel: PlayerProperty.self)
         print(a)
         

@@ -13,12 +13,14 @@ import GameplayKit
 
 class TargetComponent:GKComponent{
     
-    var myEntity:HeroEntity
+    var myEntity:HeroEntity!
     var entityManager:EntityManager!
     
     init(selfEntity:HeroEntity ,manager:EntityManager) {
+        super.init()
         myEntity = selfEntity
         entityManager = manager
+        myEntity.target = targetChoose()
     }
     
     func targetChoose() -> HeroEntity{
@@ -31,6 +33,10 @@ class TargetComponent:GKComponent{
             }
         }
         return target
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        myEntity.target = targetChoose()
     }
     
     

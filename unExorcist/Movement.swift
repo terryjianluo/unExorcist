@@ -10,39 +10,42 @@ import UIKit
 import GameplayKit
 import SpriteKit
 
-class Movement: GKAgent2D, GKAgentDelegate {
+class Movement: GKAgent2D ,GKAgentDelegate{
     
-    let entityManager: EntityManager
-    
-    // 3
-    init(maxSpeed: Float, maxAcceleration: Float, radius: Float, entityManager: EntityManager) {
-        self.entityManager = entityManager
+    var myTarget:HeroEntity!
+
+    init(targetEntity:HeroEntity) {
         super.init()
+        myTarget = targetEntity
+        myTarget.agent.position = float2(x: Float(myTarget.componentForClass(BasicNode)!.node.position.x), y: Float(myTarget.componentForClass(BasicNode)!.node.position.y))
         delegate = self
-        self.maxSpeed = maxSpeed
-        self.maxAcceleration = maxAcceleration
-        self.radius = radius
-        print(self.mass)
-        self.mass = 0.01
+        move()
     }
     
-    // 4
-    func agentWillUpdate(agent: GKAgent) {
-        guard let spriteComponent = entity?.componentForClass(BasicNode.self) else {
-            return
-        }
+    func move(){
+        let seek = GKGoal(toSeekAgent: myTarget.agent)
+        print("test target ----- \(myTarget.agent.position) \(self.position)")
+        self.behavior = GKBehavior(goal: seek, weight: 1)
         
-        //position = float2(spriteComponent.node.position)
+        self.maxSpeed = 10
+        self.maxAcceleration = 4
+        self.mass = 0.5
+        
+        let test = SKLabelNode(text: "enemy")
+        test.fontSize = 20
+        myTarget.componentForClass(BasicNode)!.node.addChild(test)
     }
     
-    // 5
     func agentDidUpdate(agent: GKAgent) {
-        guard let spriteComponent = entity?.componentForClass(BasicNode.self) else {
-            return
-        }
-        
-        //spriteComponent.node.position = CGPoint(position)
+        let spriteComponent = entity?.componentForClass(BasicNode.self)
+        spriteComponent!.node.position = CGPoint(x: CGFloat(position.x), y: CGFloat(position.y))
+        //print("test target ----- \(myTarget.agent.position) \(self.position)")
     }
     
+    func agentWillUpdate(agent: GKAgent) {
+        let spriteComponent = entity?.componentForClass(BasicNode.self)
+        position = float2(x: Float(spriteComponent!.node.position.x), y: Float(spriteComponent!.node.position.y))
+        //print("test target ----- \(myTarget.agent.position) \(self.position)")
+    }
     
 }

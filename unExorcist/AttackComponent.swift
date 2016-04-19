@@ -10,30 +10,31 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class AttackComponent: GKComponent {
+class AttackComponent: GKComponent{
     
-    let myEntity:HeroEntity
+    var myEntity:HeroEntity!
     var lastAtk = NSTimeInterval(0)
     
     init(selfEntity:HeroEntity){
+        super.init()
         myEntity = selfEntity
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         super.updateWithDeltaTime(seconds)
-        let strikeSpeed = myEntity.componentForClass(BasicProperty)?.strikeSpeed
+        let strikeSpeed = entity!.componentForClass(BasicProperty)?.strikeSpeed
         if (CACurrentMediaTime() - lastAtk > strikeSpeed) {
             lastAtk = CACurrentMediaTime()
-            atkEmitter()
+            damage()
         }
     }
     
     func damageOutput() -> [String:Double]{
         var damage:[String:Double]!
-        let critical = Int((myEntity.componentForClass(BasicProperty)?.critical)! * 100)
-        let missRating = Int(100 - ((myEntity.componentForClass(BasicProperty)?.hitRating)! * 100))
-        let atk = myEntity.componentForClass(BasicProperty)?.ATK
-        let criticalDamage = myEntity.componentForClass(BasicProperty)?.criticalDamage
+        let critical = Int((entity!.componentForClass(BasicProperty)?.critical)! * 100)
+        let missRating = Int(100 - ((entity!.componentForClass(BasicProperty)?.hitRating)! * 100))
+        let atk = entity!.componentForClass(BasicProperty)?.ATK
+        let criticalDamage = entity!.componentForClass(BasicProperty)?.criticalDamage
         
         let random = GKRandomDistribution(randomSource: GKMersenneTwisterRandomSource(), lowestValue: 1, highestValue: 100).nextInt()
         print("random-\(random)||miss\(missRating)||cri\(critical)")
@@ -56,21 +57,33 @@ class AttackComponent: GKComponent {
         return damage
     }
     
-    func atkEmitter(){
-        let range = myEntity.componentForClass(BasicProperty)?.range
-        let myEntityPosition = myEntity.componentForClass(BasicNode)?.node.position
-        let targetPosition = myEntity.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicNode)?.node.position
+    func atkEmitter() -> EffectEntity {
+        let effect = EffectEntity(parent:myEntity)
+        return effect
+    }
+    
+    func damage(){
+        let range = entity!.componentForClass(BasicProperty)?.range
+        let myEntityPosition = entity!.componentForClass(BasicNode)?.node.position
+        let targetPosition = entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicNode)?.node.position
         
         let distance = Double(sqrt(pow(((myEntityPosition?.x)! - (targetPosition?.x)!), 2) + pow(((myEntityPosition?.y)! - (targetPosition?.y)!), 2)))
         
         if range >= distance {
-        let damage = self.damageOutput()
-        myEntity.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage)
-        print("target HP = \(myEntity.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP)")
+            let effect = atkEmitter()
+            entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
+            entity?.componentForClass(EffectContainer)?.addEffect(effect)
+            //print("agent position >>>>>>> \(effect.parentEntity.target.agent.position)")
+            print("agent position >>>>>>> \(myEntity.agent.position)")
+            
+            let damage = self.damageOutput()
+            entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage)
+            print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
         }else{
             //out of range
             print("Out of range || distance \(distance)")
         }
+
     }
     
     
