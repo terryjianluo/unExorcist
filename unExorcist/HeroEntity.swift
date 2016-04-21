@@ -23,7 +23,7 @@ class HeroEntity:GKEntity{
         addComponent(propertyComponent)
         let effect = EffectContainer()
         addComponent(effect)
-        let attackComponent = AttackComponent(selfEntity:self)
+        let attackComponent = AttackComponent()
         addComponent(attackComponent)
         let damageComponent = DamageComponent()
         addComponent(damageComponent)

@@ -26,13 +26,13 @@ class Movement: GKAgent2D ,GKAgentDelegate{
         let seek = GKGoal(toSeekAgent: myTarget.agent)
         self.behavior = GKBehavior(goal: seek, weight: 1)
         
-        self.maxSpeed = 10
+        self.maxSpeed = 15
         self.maxAcceleration = 4
         self.mass = 0.5
         
-        let test = SKLabelNode(text: "enemy")
-        test.fontSize = 20
-        myTarget.componentForClass(BasicNode)!.node.addChild(test)
+        //let test = SKLabelNode(text: "enemy")
+        //test.fontSize = 20
+        //myTarget.componentForClass(BasicNode)!.node.addChild(test)
     }
     
     func agentDidUpdate(agent: GKAgent) {

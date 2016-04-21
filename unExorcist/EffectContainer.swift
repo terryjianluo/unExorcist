@@ -10,6 +10,7 @@ import Foundation
 import GameplayKit
 import UIKit
 import SpriteKit
+import CoreGraphics
 
 class EffectContainer:GKComponent {
     
@@ -24,23 +25,29 @@ class EffectContainer:GKComponent {
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        for effect in effects {
-            
-            if CGPathContainsPoint(pointAnylazy(effect), nil, effect.componentForClass(BasicNode)!.node.position, false) {
-                effects.remove(effect)
-                effect.componentForClass(BasicNode)!.node.removeFromParent()
+        for fx in effects {
+            let position = fx.componentForClass(BasicNode)!.node.position
+            let path = pointAnylazy()
+            if CGPathContainsPoint(path, nil, position, false) {
+                effects.remove(fx)
+                fx.componentForClass(BasicNode)!.node.removeFromParent()
+                fx.removeComponentForClass(BasicNode)
+                fx.removeComponentForClass(Movement)
+                
                 let damage = entity?.componentForClass(AttackComponent)?.damageOutput()
                 entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage!)
-                print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
+                print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) ")
             }else{
-                effect.updateWithDeltaTime(seconds)
+                fx.updateWithDeltaTime(seconds)
             }
+            
+            
         }
     }
     
-    func pointAnylazy(effectEntity:EffectEntity) -> CGPath {
+    func pointAnylazy() -> CGPath {
         let pathRef = CGPathCreateMutable()
-        let position = (effectEntity.parentEntity.target.componentForClass(BasicNode)?.node.position)!
+        let position = ((entity as! HeroEntity).target.componentForClass(BasicNode)?.node.position)!
         CGPathAddArc(pathRef, nil, position.x, position.y, 5, 0, CGFloat(2*M_PI), false)
         CGPathCloseSubpath(pathRef)
         

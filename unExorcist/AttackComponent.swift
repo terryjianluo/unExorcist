@@ -12,13 +12,13 @@ import GameplayKit
 
 class AttackComponent: GKComponent{
     
-    var myEntity:HeroEntity!
     var lastAtk = NSTimeInterval(0)
     
+    /*
     init(selfEntity:HeroEntity){
         super.init()
         myEntity = selfEntity
-    }
+    }*/
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         super.updateWithDeltaTime(seconds)
@@ -57,10 +57,6 @@ class AttackComponent: GKComponent{
         return damage
     }
     
-    func atkEmitter() -> EffectEntity {
-        let effect = EffectEntity(parent:myEntity)
-        return effect
-    }
     
     func damage(){
         let range = entity!.componentForClass(BasicProperty)?.range
@@ -70,7 +66,7 @@ class AttackComponent: GKComponent{
         let distance = Double(sqrt(pow(((myEntityPosition?.x)! - (targetPosition?.x)!), 2) + pow(((myEntityPosition?.y)! - (targetPosition?.y)!), 2)))
         
         if range >= distance {
-            let effect = atkEmitter()
+            let effect = EffectEntity(parent:entity as! HeroEntity)
             entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
             entity?.componentForClass(EffectContainer)?.addEffect(effect)
             

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //CSV数据转存Realm数据库
         //CoreDataManager().csv2Realm("save", db: "save")
         //CoreDataManager().csv2Realm("mapDataCN", db: "mapData")
+        UIApplication.sharedApplication().idleTimerDisabled = true
         
         return true
     }
@@ -38,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -47,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
 
     

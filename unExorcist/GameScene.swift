@@ -80,6 +80,7 @@ class GameScene: SKScene{
             AiEnemy[0].componentForClass(BasicNode)?.node.position = touchPoint
             AiEnemy[0].agent.position = float2(x: Float(touchPoint.x), y: Float(touchPoint.y))
         }
+        
     }
     
 }
