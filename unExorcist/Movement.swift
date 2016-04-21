@@ -30,9 +30,6 @@ class Movement: GKAgent2D ,GKAgentDelegate{
         self.maxAcceleration = 4
         self.mass = 0.5
         
-        //let test = SKLabelNode(text: "enemy")
-        //test.fontSize = 20
-        //myTarget.componentForClass(BasicNode)!.node.addChild(test)
     }
     
     func agentDidUpdate(agent: GKAgent) {

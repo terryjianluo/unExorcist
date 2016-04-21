@@ -155,6 +155,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		181B43A11CC8A47F002C3FCD /* Plan.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Plan.rtf; sourceTree = "<group>"; };
 		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +252,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181B43A01CC8A462002C3FCD /* DevelopPlan */ = {
+			isa = PBXGroup;
+			children = (
+				181B43A11CC8A47F002C3FCD /* Plan.rtf */,
+			);
+			name = DevelopPlan;
+			sourceTree = "<group>";
+		};
 		1826F6291BAE8B9100D724B2 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +284,7 @@
 		1826F6341BAE8B9100D724B2 /* unExorcist */ = {
 			isa = PBXGroup;
 			children = (
+				181B43A01CC8A462002C3FCD /* DevelopPlan */,
 				184F11261C5BB0E400D584EB /* FrameWork */,
 				18F5872F1BDBBCDE0094D2E1 /* DataCache */,
 				184F11271C5BB0FE00D584EB /* Encrypt */,
