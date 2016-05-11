@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import RealmSwift
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //CoreDataManager().csv2Realm("save", db: "save")
         //CoreDataManager().csv2Realm("mapDataCN", db: "mapData")
         UIApplication.sharedApplication().idleTimerDisabled = true
+        
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "vlatest"
+            $0.clientKey = "jwdlh"
+            $0.server = "http://terrylj.website:1337/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
         
         return true
     }

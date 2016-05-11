@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-HZ-z91">
                                 <rect key="frame" x="280" y="335" width="41" height="30"/>
                                 <state key="normal" title="Editor"/>
+                                <connections>
+                                    <action selector="serverTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9I-oq-aFx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

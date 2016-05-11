@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181B43A41CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
+		181B43A51CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
+		181B43A61CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
 		1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
 		1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6391BAE8B9100D724B2 /* Main.storyboard */; };
@@ -14,7 +17,11 @@
 		1826F6431BAE8B9100D724B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6411BAE8B9100D724B2 /* LaunchScreen.storyboard */; };
 		1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F64D1BAE8B9100D724B2 /* unExorcistTests.swift */; };
 		1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */; };
-		1826F66A1BB8C20200D724B2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1826F6691BB8C20200D724B2 /* StoreKit.framework */; };
+		183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DC41CE31A5C00E47267 /* Bolts.framework */; };
+		183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DCE1CE31EC200E47267 /* Parse.framework */; };
+		183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD21CE3208D00E47267 /* libsqlite3.tbd */; };
+		183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD41CE3217500E47267 /* SystemConfiguration.framework */; };
+		183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD61CE321E700E47267 /* AudioToolbox.framework */; };
 		184F112D1C5DA91500D584EB /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
 		184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
 		188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188ACD7F1CB51DD100865E0F /* InfoPlist.strings */; };
@@ -27,7 +34,6 @@
 		1890F4A71CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
 		1890F4A81CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
 		1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
-		1890F4AC1CA52B160081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
 		1890F4AD1CA52B160081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
 		1890F4AE1CA52B170081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
 		1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
@@ -35,9 +41,7 @@
 		1890F4B11CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
 		1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
 		1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1890F4B41CA52B240081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
 		1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1890F4B71CA534EE0081BEE5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4B61CA534EE0081BEE5 /* GameKit.framework */; };
 		1890F4BA1CA8D7920081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
 		1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
 		1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
@@ -152,10 +156,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		181B43F61CCA1B1E002C3FCD /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		181B43A11CC8A47F002C3FCD /* Plan.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Plan.rtf; sourceTree = "<group>"; };
+		181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameReadyState.swift; sourceTree = "<group>"; };
 		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +184,11 @@
 		1826F6541BAE8B9100D724B2 /* unExorcistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unExorcistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unExorcistUITests.swift; sourceTree = "<group>"; };
 		1826F65A1BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1826F6691BB8C20200D724B2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		183A1DC41CE31A5C00E47267 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		183A1DCE1CE31EC200E47267 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		183A1DD21CE3208D00E47267 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		183A1DD41CE3217500E47267 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		183A1DD61CE321E700E47267 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		184F112C1C5DA91500D584EB /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		184F112E1C5DA9F900D584EB /* RealmData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		188ACD791CB51DB100865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -186,7 +205,6 @@
 		1890F4A61CA515CB0081BEE5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		1890F4AA1CA52B160081BEE5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		1890F4B61CA534EE0081BEE5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroEntity.swift; sourceTree = "<group>"; };
 		1890F4BD1CA8D8CA0081BEE5 /* AttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackComponent.swift; sourceTree = "<group>"; };
 		1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicPorperty.swift; sourceTree = "<group>"; };
@@ -222,11 +240,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1890F4AC1CA52B160081BEE5 /* Realm.framework in Frameworks */,
-				1890F4B41CA52B240081BEE5 /* RealmSwift.framework in Frameworks */,
+				183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */,
+				183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */,
+				183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */,
+				183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */,
 				1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
-				1890F4B71CA534EE0081BEE5 /* GameKit.framework in Frameworks */,
-				1826F66A1BB8C20200D724B2 /* StoreKit.framework in Frameworks */,
+				183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */,
 				1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +279,17 @@
 			name = DevelopPlan;
 			sourceTree = "<group>";
 		};
+		181B43A21CC8CDA5002C3FCD /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */,
+			);
+			name = StateMachine;
+			sourceTree = "<group>";
+		};
 		1826F6291BAE8B9100D724B2 = {
 			isa = PBXGroup;
 			children = (
-				1890F4B61CA534EE0081BEE5 /* GameKit.framework */,
 				1826F6341BAE8B9100D724B2 /* unExorcist */,
 				1826F64C1BAE8B9100D724B2 /* unExorcistTests */,
 				1826F6571BAE8B9100D724B2 /* unExorcistUITests */,
@@ -325,9 +351,13 @@
 			isa = PBXGroup;
 			children = (
 				184F112C1C5DA91500D584EB /* CSV.swift */,
+				183A1DD21CE3208D00E47267 /* libsqlite3.tbd */,
+				183A1DD61CE321E700E47267 /* AudioToolbox.framework */,
+				183A1DD41CE3217500E47267 /* SystemConfiguration.framework */,
+				183A1DCE1CE31EC200E47267 /* Parse.framework */,
+				183A1DC41CE31A5C00E47267 /* Bolts.framework */,
 				1890F4AA1CA52B160081BEE5 /* Realm.framework */,
 				1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */,
-				1826F6691BB8C20200D724B2 /* StoreKit.framework */,
 			);
 			name = FrameWork;
 			sourceTree = "<group>";
@@ -366,6 +396,7 @@
 		1890F4631CA510CC0081BEE5 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				181B43A21CC8CDA5002C3FCD /* StateMachine */,
 				1890F4B81CA8D7350081BEE5 /* Entity */,
 				1890F4C11CA8D9770081BEE5 /* Rules */,
 				1890F4A41CA514C00081BEE5 /* GameScene.swift */,
@@ -452,6 +483,7 @@
 				1826F6301BAE8B9100D724B2 /* Resources */,
 				18061C011C5BAF78000D44F0 /* Embed Frameworks */,
 				18061C021C5BAFA0000D44F0 /* ShellScript */,
+				181B43F61CCA1B1E002C3FCD /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -513,10 +545,10 @@
 						DevelopmentTeam = T525M2T996;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 0;
@@ -627,6 +659,7 @@
 				184F112D1C5DA91500D584EB /* CSV.swift in Sources */,
 				1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */,
 				1890F4DF1CAA33CB0081BEE5 /* GameRules.swift in Sources */,
+				181B43A41CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */,
 				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
 				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
@@ -661,6 +694,7 @@
 				1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */,
 				18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */,
 				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				181B43A51CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
 				18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */,
 				18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */,
@@ -695,6 +729,7 @@
 				1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */,
 				18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */,
 				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
+				181B43A61CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
 				18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */,
 				18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */,
@@ -866,6 +901,10 @@
 				INFOPLIST_FILE = unExorcist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -890,6 +929,10 @@
 				INFOPLIST_FILE = unExorcist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -908,6 +951,10 @@
 				);
 				INFOPLIST_FILE = unExorcistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
@@ -924,6 +971,10 @@
 				);
 				INFOPLIST_FILE = unExorcistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
@@ -939,6 +990,10 @@
 				);
 				INFOPLIST_FILE = unExorcistUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = unExorcist;
@@ -955,6 +1010,10 @@
 				);
 				INFOPLIST_FILE = unExorcistUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/unExorcist",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = unExorcist;

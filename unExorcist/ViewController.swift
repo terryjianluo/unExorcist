@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,9 @@ class ViewController: UIViewController {
         let a = CoreDataManager().PropertyDictionary("P0001", dataModel: PlayerProperty.self)
         print(a)
         
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +29,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func serverTest(sender: UIButton) {
+        let testData = PFObject(className: "testData")
+        testData["score"] = 10
+        testData["name"] = "Terry"
+        testData.saveInBackground()
+    }
 
 }
 
