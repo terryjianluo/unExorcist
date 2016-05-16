@@ -36,17 +36,25 @@ class GameReadyState:GKState {
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
         
+        for p in entityManager.teammates{
+            p.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.width/4)
+        }
+        
+        for e in entityManager.enemys{
+            e.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.width*0.75)
+        }
+        
     }
     
     func countDown(){
         let countNumber = SKLabelNode(text: "4")
-        countNumber.fontSize = 50
+        countNumber.fontSize = 190
         countNumber.zPosition = 15
         countNumber.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.height/2)
         entityManager.scene.addChild(countNumber)
         
-        let countActionDown = SKAction.scaleTo(0.1, duration: 0.5)
-        let countActionUp = SKAction.scaleTo(1, duration: 0.5)
+        let countActionDown = SKAction.scaleTo(0.1, duration: 1)
+        let countActionUp = SKAction.scaleTo(1, duration: 1)
         
         let countNumberChange3 = SKAction.runBlock({
             countNumber.text = "3"

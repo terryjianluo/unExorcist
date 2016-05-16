@@ -17,13 +17,29 @@ class GameRecord: Object {
     //    return []
     //  }
     
-    dynamic var id = ""
-    dynamic var scene = ""
-    dynamic var property = ""
-    dynamic var equip = ""
-    dynamic var trigger = ""
-    dynamic var quest = ""
-    dynamic var bag = ""
+    dynamic var uerId = ""
+    dynamic var player1 = ""
+    dynamic var player2 = ""
+    dynamic var player3 = ""
+    dynamic var player4 = ""
+    dynamic var player5 = ""
+    dynamic var player1Position = ""
+    dynamic var player2Position = ""
+    dynamic var player3Position = ""
+    dynamic var player4Position = ""
+    dynamic var player5Position = ""
+    
+    /*待功能完善后开放
+    dynamic var player1Equipment:HeroEquip?
+    dynamic var player2Equipment:HeroEquip?
+    dynamic var player3Equipment:HeroEquip?
+    dynamic var player4Equipment:HeroEquip?
+    dynamic var player5Equipment:HeroEquip?
+    dynamic var combo1:SkillCombo?
+    dynamic var combo2:SkillCombo?
+    dynamic var combo3:SkillCombo?
+    dynamic var bag:Pakage?
+    */
 }
 
 class Pakage: Object {
@@ -82,7 +98,7 @@ class PlayerProperty: Object {
 
 }
 
-class GameConfigRecord: Object {
+class HeroEquip: Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -90,26 +106,33 @@ class GameConfigRecord: Object {
     //    return []
     //  }
     
-    dynamic var player1 = ""
-    dynamic var player2 = ""
-    dynamic var player3 = ""
-    dynamic var player4 = ""
-    dynamic var player5 = ""
-    dynamic var player1Position = ""
-    dynamic var player2Position = ""
-    dynamic var player3Position = ""
-    dynamic var player4Position = ""
-    dynamic var player5Position = ""
-    //dynamic var player1Property = ""
-    //dynamic var player2Property = ""
-    //dynamic var player3Property = ""
-    //dynamic var player4Property = ""
-    //dynamic var player5Property = ""
-    dynamic var combo1 = ""
-    dynamic var combo2 = ""
-    dynamic var combo3 = ""
+    dynamic var head = ""
+    dynamic var shoulder = ""
+    dynamic var arm = ""
+    dynamic var leg = ""
+    dynamic var body = ""
+    dynamic var shoe = ""
+    dynamic var weapon = ""
+    dynamic var ring = ""
 }
 
+class SkillCombo: Object {
+    
+    // Specify properties to ignore (Realm won't persist these)
+    
+    //  override static func ignoredProperties() -> [String] {
+    //    return []
+    //  }
+    
+    dynamic var name = ""
+    dynamic var first = ""
+    dynamic var second = ""
+    dynamic var third = ""
+    dynamic var fouth = ""
+    dynamic var fifth = ""
+    dynamic var sixth = ""
+    dynamic var seventh = ""
+}
 
 
 
