@@ -22,6 +22,11 @@
 		183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD21CE3208D00E47267 /* libsqlite3.tbd */; };
 		183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD41CE3217500E47267 /* SystemConfiguration.framework */; };
 		183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD61CE321E700E47267 /* AudioToolbox.framework */; };
+		183A1DD91CE3438A00E47267 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD81CE3438A00E47267 /* GameKit.framework */; };
+		183A1DDB1CE3439700E47267 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DDA1CE3439700E47267 /* StoreKit.framework */; };
+		183A1DDD1CE9B64400E47267 /* GameConfigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A1DDC1CE9B64300E47267 /* GameConfigScene.swift */; };
+		183A1DDE1CE9B64A00E47267 /* GameConfigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A1DDC1CE9B64300E47267 /* GameConfigScene.swift */; };
+		183A1DDF1CE9B64A00E47267 /* GameConfigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A1DDC1CE9B64300E47267 /* GameConfigScene.swift */; };
 		184F112D1C5DA91500D584EB /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
 		184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112E1C5DA9F900D584EB /* RealmData.swift */; };
 		188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188ACD7F1CB51DD100865E0F /* InfoPlist.strings */; };
@@ -103,8 +108,6 @@
 		18B7034B1CBFD64800B5EAFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4641CA5139C0081BEE5 /* GameViewController.swift */; };
 		18B7034C1CBFD69400B5EAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
 		18B7034D1CBFD69500B5EAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
-		18B7034E1CBFD69800B5EAFF /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
-		18B7034F1CBFD69900B5EAFF /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
 		18B703501CBFD69D00B5EAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		18B703511CBFD69E00B5EAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
@@ -121,7 +124,6 @@
 		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
 		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
 		18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
-		18F5E67B1BC228CF002502DE /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E67A1BC228CF002502DE /* WorldViewController.swift */; };
 		18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
 		18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
 /* End PBXBuildFile section */
@@ -189,6 +191,9 @@
 		183A1DD21CE3208D00E47267 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		183A1DD41CE3217500E47267 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		183A1DD61CE321E700E47267 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		183A1DD81CE3438A00E47267 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		183A1DDA1CE3439700E47267 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		183A1DDC1CE9B64300E47267 /* GameConfigScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfigScene.swift; sourceTree = "<group>"; };
 		184F112C1C5DA91500D584EB /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		184F112E1C5DA9F900D584EB /* RealmData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		188ACD791CB51DB100865E0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -228,7 +233,6 @@
 		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
 		18F587351BDBBD760094D2E1 /* Base64codeFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64codeFunc.h; sourceTree = "<group>"; };
 		18F587361BDBBD760094D2E1 /* Base64codeFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64codeFunc.m; sourceTree = "<group>"; };
-		18F5E67A1BC228CF002502DE /* WorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
 		18FD2FC01C049F4100902E9C /* AesEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AesEncode.h; sourceTree = "<group>"; };
 		18FD2FC11C049F7F00902E9C /* AesEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AesEncode.m; sourceTree = "<group>"; };
 		18FD2FC31C04A98300902E9C /* stringAes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringAes.h; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183A1DDB1CE3439700E47267 /* StoreKit.framework in Frameworks */,
 				183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */,
 				183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */,
 				183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */,
@@ -247,6 +252,7 @@
 				1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
 				183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */,
 				1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */,
+				183A1DD91CE3438A00E47267 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +358,8 @@
 			children = (
 				184F112C1C5DA91500D584EB /* CSV.swift */,
 				183A1DD21CE3208D00E47267 /* libsqlite3.tbd */,
+				183A1DDA1CE3439700E47267 /* StoreKit.framework */,
+				183A1DD81CE3438A00E47267 /* GameKit.framework */,
 				183A1DD61CE321E700E47267 /* AudioToolbox.framework */,
 				183A1DD41CE3217500E47267 /* SystemConfiguration.framework */,
 				183A1DCE1CE31EC200E47267 /* Parse.framework */,
@@ -400,6 +408,7 @@
 				1890F4B81CA8D7350081BEE5 /* Entity */,
 				1890F4C11CA8D9770081BEE5 /* Rules */,
 				1890F4A41CA514C00081BEE5 /* GameScene.swift */,
+				183A1DDC1CE9B64300E47267 /* GameConfigScene.swift */,
 				1890F4641CA5139C0081BEE5 /* GameViewController.swift */,
 				1890F4A61CA515CB0081BEE5 /* GameScene.sks */,
 				1890F4FB1CAE79120081BEE5 /* SKAction */,
@@ -466,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				1826F6371BAE8B9100D724B2 /* ViewController.swift */,
-				18F5E67A1BC228CF002502DE /* WorldViewController.swift */,
 			);
 			name = world;
 			sourceTree = "<group>";
@@ -545,10 +553,10 @@
 						DevelopmentTeam = T525M2T996;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 0;
@@ -670,7 +678,7 @@
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
-				18F5E67B1BC228CF002502DE /* WorldViewController.swift in Sources */,
+				183A1DDD1CE9B64400E47267 /* GameConfigScene.swift in Sources */,
 				188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */,
 				1890F4E31CAA35B00081BEE5 /* Movement.swift in Sources */,
 				1890F5051CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
@@ -704,7 +712,6 @@
 				18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
-				18B7034E1CBFD69800B5EAFF /* WorldViewController.swift in Sources */,
 				18B703421CBFD62D00B5EAFF /* DataCache.swift in Sources */,
 				1890F4BF1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E41CAA35B00081BEE5 /* Movement.swift in Sources */,
@@ -712,6 +719,7 @@
 				18B703461CBFD63800B5EAFF /* RealmData.swift in Sources */,
 				1890F4D01CA931910081BEE5 /* BasicPorperty.swift in Sources */,
 				18B703401CBFD5AF00B5EAFF /* EffectMoveBehavior.swift in Sources */,
+				183A1DDE1CE9B64A00E47267 /* GameConfigScene.swift in Sources */,
 				18B7034C1CBFD69400B5EAFF /* ViewController.swift in Sources */,
 				1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */,
 				18B703501CBFD69D00B5EAFF /* AppDelegate.swift in Sources */,
@@ -739,7 +747,6 @@
 				18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
-				18B7034F1CBFD69900B5EAFF /* WorldViewController.swift in Sources */,
 				18B703431CBFD62E00B5EAFF /* DataCache.swift in Sources */,
 				1890F4C01CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E51CAA35B00081BEE5 /* Movement.swift in Sources */,
@@ -747,6 +754,7 @@
 				18B703471CBFD63800B5EAFF /* RealmData.swift in Sources */,
 				1890F4D11CA931910081BEE5 /* BasicPorperty.swift in Sources */,
 				18B703411CBFD5B100B5EAFF /* EffectMoveBehavior.swift in Sources */,
+				183A1DDF1CE9B64A00E47267 /* GameConfigScene.swift in Sources */,
 				18B7034D1CBFD69500B5EAFF /* ViewController.swift in Sources */,
 				1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */,
 				18B703511CBFD69E00B5EAFF /* AppDelegate.swift in Sources */,

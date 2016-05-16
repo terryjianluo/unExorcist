@@ -11,23 +11,25 @@ import GameplayKit
 
 class GameScene: SKScene{
     
-    var teammate = [HeroEntity]()
-    var AiEnemy = [HeroEntity]()
     var components = GKComponentSystem(componentClass: TargetComponent.self)
-    
+   
     var lastUpdateTimeInterval: NSTimeInterval = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         //self.view?.backgroundColor = UIColor.brownColor()
-        let a = SKLabelNode(text: "hello world \n morning star")
+        let a = SKLabelNode(text: "召唤师峡谷")
         a.position = CGPoint(x: size.width/2, y: size.height/2)
         a.fontColor = UIColor.whiteColor()
-        a.zPosition = 5
+        a.zPosition = 1
         self.addChild(a)
         print(self.size)
         
+        
         let entityManager = EntityManager(scene: self)
+        let gameRules = GKStateMachine(states: [GameReadyState(manager: entityManager),GamePlayState(manager: entityManager),GameOverState(manager: entityManager)])
+        gameRules.enterState(GameReadyState)
+        /* 用state改写初始化
         teammate.append(HeroEntity(id: "P0001",team: "partner"))
         AiEnemy.append(HeroEntity(id: "P0001", team: "enemy"))
         teammate[0].componentForClass(BasicNode.self)?.node.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -48,7 +50,7 @@ class GameScene: SKScene{
             let targetComponent = TargetComponent(selfEntity:enemy,manager: entityManager)
             components.addComponent(targetComponent)
         }
-        
+        */
         //hero.updateWithDeltaTime(1)
         
     }
@@ -56,14 +58,14 @@ class GameScene: SKScene{
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         let deltaTime = currentTime - lastUpdateTimeInterval
-        teammate[0].componentForClass(AttackComponent)!.updateWithDeltaTime(deltaTime)
+        //teammate[0].componentForClass(AttackComponent)!.updateWithDeltaTime(deltaTime)
             //enemy.componentForClass(DamageComponent)?.updateWithDeltaTime(deltaTime)
             //print("HP = \(enemy.componentForClass(BasicProperty)?.HP)")
         for component in components.components{
             component.updateWithDeltaTime(currentTime)
         }
         
-        teammate[0].componentForClass(EffectContainer)?.updateWithDeltaTime(0.1)
+        //teammate[0].componentForClass(EffectContainer)?.updateWithDeltaTime(0.1)
         lastUpdateTimeInterval = currentTime
         
     }
@@ -77,8 +79,8 @@ class GameScene: SKScene{
             let uiTouchPoint = touch.locationInView(self.view)
             let touchPoint = CGPoint(x: (512 - (self.view?.frame.width)!/2) + uiTouchPoint.x , y:(768 - (uiTouchPoint.y * 768 / (self.view?.frame.height)!)))
             print(touchPoint)
-            AiEnemy[0].componentForClass(BasicNode)?.node.position = touchPoint
-            AiEnemy[0].agent.position = float2(x: Float(touchPoint.x), y: Float(touchPoint.y))
+            //AiEnemy[0].componentForClass(BasicNode)?.node.position = touchPoint
+            //AiEnemy[0].agent.position = float2(x: Float(touchPoint.x), y: Float(touchPoint.y))
         }
         
     }

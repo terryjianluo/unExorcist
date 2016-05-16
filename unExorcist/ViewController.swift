@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         let testData = PFObject(className: "testData")
         testData["score"] = 10
         testData["name"] = "Terry"
+        //testData.objectId = "testData1"
         testData.saveInBackground()
     }
 

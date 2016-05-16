@@ -26,7 +26,7 @@ class GameRecord: Object {
     dynamic var bag = ""
 }
 
-class MapData: Object {
+class Pakage: Object {
     
 // Specify properties to ignore (Realm won't persist these)
     
@@ -35,13 +35,7 @@ class MapData: Object {
 //  }
     
     dynamic var id = ""
-    dynamic var name = ""
-    dynamic var intro = ""
-    dynamic var quest = ""
-    dynamic var npc = ""
-    dynamic var property = ""
-    dynamic var trigger = ""
-    dynamic var passway = ""
+    dynamic var number = ""
 }
 
 class PlayerProperty: Object {
@@ -87,5 +81,35 @@ class PlayerProperty: Object {
     dynamic var powerRank = ""
 
 }
+
+class GameConfigRecord: Object {
+    
+    // Specify properties to ignore (Realm won't persist these)
+    
+    //  override static func ignoredProperties() -> [String] {
+    //    return []
+    //  }
+    
+    dynamic var player1 = ""
+    dynamic var player2 = ""
+    dynamic var player3 = ""
+    dynamic var player4 = ""
+    dynamic var player5 = ""
+    dynamic var player1Position = ""
+    dynamic var player2Position = ""
+    dynamic var player3Position = ""
+    dynamic var player4Position = ""
+    dynamic var player5Position = ""
+    //dynamic var player1Property = ""
+    //dynamic var player2Property = ""
+    //dynamic var player3Property = ""
+    //dynamic var player4Property = ""
+    //dynamic var player5Property = ""
+    dynamic var combo1 = ""
+    dynamic var combo2 = ""
+    dynamic var combo3 = ""
+}
+
+
 
 

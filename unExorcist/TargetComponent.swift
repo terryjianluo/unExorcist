@@ -25,7 +25,7 @@ class TargetComponent:GKComponent{
     
     func targetChoose() -> HeroEntity{
         var target:HeroEntity!
-        let entities = entityManager.entities
+        let entities = entityManager.enemys
         
         for entity in entities{
             if entity.componentForClass(BasicProperty)?.team != myEntity.componentForClass(BasicProperty)?.team{

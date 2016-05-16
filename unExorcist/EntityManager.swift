@@ -13,27 +13,44 @@ import GameplayKit
 
 class EntityManager {
     
-    var entities = Set<HeroEntity>()
+    var teammates = Set<HeroEntity>()
+    var enemys = Set<HeroEntity>()
     let scene: SKScene
     
     init(scene: SKScene) {
         self.scene = scene
     }
     
-    func add(entity: HeroEntity) {
-        entities.insert(entity)
+    func addTeamMate(entity: HeroEntity) {
+        teammates.insert(entity)
         
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
             scene.addChild(spriteNode)
         }
     }
     
-    func remove(entity: HeroEntity) {
+    func addEnemy(entity: HeroEntity) {
+        enemys.insert(entity)
+        
+        if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
+            scene.addChild(spriteNode)
+        }
+    }
+    
+    func removeTeamMate(entity: HeroEntity) {
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
             spriteNode.removeFromParent()
         }
         
-        entities.remove(entity)
+        teammates.remove(entity)
+    }
+    
+    func removeEnemy(entity: HeroEntity) {
+        if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
+            spriteNode.removeFromParent()
+        }
+        
+        enemys.remove(entity)
     }
     
     

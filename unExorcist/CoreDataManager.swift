@@ -52,12 +52,6 @@ class CoreDataManager{
                     }
                 }
             switch csvFile {
-            case "mapData":
-                let data = MapData(value:dataDecode)
-                try! realm.write {
-                    realm.add(data)
-                    }
-                break
             case "save":
                 let data = GameRecord(value:dataDecode)
                 try! realm.write {
