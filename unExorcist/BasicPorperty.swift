@@ -64,6 +64,9 @@ class BasicProperty: GKComponent {
     //队伍
     var team:String!
     
+    //攻速刷新时间
+    var updateTime = NSTimeInterval(0)
+    
     init(id:String,team:String) {
         super.init()
         self.name = propertyDic(id).valueForKey("name") as! String

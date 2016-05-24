@@ -17,7 +17,7 @@ class GameRecord: Object {
     //    return []
     //  }
     
-    dynamic var uerId = ""
+    dynamic var usrId = ""
     dynamic var player1 = ""
     dynamic var player2 = ""
     dynamic var player3 = ""
@@ -39,7 +39,14 @@ class GameRecord: Object {
     dynamic var combo2:SkillCombo?
     dynamic var combo3:SkillCombo?
     dynamic var bag:Pakage?
+     
+     dynamic var diamond = ""
+     dynamic var gold = ""
     */
+    
+    override static func indexedProperties() -> [String] {
+        return ["usrId"]
+    }
 }
 
 class Pakage: Object {
@@ -52,6 +59,10 @@ class Pakage: Object {
     
     dynamic var id = ""
     dynamic var number = ""
+    
+    override static func indexedProperties() -> [String] {
+        return ["id"]
+    }
 }
 
 class PlayerProperty: Object {
@@ -95,6 +106,10 @@ class PlayerProperty: Object {
     dynamic var phyle = ""
     dynamic var career = ""
     dynamic var powerRank = ""
+    
+    override static func indexedProperties() -> [String] {
+        return ["id"]
+    }
 
 }
 

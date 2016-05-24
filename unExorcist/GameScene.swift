@@ -14,10 +14,10 @@ class GameScene: SKScene{
     var components = GKComponentSystem(componentClass: TargetComponent.self)
    
     var lastUpdateTimeInterval: NSTimeInterval = 0
+    var gameRules:GKStateMachine!
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        //self.view?.backgroundColor = UIColor.brownColor()
         let a = SKLabelNode(text: "召唤师峡谷")
         a.position = CGPoint(x: size.width/2, y: size.height/2)
         a.fontColor = UIColor.whiteColor()
@@ -27,37 +27,17 @@ class GameScene: SKScene{
         
         
         let entityManager = EntityManager(scene: self)
-        let gameRules = GKStateMachine(states: [GameReadyState(manager: entityManager),GamePlayState(manager: entityManager),GameOverState(manager: entityManager)])
+        gameRules = GKStateMachine(states: [GameReadyState(manager:entityManager,scene:self),GamePlayState(manager: entityManager),GameOverState(manager: entityManager),GameCheckOut()])
         gameRules.enterState(GameReadyState)
-        /* 用state改写初始化
-        teammate.append(HeroEntity(id: "P0001",team: "partner"))
-        AiEnemy.append(HeroEntity(id: "P0001", team: "enemy"))
-        teammate[0].componentForClass(BasicNode.self)?.node.position = CGPoint(x: size.width/2, y: size.height/2)
-        AiEnemy[0].componentForClass(BasicNode.self)?.node.position = CGPoint(x: size.width/2, y: size.height*0.75)
-        for hero in teammate{
-            entityManager.add(hero)
-            print(hero.componentForClass(BasicNode)?.node.size)
-        }
-        for enemy in AiEnemy{
-            entityManager.add(enemy)
-        }
-        for hero in teammate{
-            let targetComponent = TargetComponent(selfEntity:hero,manager: entityManager)
-            hero.addComponent(targetComponent)
-            components.addComponent(targetComponent)
-        }
-        for enemy in AiEnemy{
-            let targetComponent = TargetComponent(selfEntity:enemy,manager: entityManager)
-            components.addComponent(targetComponent)
-        }
-        */
-        //hero.updateWithDeltaTime(1)
         
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         let deltaTime = currentTime - lastUpdateTimeInterval
+            gameRules.updateWithDeltaTime(deltaTime)
+            lastUpdateTimeInterval = currentTime
+        
         //teammate[0].componentForClass(AttackComponent)!.updateWithDeltaTime(deltaTime)
             //enemy.componentForClass(DamageComponent)?.updateWithDeltaTime(deltaTime)
             //print("HP = \(enemy.componentForClass(BasicProperty)?.HP)")
@@ -66,7 +46,6 @@ class GameScene: SKScene{
         }
         
         //teammate[0].componentForClass(EffectContainer)?.updateWithDeltaTime(0.1)
-        lastUpdateTimeInterval = currentTime
         
     }
     
@@ -78,7 +57,6 @@ class GameScene: SKScene{
         for touch in touches {
             let uiTouchPoint = touch.locationInView(self.view)
             let touchPoint = CGPoint(x: (512 - (self.view?.frame.width)!/2) + uiTouchPoint.x , y:(768 - (uiTouchPoint.y * 768 / (self.view?.frame.height)!)))
-            print(touchPoint)
             //AiEnemy[0].componentForClass(BasicNode)?.node.position = touchPoint
             //AiEnemy[0].agent.position = float2(x: Float(touchPoint.x), y: Float(touchPoint.y))
         }

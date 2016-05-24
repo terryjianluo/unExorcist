@@ -62,13 +62,4 @@ class DamageComponent: GKComponent{
         
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        super.updateWithDeltaTime(seconds)
-        //let strikeSpeed = myEntity.componentForClass(BasicProperty)?.strikeSpeed
-        //if (CACurrentMediaTime() - lastAtk > strikeSpeed) {
-        //    lastAtk = CACurrentMediaTime()
-        //}
-
-    }
-    
 }

@@ -26,22 +26,20 @@ class Movement: GKAgent2D ,GKAgentDelegate{
         let seek = GKGoal(toSeekAgent: myTarget.agent)
         self.behavior = GKBehavior(goal: seek, weight: 1)
         
-        self.maxSpeed = 15
-        self.maxAcceleration = 4
-        self.mass = 0.5
+        self.maxSpeed = 150
+        self.maxAcceleration = 1600
+        self.mass = 0.1
         
     }
     
     func agentDidUpdate(agent: GKAgent) {
         let spriteComponent = entity?.componentForClass(BasicNode.self)
         spriteComponent!.node.position = CGPoint(x: CGFloat(position.x), y: CGFloat(position.y))
-        //print("test target ----- \(myTarget.agent.position) \(self.position)")
     }
     
     func agentWillUpdate(agent: GKAgent) {
         let spriteComponent = entity?.componentForClass(BasicNode.self)
         position = float2(x: Float(spriteComponent!.node.position.x), y: Float(spriteComponent!.node.position.y))
-        //print("test target ----- \(myTarget.agent.position) \(self.position)")
     }
     
 }

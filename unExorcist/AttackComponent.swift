@@ -65,15 +65,12 @@ class AttackComponent: GKComponent{
         
         let distance = Double(sqrt(pow(((myEntityPosition?.x)! - (targetPosition?.x)!), 2) + pow(((myEntityPosition?.y)! - (targetPosition?.y)!), 2)))
         
-        if range >= distance {
+        if (range >= distance) && ((entity as! HeroEntity).target != entity) == true {
             let effect = EffectEntity(parent:entity as! HeroEntity)
             entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
             entity?.componentForClass(EffectContainer)?.addEffect(effect)
             
-            //let damage = self.damageOutput()
-            //entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage)
-            //print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) \n team = \(entity!.componentForClass(BasicProperty)?.team)")
-        }else{
+        }else if range < distance{
             //out of range
             print("Out of range || distance \(distance)")
         }

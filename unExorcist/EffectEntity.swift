@@ -29,13 +29,6 @@ class EffectEntity:GKEntity{
         let moveComponent = Movement(targetEntity: parent.target)
         //effect.agent = moveComponent
         self.addComponent(moveComponent)
-        
-        print("---------> effect entity create \(self)")
-        
     }
-    
-    deinit{
-        print(" effect entity release --------->\(self)")
-    }
-       
+          
 }

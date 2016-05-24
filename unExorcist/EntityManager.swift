@@ -17,6 +17,9 @@ class EntityManager {
     var enemys = Set<HeroEntity>()
     let scene: SKScene
     
+    var teammatesDie = Set<HeroEntity>()
+    var enemysDie = Set<HeroEntity>()
+    
     init(scene: SKScene) {
         self.scene = scene
     }
@@ -39,18 +42,26 @@ class EntityManager {
     
     func removeTeamMate(entity: HeroEntity) {
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
-            spriteNode.removeFromParent()
+            //spriteNode.removeFromParent()
+            spriteNode.color = UIColor.grayColor()
+            spriteNode.colorBlendFactor = 0.8
         }
         
-        teammates.remove(entity)
+        //teammates.remove(entity)
+        teammatesDie.insert(entity)
+        entity.componentForClass(BasicProperty)?.team = "partnerDie"
     }
     
     func removeEnemy(entity: HeroEntity) {
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
-            spriteNode.removeFromParent()
+            //spriteNode.removeFromParent()
+            spriteNode.color = UIColor.grayColor()
+            spriteNode.colorBlendFactor = 0.8
         }
         
-        enemys.remove(entity)
+        //enemys.remove(entity)
+        enemysDie.insert(entity)
+        entity.componentForClass(BasicProperty)?.team = "enemyDie"
     }
     
     

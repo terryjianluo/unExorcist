@@ -25,13 +25,26 @@ class TargetComponent:GKComponent{
     
     func targetChoose() -> HeroEntity{
         var target:HeroEntity!
-        let entities = entityManager.enemys
-        
-        for entity in entities{
-            if entity.componentForClass(BasicProperty)?.team != myEntity.componentForClass(BasicProperty)?.team{
+        // 增加判断空值的逻辑
+        if myEntity.componentForClass(BasicProperty)?.team == "partner"{
+            let entities = entityManager.enemys
+            for entity in entities{
+                if entity.componentForClass(BasicProperty)?.team == "enemy"{
                 target = entity
+                }
+            }
+        }else{
+            let entities = entityManager.teammates
+            for entity in entities{
+                if entity.componentForClass(BasicProperty)?.team == "partner"{
+                    target = entity
+                }
             }
         }
+        if target == nil {
+            target = myEntity
+        }
+        
         return target
     }
     

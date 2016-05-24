@@ -13,9 +13,11 @@ import SpriteKit
 class GameReadyState:GKState {
     
     let entityManager:EntityManager
+    let gameScene:GameScene
     
-    init(manager:EntityManager) {
+    init(manager:EntityManager,scene:GameScene) {
         entityManager = manager
+        gameScene = scene
     }
     
     override func didEnterWithPreviousState(previousState: GKState?) {
@@ -24,24 +26,36 @@ class GameReadyState:GKState {
     }
     
     func playerInit(){
+        var a:CGFloat = 3.5
+        var b:CGFloat = 3.5
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "partner"))
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "partner"))
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "partner"))
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "partner"))
         entityManager.addTeamMate(HeroEntity(id: "P0001", team: "partner"))
         
-        entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
-        entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
-        entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
-        entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
-        entityManager.addTeamMate(HeroEntity(id: "P0001", team: "enemy"))
+        entityManager.addEnemy(HeroEntity(id: "P0001", team: "enemy"))
+        entityManager.addEnemy(HeroEntity(id: "P0001", team: "enemy"))
+        entityManager.addEnemy(HeroEntity(id: "P0001", team: "enemy"))
+        entityManager.addEnemy(HeroEntity(id: "P0001", team: "enemy"))
+        entityManager.addEnemy(HeroEntity(id: "P0001", team: "enemy"))
         
         for p in entityManager.teammates{
-            p.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.width/4)
+            p.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width*(a*0.1), y: entityManager.scene.size.height*0.4)
+            a += 0.75
+            let targetComponent = TargetComponent(selfEntity:p,manager: entityManager)
+            p.addComponent(targetComponent)
+            gameScene.components.addComponent(targetComponent)
+            
         }
         
         for e in entityManager.enemys{
-            e.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.width*0.75)
+            e.componentForClass(BasicNode)?.node.position = CGPoint(x: entityManager.scene.size.width*(b*0.1), y: entityManager.scene.size.height*0.6)
+            b += 0.75
+            
+            let targetComponent = TargetComponent(selfEntity:e,manager: entityManager)
+            e.addComponent(targetComponent)
+            gameScene.components.addComponent(targetComponent)
         }
         
     }
@@ -53,8 +67,8 @@ class GameReadyState:GKState {
         countNumber.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.height/2)
         entityManager.scene.addChild(countNumber)
         
-        let countActionDown = SKAction.scaleTo(0.1, duration: 1)
-        let countActionUp = SKAction.scaleTo(1, duration: 1)
+        let countActionDown = SKAction.scaleTo(0.1, duration: 0.5)
+        let countActionUp = SKAction.scaleTo(1, duration: 0.5)
         
         let countNumberChange3 = SKAction.runBlock({
             countNumber.text = "3"
@@ -82,6 +96,48 @@ class GamePlayState:GKState {
     init(manager:EntityManager) {
         entityManager = manager
     }
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        //Need write fight method
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        super.updateWithDeltaTime(seconds)
+        if (entityManager.enemysDie.count == 5 || entityManager.teammatesDie.count == 5) == true{
+            self.stateMachine?.enterState(GameOverState)
+        }else{
+        for entity in entityManager.teammates{
+            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(BasicProperty)?.updateTime += seconds
+            if entity.componentForClass(BasicProperty)?.HP <= 0{
+                entityManager.removeTeamMate(entity)
+            }else{
+                //entity attack method
+                let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
+                if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
+                    entity.componentForClass(AttackComponent)?.damage()
+                    entity.componentForClass(BasicProperty)?.updateTime = 0
+                    
+                }
+            }
+        }
+        
+        for entity in entityManager.enemys{
+            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(BasicProperty)?.updateTime += seconds
+            if entity.componentForClass(BasicProperty)?.HP <= 0{
+                entityManager.removeEnemy(entity)
+            }else{
+                //entity attack method
+                let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
+                if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
+                    entity.componentForClass(AttackComponent)?.damage()
+                    entity.componentForClass(BasicProperty)?.updateTime = 0
+                }
+                }
+            }
+        }       
+    }
 }
 
 class GameOverState:GKState {
@@ -90,4 +146,21 @@ class GameOverState:GKState {
     init(manager:EntityManager) {
         entityManager = manager
     }
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        print("Game Over!!")
+        if entityManager.teammatesDie.count == 5{
+            print("Lose")
+        }else if entityManager.enemysDie.count == 5{
+            print("win")
+        }
+    }
+}
+
+class GameCheckOut: GKState {
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        //Scene 转场
+    }
+    
 }

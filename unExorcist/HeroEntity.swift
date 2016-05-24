@@ -31,10 +31,4 @@ class HeroEntity:GKEntity{
         target = self
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        super.updateWithDeltaTime(seconds)
-        self.componentForClass(AttackComponent)?.damageOutput()
-    }
-    
-    
 }
