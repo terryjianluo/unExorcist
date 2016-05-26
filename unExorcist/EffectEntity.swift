@@ -19,7 +19,7 @@ class EffectEntity:GKEntity{
     init(parent:HeroEntity) {
         super.init()
         parentEntity = parent
-        let spriteComponent = BasicNode(code: "UIAni_1")
+        let spriteComponent = BasicNode(code:"UIAni_1") //  "Spaceship"
         addComponent(spriteComponent)
         //node = self.componentForClass(BasicNode)?.node
         self.componentForClass(BasicNode)?.node.color = UIColor.redColor()

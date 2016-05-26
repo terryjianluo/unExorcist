@@ -29,7 +29,7 @@ class EffectContainer:GKComponent {
             let position = fx.componentForClass(BasicNode)!.node.position
             let path = CGPathCreateMutable()
             let positionTarget = fx.componentForClass(Movement)?.myTarget.componentForClass(BasicNode)?.node.position
-            CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 5, 0, CGFloat(2*M_PI), false)
+            CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
             CGPathCloseSubpath(path)
             if CGPathContainsPoint(path, nil, position, false) {
                 let damage = entity?.componentForClass(AttackComponent)?.damageOutput()

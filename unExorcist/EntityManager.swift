@@ -37,7 +37,7 @@ class EntityManager {
         
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
             scene.addChild(spriteNode)
-        }
+            }
     }
     
     func removeTeamMate(entity: HeroEntity) {
