@@ -24,6 +24,7 @@ class DamageComponent: GKComponent{
         let myDodge = entity!.componentForClass(BasicProperty)?.dodge
         let myDef = entity!.componentForClass(BasicProperty)?.DEF
         let myMr = entity!.componentForClass(BasicProperty)?.MR
+        let shield = entity!.componentForClass(BasicProperty)?.shield
         let reducePhy = 100/(100 + myDef!)
         let reduceSpell = 100/(100 + myMr!)
         
@@ -33,12 +34,22 @@ class DamageComponent: GKComponent{
             switch k {
             case "normal":
                 if random >= Int(myDodge!*100){
-                    myHP = myHP! - (v*reducePhy)
+                    let damage = v - shield!
+                    if damage > 0 {
+                        myHP = myHP! - (damage*reducePhy)
+                    }else if damage <= 0{
+                        entity!.componentForClass(BasicProperty)?.shield! -= v
+                    }
                 }
                 break
             case "critical":
                 if random >= Int(myDodge!*100){
-                    myHP = myHP! - (v*reducePhy)
+                    let damage = v - shield!
+                    if damage > 0 {
+                        myHP = myHP! - (damage*reducePhy)
+                    }else if damage <= 0{
+                        entity!.componentForClass(BasicProperty)?.shield! -= v
+                    }
                 }
                 break
             case "spell":

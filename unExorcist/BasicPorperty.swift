@@ -91,7 +91,7 @@ class BasicProperty: GKComponent {
         self.spellCriticalDamage = propertyDic(id).valueForKey("spellCriticalDamage") as! Double
         self.dodge = propertyDic(id).valueForKey("dodge") as! Double
         self.strikeSpeed = propertyDic(id).valueForKey("strikeSpeed") as! Double
-        self.shield = propertyDic(id).valueForKey("shield") as! Double
+        self.shield = 0
         self.powerRank = propertyDic(id).valueForKey("powerRank") as! Int
         self.threaten = propertyDic(id).valueForKey("threaten") as! Double
         self.assist = propertyDic(id).valueForKey("assist") as! Double

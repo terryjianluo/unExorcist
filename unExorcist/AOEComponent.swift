@@ -8,8 +8,16 @@
 
 import Foundation
 import GameplayKit
+import UIKit
 
 class AOEComponent: GKComponent{
     
+    var point:CGPoint!
+    var target:[HeroEntity]!
     
+    init(targets:[HeroEntity],centerPoint:CGPoint) {
+        super.init()
+        point = centerPoint
+        target = targets
+    }
 }

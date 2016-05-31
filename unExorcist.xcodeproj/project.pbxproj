@@ -10,6 +10,18 @@
 		181B43A41CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
 		181B43A51CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
 		181B43A61CC8CDEA002C3FCD /* GameReadyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */; };
+		181F56F61CFC33530078933C /* SkillEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F51CFC33520078933C /* SkillEntity.swift */; };
+		181F56F71CFC33570078933C /* SkillEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F51CFC33520078933C /* SkillEntity.swift */; };
+		181F56F81CFC33570078933C /* SkillEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F51CFC33520078933C /* SkillEntity.swift */; };
+		181F56FA1CFC410D0078933C /* BuffComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F91CFC410D0078933C /* BuffComponent.swift */; };
+		181F56FB1CFC410D0078933C /* BuffComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F91CFC410D0078933C /* BuffComponent.swift */; };
+		181F56FC1CFC410D0078933C /* BuffComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56F91CFC410D0078933C /* BuffComponent.swift */; };
+		181F56FE1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
+		181F56FF1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
+		181F57001CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
+		181F57021CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
+		181F57031CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
+		181F57041CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
 		1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
 		1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6391BAE8B9100D724B2 /* Main.storyboard */; };
@@ -173,6 +185,10 @@
 /* Begin PBXFileReference section */
 		181B43A11CC8A47F002C3FCD /* Plan.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Plan.rtf; sourceTree = "<group>"; };
 		181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameReadyState.swift; sourceTree = "<group>"; };
+		181F56F51CFC33520078933C /* SkillEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillEntity.swift; sourceTree = "<group>"; };
+		181F56F91CFC410D0078933C /* BuffComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffComponent.swift; sourceTree = "<group>"; };
+		181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillAttackComponent.swift; sourceTree = "<group>"; };
+		181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillTimeCountComponent.swift; sourceTree = "<group>"; };
 		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +438,7 @@
 				1890F4E61CAB7C420081BEE5 /* EntityManager.swift */,
 				1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */,
 				188ACD891CBF8FC900865E0F /* EffectEntity.swift */,
+				181F56F51CFC33520078933C /* SkillEntity.swift */,
 				188ACD821CB7A39D00865E0F /* Agent */,
 				1890F4F61CAE32C70081BEE5 /* Component */,
 			);
@@ -446,7 +463,10 @@
 				1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */,
 				1890F4D61CAA2E310081BEE5 /* BasicNode.swift */,
 				18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */,
+				181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */,
+				181F56F91CFC410D0078933C /* BuffComponent.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
+				181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
 			name = Component;
@@ -664,12 +684,14 @@
 				1890F4BA1CA8D7920081BEE5 /* HeroEntity.swift in Sources */,
 				184F112F1C5DA9F900D584EB /* RealmData.swift in Sources */,
 				18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */,
+				181F56FA1CFC410D0078933C /* BuffComponent.swift in Sources */,
 				184F112D1C5DA91500D584EB /* CSV.swift in Sources */,
 				1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */,
 				1890F4DF1CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				181B43A41CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */,
 				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
+				181F57021CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
 				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
 				18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */,
 				18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */,
@@ -677,6 +699,8 @@
 				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
+				181F56FE1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
+				181F56F61CFC33530078933C /* SkillEntity.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
 				183A1DDD1CE9B64400E47267 /* GameConfigScene.swift in Sources */,
 				188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */,
@@ -695,7 +719,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F56FB1CFC410D0078933C /* BuffComponent.swift in Sources */,
 				18B7034A1CBFD64700B5EAFF /* GameViewController.swift in Sources */,
+				181F57031CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
 				1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				18B703481CBFD64300B5EAFF /* GameScene.swift in Sources */,
 				18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */,
@@ -703,12 +729,14 @@
 				18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */,
 				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				181B43A51CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
+				181F56F71CFC33570078933C /* SkillEntity.swift in Sources */,
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
 				18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */,
 				18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */,
 				18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				181F56FF1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
 				18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
@@ -730,7 +758,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F56FC1CFC410D0078933C /* BuffComponent.swift in Sources */,
 				18B7034B1CBFD64800B5EAFF /* GameViewController.swift in Sources */,
+				181F57041CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
 				1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				18B703491CBFD64400B5EAFF /* GameScene.swift in Sources */,
 				18B703531CC36F3100B5EAFF /* CSV.swift in Sources */,
@@ -738,12 +768,14 @@
 				18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */,
 				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				181B43A61CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
+				181F56F81CFC33570078933C /* SkillEntity.swift in Sources */,
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
 				18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */,
 				18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */,
 				18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				181F57001CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
 				18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,

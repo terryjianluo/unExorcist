@@ -82,7 +82,7 @@ class GameReadyState:GKState {
         let countNumberChangeGo = SKAction.runBlock({
             countNumber.text = "Go"
         })
-        countNumber.runAction(SKAction.sequence([countActionDown,countNumberChange3,countActionUp,countActionDown,countNumberChange2,countActionUp,countActionDown,countNumberChange1,countActionUp,countActionDown,countNumberChangeGo,countActionUp,SKAction.runBlock({
+        countNumber.runAction(SKAction.sequence([countActionDown,countNumberChange3,countActionUp,countActionDown,countNumberChange2,countActionUp,countActionDown,countNumberChange1,countActionUp,countActionDown,countNumberChangeGo,SKAction.runBlock({
             countNumber.removeFromParent()
             self.stateMachine?.enterState(GamePlayState)
         })]))
@@ -107,26 +107,29 @@ class GamePlayState:GKState {
             self.stateMachine?.enterState(GameOverState)
         }else{
         for entity in entityManager.teammates{
-            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
-            entity.componentForClass(BasicProperty)?.updateTime += seconds
+            
             if entity.componentForClass(BasicProperty)?.HP <= 0{
                 entityManager.removeTeamMate(entity)
+            }else if entity.componentForClass(BasicProperty)?.updateTime == 0 {
+                entity.componentForClass(AttackComponent)?.damage()
             }else{
                 //entity attack method
                 let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
                 if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
                     entity.componentForClass(AttackComponent)?.damage()
                     entity.componentForClass(BasicProperty)?.updateTime = 0
-                    
                 }
             }
+            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(BasicProperty)?.updateTime += seconds
         }
         
         for entity in entityManager.enemys{
-            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
-            entity.componentForClass(BasicProperty)?.updateTime += seconds
+            
             if entity.componentForClass(BasicProperty)?.HP <= 0{
                 entityManager.removeEnemy(entity)
+            }else if entity.componentForClass(BasicProperty)?.updateTime == 0 {
+                entity.componentForClass(AttackComponent)?.damage()
             }else{
                 //entity attack method
                 let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
@@ -135,6 +138,8 @@ class GamePlayState:GKState {
                     entity.componentForClass(BasicProperty)?.updateTime = 0
                 }
                 }
+            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(BasicProperty)?.updateTime += seconds
             }
         }       
     }

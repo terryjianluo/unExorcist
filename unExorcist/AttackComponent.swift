@@ -14,21 +14,6 @@ class AttackComponent: GKComponent{
     
     var lastAtk = NSTimeInterval(0)
     
-    /*
-    init(selfEntity:HeroEntity){
-        super.init()
-        myEntity = selfEntity
-    }*/
-    
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        super.updateWithDeltaTime(seconds)
-        let strikeSpeed = entity!.componentForClass(BasicProperty)?.strikeSpeed
-        if (CACurrentMediaTime() - lastAtk > strikeSpeed) {
-            lastAtk = CACurrentMediaTime()
-            damage()
-        }
-    }
-    
     func damageOutput() -> [String:Double]{
         var damage:[String:Double]!
         let critical = Int((entity!.componentForClass(BasicProperty)?.critical)! * 100)

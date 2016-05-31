@@ -22,7 +22,7 @@ class TargetComponent:GKComponent{
         entityManager = manager
         myEntity.target = targetChoose()
     }
-    
+    //需增加切换目标重置攻击计时
     func targetChoose() -> HeroEntity{
         var target:HeroEntity!
         // 增加判断空值的逻辑
@@ -49,7 +49,11 @@ class TargetComponent:GKComponent{
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        myEntity.target = targetChoose()
+        if myEntity.target != targetChoose() {
+            myEntity.componentForClass(BasicProperty)?.updateTime = 0
+            myEntity.target = targetChoose()
+        }
+        
     }
     
     

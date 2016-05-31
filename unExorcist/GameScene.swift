@@ -45,13 +45,8 @@ class GameScene: SKScene{
             component.updateWithDeltaTime(currentTime)
         }
         
-        //teammate[0].componentForClass(EffectContainer)?.updateWithDeltaTime(0.1)
-        
     }
     
-    func heroEntityInit(heroDic:NSDictionary){
-    
-    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
