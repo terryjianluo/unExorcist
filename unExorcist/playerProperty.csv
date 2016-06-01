@@ -1,3 +1,2 @@
-id,name,level,HP,MP,ATK,DEF,MR,SP,HPup,MPup,ATKup,DEFup,speed,range,critical,spellCritical,hitPenetration,spellPenetration,hitRating,spellHitRating,criticalDamage,spellCriticalDamage,dodge,strikeSpeed,shield,threaten,assist,phyle,career,powerRank
-P0001,leishen,1,1200,400,55,23,10,0,120,20,3.4,4.1,50,300,0.15,0,0,0,0.75,0.75,1.5,1.5,0.05,1.5,0,0,0,7,1,100
-
+"id","name","level","HP","MP","ATK","DEF","MR","SP","HPup","MPup","ATKup","DEFup","speed","range","critical","spellCritical","hitPenetration","spellPenetration","hitRating","spellHitRating","criticalDamage","spellCriticalDamage","dodge","strikeSpeed","shield","threaten","assist","phyle","career","powerRank"
+"P0001","leishen","1","1200","400","55","23","10","0","120","20","3.4","4.1","50","300","0.15","0","0","0","0.75","0.75","1.5","1.5","0.05","1.5","0","0","0","7","1","100"

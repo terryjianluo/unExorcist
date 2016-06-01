@@ -30,3 +30,15 @@ enum Phyle:Int {
     case unknown = 10
     case machine = 11
 }
+
+enum SkillType:Double {
+    case buff = 1
+    case aoe = 2
+    case control = 3
+    case heal = 4
+    case dot = 5
+    case hot = 6
+    case halo = 7
+    case damage = 8
+    case move = 9
+}

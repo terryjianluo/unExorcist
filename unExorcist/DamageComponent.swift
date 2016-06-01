@@ -21,19 +21,19 @@ class DamageComponent: GKComponent{
     
     func damage(damageInput:[String:Double]){
         var myHP = entity!.componentForClass(BasicProperty)?.HP
-        let myDodge = entity!.componentForClass(BasicProperty)?.dodge
-        let myDef = entity!.componentForClass(BasicProperty)?.DEF
-        let myMr = entity!.componentForClass(BasicProperty)?.MR
+        let myDodge = (entity!.componentForClass(BasicProperty)?.dodge)! + (entity!.componentForClass(BuffContainer)?.dodge)!
+        let myDef = (entity!.componentForClass(BasicProperty)?.DEF)! + (entity!.componentForClass(BuffContainer)?.DEF)! - damageInput["penetration"]!
+        let myMr = (entity!.componentForClass(BasicProperty)?.MR)! + (entity!.componentForClass(BuffContainer)?.MR)! - damageInput["penetration"]!
         let shield = entity!.componentForClass(BasicProperty)?.shield
-        let reducePhy = 100/(100 + myDef!)
-        let reduceSpell = 100/(100 + myMr!)
+        let reducePhy = 100/(100 + myDef)
+        let reduceSpell = 100/(100 + myMr)
         
         let random = GKRandomDistribution(randomSource: GKMersenneTwisterRandomSource(), lowestValue: 1, highestValue: 100).nextInt()
         
         for (k,v) in damageInput{
             switch k {
             case "normal":
-                if random >= Int(myDodge!*100){
+                if random >= Int(myDodge*100){
                     let damage = v - shield!
                     if damage > 0 {
                         myHP = myHP! - (damage*reducePhy)
@@ -43,7 +43,7 @@ class DamageComponent: GKComponent{
                 }
                 break
             case "critical":
-                if random >= Int(myDodge!*100){
+                if random >= Int(myDodge*100){
                     let damage = v - shield!
                     if damage > 0 {
                         myHP = myHP! - (damage*reducePhy)

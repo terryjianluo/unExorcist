@@ -15,43 +15,29 @@ class SkillEntity:GKEntity{
     var name:String!
     var skillDescription: String!
     var caster:HeroEntity!
+    var targetHero:HeroEntity!
     var skillMode:String!
     var timeCount = NSTimeInterval(0)
     
     init(cast:HeroEntity,config:[String:String],targets:[HeroEntity]) {
         super.init()
+        //test dic
+        let dic = ["test":Double(0)]
+        
         caster = cast
         name = config["name"]
         skillDescription = config["description"]
         skillMode = config["mode"]
-        let time = SkillTime()
-        addComponent(time)
         
-        //根据类型选择来加载不同的组件
-        let skillType = config["type"]!
-        switch skillType {
-            case "buff":
-            break
-            case "damage":
-                
-            break
-            case "aoe":
-                //let aoe = AOEComponent(targets: targets)
-                //addComponent(aoe)
-            break
-            case "heal":
-            break
-            case "support":
-            break
-            case "halo":
-            break
-            case "cantrol":
-            break
-            case "transform":
-            break
-            default:
-            break
-        }
+        let node = BasicNode(code: "Smoke")
+        addComponent(node)
+        
+        let time = SkillTimeCountComponent(config:dic)
+        addComponent(time)
+        let buff = BuffComponent()
+        addComponent(buff)
+        
+       
     }
     
 

@@ -114,7 +114,7 @@ class GamePlayState:GKState {
                 entity.componentForClass(AttackComponent)?.damage()
             }else{
                 //entity attack method
-                let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
+                let strikeSpeed = ((entity.componentForClass(BasicProperty)?.strikeSpeed)! + (entity.componentForClass(BuffContainer)?.strikeSpeed)!) as NSTimeInterval
                 if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
                     entity.componentForClass(AttackComponent)?.damage()
                     entity.componentForClass(BasicProperty)?.updateTime = 0

@@ -21,6 +21,8 @@ class HeroEntity:GKEntity{
         let propertyComponent = BasicProperty(id: id,team:team)
         addComponent(spriteComponent)
         addComponent(propertyComponent)
+        let buffContainer = BuffContainer(initNum: 0)
+        addComponent(buffContainer)
         let effect = EffectContainer()
         addComponent(effect)
         let attackComponent = AttackComponent()

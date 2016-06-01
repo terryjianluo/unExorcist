@@ -22,6 +22,9 @@
 		181F57021CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
 		181F57031CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
 		181F57041CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
+		181F57061CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
+		181F57071CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
+		181F57081CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
 		1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
 		1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6391BAE8B9100D724B2 /* Main.storyboard */; };
@@ -189,6 +192,7 @@
 		181F56F91CFC410D0078933C /* BuffComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffComponent.swift; sourceTree = "<group>"; };
 		181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillAttackComponent.swift; sourceTree = "<group>"; };
 		181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillTimeCountComponent.swift; sourceTree = "<group>"; };
+		181F57051CFEB6440078933C /* BuffContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffContainer.swift; sourceTree = "<group>"; };
 		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +466,7 @@
 				1890F4F71CAE44FF0081BEE5 /* DamageComponent.swift */,
 				1890F4CE1CA931910081BEE5 /* BasicPorperty.swift */,
 				1890F4D61CAA2E310081BEE5 /* BasicNode.swift */,
+				181F57051CFEB6440078933C /* BuffContainer.swift */,
 				18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */,
 				181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */,
 				181F56F91CFC410D0078933C /* BuffComponent.swift */,
@@ -701,6 +706,7 @@
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				181F56FE1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
 				181F56F61CFC33530078933C /* SkillEntity.swift in Sources */,
+				181F57061CFEB6440078933C /* BuffContainer.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
 				183A1DDD1CE9B64400E47267 /* GameConfigScene.swift in Sources */,
 				188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */,
@@ -737,6 +743,7 @@
 				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F56FF1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
+				181F57071CFEB6440078933C /* BuffContainer.swift in Sources */,
 				18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E01CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
@@ -776,6 +783,7 @@
 				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F57001CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
+				181F57081CFEB6440078933C /* BuffContainer.swift in Sources */,
 				18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */,
 				1890F4E11CAA33CB0081BEE5 /* GameRules.swift in Sources */,
 				1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
