@@ -31,6 +31,9 @@ class HeroEntity:GKEntity{
         addComponent(damageComponent)
         addComponent(agent)
         target = self
+        
+        let skillCast = SkillManager(id: id)
+        addComponent(skillCast)
     }
     
 }

@@ -12,102 +12,116 @@ import SpriteKit
 
 class BuffComponent: GKComponent{
     
-    func buff(config:[String:Double]){
-        let hero = (entity as! SkillEntity).targetHero
-        if let node = (entity as! SkillEntity).componentForClass(BasicNode)?.node {
-            node.position = CGPoint(x: 0, y: 42)
-            (entity as! SkillEntity).caster.componentForClass(BasicNode)?.node.addChild(node)
+    
+    var buffConfig:[String:Double]!
+    var targetEntity:HeroEntity!
+    
+    init(id:String,target:HeroEntity) {
+        super.init()
+        buffConfig = skillConfigDic(id)
+        targetEntity = target
+    }
+    
+    func skillConfigDic(id:String) -> [String:Double] {
+        let dic = CoreDataManager().spellConfig(id, dataModel: SkillConfigration.self)
+        var dic1 = ["index":Double(0)]
+        for (k,v) in dic {
+            if v is Double  {
+                dic1[k as! String] = v as? Double
+            }
         }
-        for (k,v) in config{
+        return dic1
+    }
+    
+    func buff(){
+        for (k,v) in buffConfig{
             var delta = Double(0)
             delta += v
             switch k {
             case "maxHP":
-                hero.componentForClass(BuffContainer)?.maxHP = delta
+                targetEntity.componentForClass(BuffContainer)?.maxHP = delta
                 break
             case "maxMP":
-                hero.componentForClass(BuffContainer)?.maxMP = delta
+                targetEntity.componentForClass(BuffContainer)?.maxMP = delta
                 break
             case "ATK":
-                hero.componentForClass(BuffContainer)?.ATK = delta
+                targetEntity.componentForClass(BuffContainer)?.ATK = delta
                 break
             case "DEF":
-                hero.componentForClass(BuffContainer)?.DEF = delta
+                targetEntity.componentForClass(BuffContainer)?.DEF = delta
                 break
             case "MR":
-                hero.componentForClass(BuffContainer)?.MR = delta
+                targetEntity.componentForClass(BuffContainer)?.MR = delta
                 break
             case "SP":
-                hero.componentForClass(BuffContainer)?.SP = delta
+                targetEntity.componentForClass(BuffContainer)?.SP = delta
                 break
             case "speed":
-                hero.componentForClass(BuffContainer)?.speed = delta
+                targetEntity.componentForClass(BuffContainer)?.speed = delta
                 break
             case "range":
-                hero.componentForClass(BuffContainer)?.range = delta
+                targetEntity.componentForClass(BuffContainer)?.range = delta
                 break
             case "critical":
-                hero.componentForClass(BuffContainer)?.critical = delta
+                targetEntity.componentForClass(BuffContainer)?.critical = delta
                 break
             case "spellCritical":
-                hero.componentForClass(BuffContainer)?.spellCritical = delta
+                targetEntity.componentForClass(BuffContainer)?.spellCritical = delta
                 break
             case "hitPenetration":
-                hero.componentForClass(BuffContainer)?.hitPenetration = delta
+                targetEntity.componentForClass(BuffContainer)?.hitPenetration = delta
                 break
             case "spellPenetration":
-                hero.componentForClass(BuffContainer)?.spellPenetration = delta
+                targetEntity.componentForClass(BuffContainer)?.spellPenetration = delta
                 break
             case "hitRating":
-                hero.componentForClass(BuffContainer)?.hitRating = delta
+                targetEntity.componentForClass(BuffContainer)?.hitRating = delta
                 break
             case "spellHitRating":
-                hero.componentForClass(BuffContainer)?.spellHitRating = delta
+                targetEntity.componentForClass(BuffContainer)?.spellHitRating = delta
                 break
             case "criticalDamage":
-                hero.componentForClass(BuffContainer)?.criticalDamage = delta
+                targetEntity.componentForClass(BuffContainer)?.criticalDamage = delta
                 break
             case "spellCriticalDamage":
-                hero.componentForClass(BuffContainer)?.spellCriticalDamage = delta
+                targetEntity.componentForClass(BuffContainer)?.spellCriticalDamage = delta
                 break
             case "dodge":
-                hero.componentForClass(BuffContainer)?.dodge = delta
+                targetEntity.componentForClass(BuffContainer)?.dodge = delta
                 break
             case "strikeSpeed":
-                hero.componentForClass(BuffContainer)?.strikeSpeed = delta
+                targetEntity.componentForClass(BuffContainer)?.strikeSpeed = delta
                 break
             default:
                 break
             }
         }
-        
     }
     
     func buffEnd(){
-        let hero = (entity as! SkillEntity).targetHero
-        hero.componentForClass(BuffContainer)?.maxHP = 0
-        hero.componentForClass(BuffContainer)?.maxMP = 0
+        targetEntity.componentForClass(BuffContainer)?.maxHP = 0
+        targetEntity.componentForClass(BuffContainer)?.maxMP = 0
         
-        hero.componentForClass(BuffContainer)?.ATK = 0
-        hero.componentForClass(BuffContainer)?.DEF = 0
-        hero.componentForClass(BuffContainer)?.MR = 0      //魔抗
-        hero.componentForClass(BuffContainer)?.SP = 0     //魔攻
+        targetEntity.componentForClass(BuffContainer)?.ATK = 0
+        targetEntity.componentForClass(BuffContainer)?.DEF = 0
+        targetEntity.componentForClass(BuffContainer)?.MR = 0      //魔抗
+        targetEntity.componentForClass(BuffContainer)?.SP = 0     //魔攻
         
-        hero.componentForClass(BuffContainer)?.speed = 0 //移动速度
-        hero.componentForClass(BuffContainer)?.range = 0 //射程
+        targetEntity.componentForClass(BuffContainer)?.speed = 0 //移动速度
+        targetEntity.componentForClass(BuffContainer)?.range = 0 //射程
         
         
         //辅助属性
-        hero.componentForClass(BuffContainer)?.critical = 0 //物理暴击率
-        hero.componentForClass(BuffContainer)?.spellCritical = 0 //法术暴击率
-        hero.componentForClass(BuffContainer)?.hitPenetration = 0 //物理穿透
-        hero.componentForClass(BuffContainer)?.spellPenetration = 0 //法术穿透
-        hero.componentForClass(BuffContainer)?.hitRating = 0 //物理命中
-        hero.componentForClass(BuffContainer)?.spellHitRating = 0 //法术命中
-        hero.componentForClass(BuffContainer)?.criticalDamage = 0 //物理暴击伤害
-        hero.componentForClass(BuffContainer)?.spellCriticalDamage = 0 //法术暴击伤害
-        hero.componentForClass(BuffContainer)?.dodge = 0 //闪避
-        hero.componentForClass(BuffContainer)?.strikeSpeed = 0 //攻速
+        targetEntity.componentForClass(BuffContainer)?.critical = 0 //物理暴击率
+        targetEntity.componentForClass(BuffContainer)?.spellCritical = 0 //法术暴击率
+        targetEntity.componentForClass(BuffContainer)?.hitPenetration = 0 //物理穿透
+        targetEntity.componentForClass(BuffContainer)?.spellPenetration = 0 //法术穿透
+        targetEntity.componentForClass(BuffContainer)?.hitRating = 0 //物理命中
+        targetEntity.componentForClass(BuffContainer)?.spellHitRating = 0 //法术命中
+        targetEntity.componentForClass(BuffContainer)?.criticalDamage = 0 //物理暴击伤害
+        targetEntity.componentForClass(BuffContainer)?.spellCriticalDamage = 0 //法术暴击伤害
+        targetEntity.componentForClass(BuffContainer)?.dodge = 0 //闪避
+        targetEntity.componentForClass(BuffContainer)?.strikeSpeed = 0 //攻速
         
         (entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
     }

@@ -104,6 +104,7 @@ class BasicProperty: GKComponent {
         self.DEFup = propertyDic(id).valueForKey("DEFup") as! Double
         
         self.team = team
+        
     }
     
     func propertyDic(id:String) -> NSDictionary{

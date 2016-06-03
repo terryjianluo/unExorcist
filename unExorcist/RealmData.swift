@@ -179,6 +179,7 @@ class SkillConfigration: Object {
     dynamic var skillRange = ""
     dynamic var aoeRange = ""
     dynamic var move = ""
+    dynamic var direction = ""
     dynamic var maxHP = ""
     dynamic var maxMP = ""
     dynamic var ATK = ""
@@ -197,6 +198,7 @@ class SkillConfigration: Object {
     dynamic var spellCriticalDamage = ""
     dynamic var dodge = ""
     dynamic var strikeSpeed = ""
+    dynamic var shield = ""
     dynamic var control = ""
     dynamic var controlTime = ""
 

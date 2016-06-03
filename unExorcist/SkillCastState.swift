@@ -10,13 +10,14 @@ import Foundation
 import GameplayKit
 import SpriteKit
 
-class SkillBeginState:GKState{
+class SkillReadyState:GKState{
     
     override func didEnterWithPreviousState(previousState: GKState?) {
         
     }
     
 }
+
 
 class NormalSkillState:GKState{
     
@@ -34,6 +35,13 @@ class CircleSkillState:GKState{
     
 }
 
+class SkillCooldowntate:GKState{
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        
+    }
+    
+}
 
 class SkillEndState:GKState{
     

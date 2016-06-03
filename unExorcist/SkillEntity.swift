@@ -12,35 +12,29 @@ import GameplayKit
 
 class SkillEntity:GKEntity{
     
-    var name:String!
-    var skillDescription: String!
-    var caster:HeroEntity!
-    var targetHero:HeroEntity!
-    //var skillMode:String!
-    var timeCount = NSTimeInterval(0)
+    //ready->normal->circle->end->cooldown , 增加初始化skillentity
+    let skillCastStateMachine = GKStateMachine(states: [SkillReadyState(),NormalSkillState(),CircleSkillState(),SkillCooldowntate(),SkillEndState()])
+    var casterEntity:HeroEntity!
     
-    init(cast:HeroEntity,config:[String:String],target:HeroEntity) {
+    var config:NSDictionary!
+    var configData:[String:Double]!
+    
+    init(id:String,caster:HeroEntity) {
         super.init()
-        //test dic
-        let dic = ["test":Double(0)]
-        targetHero = target
-        caster = cast
-        name = config["name"]
-        skillDescription = config["description"]
-        //skillMode = config["mode"]
+        casterEntity = caster
         
         let node = BasicNode(code: "Smoke")
         addComponent(node)
         
-        let buff = BuffComponent()
-        addComponent(buff)
+        //增加多种配置
+        config = CoreDataManager().spellConfig(id, dataModel: SkillConfigration.self)
+        for (k,v) in config {
+            if v is Double  {
+                configData[k as! String] = v as? Double
+            }
+        }
         
-        let move = Movement(targetEntity: targetHero)
-        addComponent(move)
-        
-        let castSkill = SkillCastComponent(config: dic)
-        addComponent(castSkill)
-       
+        skillCastStateMachine.enterState(SkillReadyState)
     }
     
 

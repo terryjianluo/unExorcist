@@ -299,9 +299,195 @@ class CoreDataManager{
         let data = realm.objects(dataModel).filter("id == %@",key)
         let cache = NSMutableDictionary(dictionary: ["id":key])
         
+        let name = data.valueForKey("name") as! [String]
+        let name1 = aesDecrypt(name[0])
+        cache.setValue(name1, forKey: "name")
         
+        let skillDescription = data.valueForKey("skillDescription") as! [String]
+        let skillDescription1 = aesDecrypt(skillDescription[0])
+        cache.setValue(skillDescription1, forKey: "skillDescription")
         
+        let team = data.valueForKey("team") as! [String]
+        let team1 = aesDecrypt(team[0])
+        cache.setValue(team1, forKey: "team")
         
+        let coolDown = data.valueForKey("coolDown") as! [String]
+        let coolDown1 = aesDecrypt(coolDown[0])
+        let coolDown2 = NSTimeInterval(coolDown1)
+        cache.setValue(coolDown2, forKey: "coolDown")
+        
+        let manaCost = data.valueForKey("manaCost") as! [String]
+        let manaCost1 = aesDecrypt(manaCost[0])
+        let manaCost2 = Double(manaCost1)
+        cache.setValue(manaCost2, forKey: "manaCost")
+        
+        let hitDamage = data.valueForKey("hitDamage") as! [String]
+        let hitDamage1 = aesDecrypt(hitDamage[0])
+        let hitDamage2 = Double(hitDamage1)
+        cache.setValue(hitDamage2, forKey: "hitDamage")
+        
+        let hitDamageUp = data.valueForKey("hitDamageUp") as! [String]
+        let hitDamageUp1 = aesDecrypt(hitDamageUp[0])
+        let hitDamageUp2 = Double(hitDamageUp1)
+        cache.setValue(hitDamageUp2, forKey: "hitDamageUp")
+        
+        let spDamage = data.valueForKey("spDamage") as! [String]
+        let spDamage1 = aesDecrypt(spDamage[0])
+        let spDamage2 = Double(spDamage1)
+        cache.setValue(spDamage2, forKey: "spDamage")
+        
+        let spDamageUp = data.valueForKey("spDamageUp") as! [String]
+        let spDamageUp1 = aesDecrypt(spDamageUp[0])
+        let spDamageUp2 = Double(spDamageUp1)
+        cache.setValue(spDamageUp2, forKey: "spDamageUp")
+        
+        let sumTime = data.valueForKey("sumTime") as! [String]
+        let sumTime1 = aesDecrypt(sumTime[0])
+        let sumTime2 = NSTimeInterval(sumTime1)
+        cache.setValue(sumTime2, forKey: "coolDown")
+        
+        let timePerEffect = data.valueForKey("timePerEffect") as! [String]
+        let timePerEffect1 = aesDecrypt(timePerEffect[0])
+        let timePerEffect2 = NSTimeInterval(timePerEffect1)
+        cache.setValue(timePerEffect2, forKey: "timePerEffect")
+        
+        let sumPerEffect = data.valueForKey("sumPerEffect") as! [String]
+        let sumPerEffect1 = aesDecrypt(sumPerEffect[0])
+        let sumPerEffect2 = NSTimeInterval(sumPerEffect1)
+        cache.setValue(sumPerEffect2, forKey: "sumPerEffect")
+        
+        let spDamagePerEffect = data.valueForKey("spDamagePerEffect") as! [String]
+        let spDamagePerEffect1 = aesDecrypt(spDamagePerEffect[0])
+        let spDamagePerEffect2 = Double(spDamagePerEffect1)
+        cache.setValue(spDamagePerEffect2, forKey: "spDamagePerEffect")
+        
+        let hitDamagePerEffect = data.valueForKey("hitDamagePerEffect") as! [String]
+        let hitDamagePerEffect1 = aesDecrypt(hitDamagePerEffect[0])
+        let hitDamagePerEffect2 = Double(hitDamagePerEffect1)
+        cache.setValue(hitDamagePerEffect2, forKey: "hitDamagePerEffect")
+        
+        let skillRange = data.valueForKey("skillRange") as! [String]
+        let skillRange1 = aesDecrypt(skillRange[0])
+        let skillRange2 = Double(skillRange1)
+        cache.setValue(skillRange2, forKey: "skillRange")
+        
+        let aoeRange = data.valueForKey("aoeRange") as! [String]
+        let aoeRange1 = aesDecrypt(aoeRange[0])
+        let aoeRange2 = Double(aoeRange1)
+        cache.setValue(aoeRange2, forKey: "aoeRange")
+        
+        let move = data.valueForKey("move") as! [String]
+        let move1 = aesDecrypt(move[0])
+        let move2 = Double(move1)
+        cache.setValue(move2, forKey: "move")
+        
+        let direction = data.valueForKey("direction") as! [String]
+        let direction1 = aesDecrypt(direction[0])
+        cache.setValue(direction1, forKey: "direction")
+        
+        let maxHP = data.valueForKey("maxHP") as! [String]
+        let maxHP1 = aesDecrypt(maxHP[0])
+        let maxHP2 = Double(maxHP1)
+        cache.setValue(maxHP2, forKey: "maxHP")
+        
+        let maxMP = data.valueForKey("maxMP") as! [String]
+        let maxMP1 = aesDecrypt(maxMP[0])
+        let maxMP2 = Double(maxMP1)
+        cache.setValue(maxMP2, forKey: "maxHP")
+        
+        let ATK = data.valueForKey("ATK") as! [String]
+        let ATK1 = aesDecrypt(ATK[0])
+        let ATK2 = Double(ATK1)
+        cache.setValue(ATK2, forKey: "ATK")
+        
+        let DEF = data.valueForKey("DEF") as! [String]
+        let DEF1 = aesDecrypt(DEF[0])
+        let DEF2 = Double(DEF1)
+        cache.setValue(DEF2, forKey: "DEF")
+        
+        let MR = data.valueForKey("MR") as! [String]
+        let MR1 = aesDecrypt(MR[0])
+        let MR2 = Double(MR1)
+        cache.setValue(MR2, forKey: "MR")
+        
+        let SP = data.valueForKey("SP") as! [String]
+        let SP1 = aesDecrypt(SP[0])
+        let SP2 = Double(SP1)
+        cache.setValue(SP2, forKey: "SP")
+        
+        let speed = data.valueForKey("speed") as! [String]
+        let speed1 = aesDecrypt(speed[0])
+        let speed2 = Double(speed1)
+        cache.setValue(speed2, forKey: "speed")
+        
+        let range = data.valueForKey("range") as! [String]
+        let range1 = aesDecrypt(range[0])
+        let range2 = Double(range1)
+        cache.setValue(range2, forKey: "range")
+        
+        let critical = data.valueForKey("critical") as! [String]
+        let critical1 = aesDecrypt(critical[0])
+        let critical2 = Double(critical1)
+        cache.setValue(critical2, forKey: "critical")
+        
+        let spellCritical = data.valueForKey("spellCritical") as! [String]
+        let spellCritical1 = aesDecrypt(spellCritical[0])
+        let spellCritical2 = Double(spellCritical1)
+        cache.setValue(spellCritical2, forKey: "spellCritical")
+        
+        let hitPenetration = data.valueForKey("hitPenetration") as! [String]
+        let hitPenetration1 = aesDecrypt(hitPenetration[0])
+        let hitPenetration2 = Double(hitPenetration1)
+        cache.setValue(hitPenetration2, forKey: "hitPenetration")
+        
+        let spellPenetration = data.valueForKey("spellPenetration") as! [String]
+        let spellPenetration1 = aesDecrypt(spellPenetration[0])
+        let spellPenetration2 = Double(spellPenetration1)
+        cache.setValue(spellPenetration2, forKey: "spellPenetration")
+        
+        let hitRating = data.valueForKey("hitRating") as! [String]
+        let hitRating1 = aesDecrypt(hitRating[0])
+        let hitRating2 = Double(hitRating1)
+        cache.setValue(hitRating2, forKey: "hitRating")
+        
+        let spellHitRating = data.valueForKey("spellHitRating") as! [String]
+        let spellHitRating1 = aesDecrypt(spellHitRating[0])
+        let spellHitRating2 = Double(spellHitRating1)
+        cache.setValue(spellHitRating2, forKey: "spellHitRating")
+        
+        let criticalDamage = data.valueForKey("criticalDamage") as! [String]
+        let criticalDamage1 = aesDecrypt(criticalDamage[0])
+        let criticalDamage2 = Double(criticalDamage1)
+        cache.setValue(criticalDamage2, forKey: "criticalDamage")
+        
+        let spellCriticalDamage = data.valueForKey("spellCriticalDamage") as! [String]
+        let spellCriticalDamage1 = aesDecrypt(spellCriticalDamage[0])
+        let spellCriticalDamage2 = Double(spellCriticalDamage1)
+        cache.setValue(spellCriticalDamage2, forKey: "spellCriticalDamage")
+        
+        let dodge = data.valueForKey("dodge") as! [String]
+        let dodge1 = aesDecrypt(dodge[0])
+        let dodge2 = Double(dodge1)
+        cache.setValue(dodge2, forKey: "dodge")
+        
+        let strikeSpeed = data.valueForKey("strikeSpeed") as! [String]
+        let strikeSpeed1 = aesDecrypt(strikeSpeed[0])
+        let strikeSpeed2 = Double(strikeSpeed1)
+        cache.setValue(strikeSpeed2, forKey: "strikeSpeed")
+        
+        let shield = data.valueForKey("shield") as! [String]
+        let shield1 = aesDecrypt(shield[0])
+        let shield2 = Double(shield1)
+        cache.setValue(shield2, forKey: "shield")
+        
+        let control = data.valueForKey("control") as! [String]
+        let control1 = aesDecrypt(control[0])
+        cache.setValue(control1, forKey: "control")
+        
+        let controlTime = data.valueForKey("controlTime") as! [String]
+        let controlTime1 = aesDecrypt(controlTime[0])
+        let controlTime2 = NSTimeInterval(controlTime1)
+        cache.setValue(controlTime2, forKey: "coolDown")
         
         let dic = cache as NSDictionary
         return dic
