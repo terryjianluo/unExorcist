@@ -1,5 +1,0 @@
-id,name,intro,quest,npc,property,trigger,passway
-s0001CN,贝克街1,车来人往1,test,null,null,null,s0002;s0003;s0004
-s0002CN,贝克街2,车来人往2,test,null,null,null,null
-s0003CN,贝克街3,车来人往3,test,null,null,null,null
-s0004CN,贝克街4,车来人往4,test,null,null,null,null

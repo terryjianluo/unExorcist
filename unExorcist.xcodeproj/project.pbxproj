@@ -19,12 +19,23 @@
 		181F56FE1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
 		181F56FF1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
 		181F57001CFC42FD0078933C /* SkillAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */; };
-		181F57021CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
-		181F57031CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
-		181F57041CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */; };
+		181F57021CFD7B5B0078933C /* SkillCastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillCastComponent.swift */; };
+		181F57031CFD7B5B0078933C /* SkillCastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillCastComponent.swift */; };
+		181F57041CFD7B5B0078933C /* SkillCastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57011CFD7B5B0078933C /* SkillCastComponent.swift */; };
 		181F57061CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
 		181F57071CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
 		181F57081CFEB6440078933C /* BuffContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57051CFEB6440078933C /* BuffContainer.swift */; };
+		181F570A1CFFC5D30078933C /* SkillCastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57091CFFC5D30078933C /* SkillCastState.swift */; };
+		181F570B1CFFC5D30078933C /* SkillCastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57091CFFC5D30078933C /* SkillCastState.swift */; };
+		181F570C1CFFC5D30078933C /* SkillCastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F57091CFFC5D30078933C /* SkillCastState.swift */; };
+		181F57161D012D150078933C /* skillConfig.csv in Resources */ = {isa = PBXBuildFile; fileRef = 181F57151D012D150078933C /* skillConfig.csv */; };
+		181F57171D012D150078933C /* skillConfig.csv in Resources */ = {isa = PBXBuildFile; fileRef = 181F57151D012D150078933C /* skillConfig.csv */; };
+		181F57181D012D150078933C /* skillConfig.csv in Resources */ = {isa = PBXBuildFile; fileRef = 181F57151D012D150078933C /* skillConfig.csv */; };
+		181F571A1D0131C10078933C /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F57191D0131C10078933C /* CryptoSwift.framework */; };
+		181F571B1D0131C10078933C /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F57191D0131C10078933C /* CryptoSwift.framework */; };
+		181F571C1D0131C10078933C /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F57191D0131C10078933C /* CryptoSwift.framework */; };
+		181F571D1D0131DB0078933C /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F57191D0131C10078933C /* CryptoSwift.framework */; };
+		181F571E1D0131DB0078933C /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 181F57191D0131C10078933C /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		1826F6381BAE8B9100D724B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6371BAE8B9100D724B2 /* ViewController.swift */; };
 		1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6391BAE8B9100D724B2 /* Main.storyboard */; };
@@ -105,7 +116,6 @@
 		1890F5061CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
 		1890F5071CB35BBA0081BEE5 /* TargetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F5041CB35BB90081BEE5 /* TargetComponent.swift */; };
 		18A69A7D1C760C0100522059 /* save.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18A69A7C1C760C0100522059 /* save.csv */; };
-		18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18ACB6921C5DDB220023696A /* mapDataCN.csv */; };
 		18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
 		18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
 		18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */; };
@@ -127,20 +137,11 @@
 		18B703511CBFD69E00B5EAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6351BAE8B9100D724B2 /* AppDelegate.swift */; };
 		18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
 		18B703531CC36F3100B5EAFF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F112C1C5DA91500D584EB /* CSV.swift */; };
-		18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
-		18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
-		18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
-		18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
-		18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
-		18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
 		18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
 		18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
 		18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
 		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
 		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
-		18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F587361BDBBD760094D2E1 /* Base64codeFunc.m */; };
-		18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC11C049F7F00902E9C /* AesEncode.m */; };
-		18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2FC41C04A9A300902E9C /* stringAes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				181F571E1D0131DB0078933C /* CryptoSwift.framework in Embed Frameworks */,
 				1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */,
 				1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */,
 			);
@@ -191,8 +193,11 @@
 		181F56F51CFC33520078933C /* SkillEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillEntity.swift; sourceTree = "<group>"; };
 		181F56F91CFC410D0078933C /* BuffComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffComponent.swift; sourceTree = "<group>"; };
 		181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillAttackComponent.swift; sourceTree = "<group>"; };
-		181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillTimeCountComponent.swift; sourceTree = "<group>"; };
+		181F57011CFD7B5B0078933C /* SkillCastComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCastComponent.swift; sourceTree = "<group>"; };
 		181F57051CFEB6440078933C /* BuffContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffContainer.swift; sourceTree = "<group>"; };
+		181F57091CFFC5D30078933C /* SkillCastState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCastState.swift; sourceTree = "<group>"; };
+		181F57151D012D150078933C /* skillConfig.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skillConfig.csv; sourceTree = "<group>"; };
+		181F57191D0131C10078933C /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		1826F6321BAE8B9100D724B2 /* unExorcist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unExorcist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6351BAE8B9100D724B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1826F6371BAE8B9100D724B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -245,18 +250,11 @@
 		1890F5001CAE79640081BEE5 /* Emitter.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Emitter.xcassets; sourceTree = "<group>"; };
 		1890F5041CB35BB90081BEE5 /* TargetComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetComponent.swift; sourceTree = "<group>"; };
 		18A69A7C1C760C0100522059 /* save.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = save.csv; sourceTree = "<group>"; };
-		18ACB6921C5DDB220023696A /* mapDataCN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapDataCN.csv; sourceTree = "<group>"; };
 		18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOEComponent.swift; sourceTree = "<group>"; };
 		18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectContainer.swift; sourceTree = "<group>"; };
 		18F587301BDBBD320094D2E1 /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		18F587321BDBBD670094D2E1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
-		18F587351BDBBD760094D2E1 /* Base64codeFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64codeFunc.h; sourceTree = "<group>"; };
-		18F587361BDBBD760094D2E1 /* Base64codeFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64codeFunc.m; sourceTree = "<group>"; };
-		18FD2FC01C049F4100902E9C /* AesEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AesEncode.h; sourceTree = "<group>"; };
-		18FD2FC11C049F7F00902E9C /* AesEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AesEncode.m; sourceTree = "<group>"; };
-		18FD2FC31C04A98300902E9C /* stringAes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringAes.h; sourceTree = "<group>"; };
-		18FD2FC41C04A9A300902E9C /* stringAes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stringAes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,8 +265,10 @@
 				183A1DDB1CE3439700E47267 /* StoreKit.framework in Frameworks */,
 				183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */,
 				183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */,
+				181F571A1D0131C10078933C /* CryptoSwift.framework in Frameworks */,
 				183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */,
 				183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */,
+				181F571D1D0131DB0078933C /* CryptoSwift.framework in Frameworks */,
 				1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
 				183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */,
 				1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */,
@@ -280,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F571B1D0131C10078933C /* CryptoSwift.framework in Frameworks */,
 				1890F4B01CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
 				1890F4AD1CA52B160081BEE5 /* Realm.framework in Frameworks */,
 			);
@@ -289,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F571C1D0131C10078933C /* CryptoSwift.framework in Frameworks */,
 				1890F4B11CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
 				1890F4AE1CA52B170081BEE5 /* Realm.framework in Frameworks */,
 			);
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				181B43A31CC8CDEA002C3FCD /* GameReadyState.swift */,
+				181F57091CFFC5D30078933C /* SkillCastState.swift */,
 			);
 			name = StateMachine;
 			sourceTree = "<group>";
@@ -339,7 +342,6 @@
 				181B43A01CC8A462002C3FCD /* DevelopPlan */,
 				184F11261C5BB0E400D584EB /* FrameWork */,
 				18F5872F1BDBBCDE0094D2E1 /* DataCache */,
-				184F11271C5BB0FE00D584EB /* Encrypt */,
 				184F11291C5DA89C00D584EB /* Resource */,
 				1890F4631CA510CC0081BEE5 /* Game */,
 				18F5E6751BC22437002502DE /* world */,
@@ -378,6 +380,7 @@
 			children = (
 				184F112C1C5DA91500D584EB /* CSV.swift */,
 				183A1DD21CE3208D00E47267 /* libsqlite3.tbd */,
+				181F57191D0131C10078933C /* CryptoSwift.framework */,
 				183A1DDA1CE3439700E47267 /* StoreKit.framework */,
 				183A1DD81CE3438A00E47267 /* GameKit.framework */,
 				183A1DD61CE321E700E47267 /* AudioToolbox.framework */,
@@ -390,25 +393,12 @@
 			name = FrameWork;
 			sourceTree = "<group>";
 		};
-		184F11271C5BB0FE00D584EB /* Encrypt */ = {
-			isa = PBXGroup;
-			children = (
-				18F587351BDBBD760094D2E1 /* Base64codeFunc.h */,
-				18F587361BDBBD760094D2E1 /* Base64codeFunc.m */,
-				18FD2FC01C049F4100902E9C /* AesEncode.h */,
-				18FD2FC11C049F7F00902E9C /* AesEncode.m */,
-				18FD2FC31C04A98300902E9C /* stringAes.h */,
-				18FD2FC41C04A9A300902E9C /* stringAes.m */,
-			);
-			name = Encrypt;
-			sourceTree = "<group>";
-		};
 		184F11291C5DA89C00D584EB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				18ACB6921C5DDB220023696A /* mapDataCN.csv */,
 				1890F4F21CABCD440081BEE5 /* playerProperty.csv */,
 				18A69A7C1C760C0100522059 /* save.csv */,
+				181F57151D012D150078933C /* skillConfig.csv */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -471,7 +461,7 @@
 				181F56FD1CFC42FD0078933C /* SkillAttackComponent.swift */,
 				181F56F91CFC410D0078933C /* BuffComponent.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
-				181F57011CFD7B5B0078933C /* SkillTimeCountComponent.swift */,
+				181F57011CFD7B5B0078933C /* SkillCastComponent.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
 			name = Component;
@@ -632,10 +622,10 @@
 				1890F4FD1CAE79330081BEE5 /* MyActions.sks in Resources */,
 				1826F63B1BAE8B9100D724B2 /* Main.storyboard in Resources */,
 				1890F5011CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				181F57161D012D150078933C /* skillConfig.csv in Resources */,
 				1890F4A71CA515CB0081BEE5 /* GameScene.sks in Resources */,
 				1890F4F31CABCD440081BEE5 /* playerProperty.csv in Resources */,
 				188ACD7D1CB51DD100865E0F /* InfoPlist.strings in Resources */,
-				18ACB6931C5DDB220023696A /* mapDataCN.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +637,7 @@
 				1890F5021CAE79640081BEE5 /* Emitter.xcassets in Resources */,
 				1890F4A81CA515CB0081BEE5 /* GameScene.sks in Resources */,
 				1890F4F41CABCD440081BEE5 /* playerProperty.csv in Resources */,
+				181F57171D012D150078933C /* skillConfig.csv in Resources */,
 				1890F4FE1CAE79330081BEE5 /* MyActions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +650,7 @@
 				1890F5031CAE79640081BEE5 /* Emitter.xcassets in Resources */,
 				1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */,
 				1890F4F51CABCD440081BEE5 /* playerProperty.csv in Resources */,
+				181F57181D012D150078933C /* skillConfig.csv in Resources */,
 				1890F4FF1CAE79330081BEE5 /* MyActions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,8 +688,7 @@
 				181B43A41CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				1826F6361BAE8B9100D724B2 /* AppDelegate.swift in Sources */,
 				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
-				181F57021CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
-				18FD2FC51C04A9A300902E9C /* stringAes.m in Sources */,
+				181F57021CFD7B5B0078933C /* SkillCastComponent.swift in Sources */,
 				18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */,
 				18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */,
 				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
@@ -705,6 +696,7 @@
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				181F56FE1CFC42FD0078933C /* SkillAttackComponent.swift in Sources */,
+				181F570A1CFFC5D30078933C /* SkillCastState.swift in Sources */,
 				181F56F61CFC33530078933C /* SkillEntity.swift in Sources */,
 				181F57061CFEB6440078933C /* BuffContainer.swift in Sources */,
 				1890F4CF1CA931910081BEE5 /* BasicPorperty.swift in Sources */,
@@ -712,11 +704,9 @@
 				188ACD8A1CBF8FC900865E0F /* EffectEntity.swift in Sources */,
 				1890F4E31CAA35B00081BEE5 /* Movement.swift in Sources */,
 				1890F5051CB35BBA0081BEE5 /* TargetComponent.swift in Sources */,
-				18FD2FC21C049F7F00902E9C /* AesEncode.m in Sources */,
 				188ACD841CB7A3E400865E0F /* EffectMoveBehavior.swift in Sources */,
 				1890F4D71CAA2E310081BEE5 /* BasicNode.swift in Sources */,
 				1890F4651CA5139C0081BEE5 /* GameViewController.swift in Sources */,
-				18F587371BDBBD760094D2E1 /* Base64codeFunc.m in Sources */,
 				1890F4F81CAE44FF0081BEE5 /* DamageComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,20 +715,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F570B1CFFC5D30078933C /* SkillCastState.swift in Sources */,
 				181F56FB1CFC410D0078933C /* BuffComponent.swift in Sources */,
 				18B7034A1CBFD64700B5EAFF /* GameViewController.swift in Sources */,
-				181F57031CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
+				181F57031CFD7B5B0078933C /* SkillCastComponent.swift in Sources */,
 				1890F4F91CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				18B703481CBFD64300B5EAFF /* GameScene.swift in Sources */,
 				18B703521CC36F2F00B5EAFF /* CSV.swift in Sources */,
 				1890F4D81CAA2E310081BEE5 /* BasicNode.swift in Sources */,
-				18B703561CC36F5700B5EAFF /* AesEncode.m in Sources */,
 				1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				181B43A51CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				181F56F71CFC33570078933C /* SkillEntity.swift in Sources */,
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
-				18B703581CC36F5B00B5EAFF /* stringAes.m in Sources */,
-				18B703541CC36F5200B5EAFF /* Base64codeFunc.m in Sources */,
 				18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
@@ -765,20 +753,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F570C1CFFC5D30078933C /* SkillCastState.swift in Sources */,
 				181F56FC1CFC410D0078933C /* BuffComponent.swift in Sources */,
 				18B7034B1CBFD64800B5EAFF /* GameViewController.swift in Sources */,
-				181F57041CFD7B5B0078933C /* SkillTimeCountComponent.swift in Sources */,
+				181F57041CFD7B5B0078933C /* SkillCastComponent.swift in Sources */,
 				1890F4FA1CAE45000081BEE5 /* DamageComponent.swift in Sources */,
 				18B703491CBFD64400B5EAFF /* GameScene.swift in Sources */,
 				18B703531CC36F3100B5EAFF /* CSV.swift in Sources */,
 				1890F4D91CAA2E310081BEE5 /* BasicNode.swift in Sources */,
-				18B703571CC36F5800B5EAFF /* AesEncode.m in Sources */,
 				1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */,
 				181B43A61CC8CDEA002C3FCD /* GameReadyState.swift in Sources */,
 				181F56F81CFC33570078933C /* SkillEntity.swift in Sources */,
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
-				18B703591CC36F5C00B5EAFF /* stringAes.m in Sources */,
-				18B703551CC36F5300B5EAFF /* Base64codeFunc.m in Sources */,
 				18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,

@@ -43,10 +43,10 @@ class AttackComponent: GKComponent{
         case (missRating + 1) ... (critical + missRating):
             //未命中
             let d = atk * criticalDamage
-            damage = ["critical":d]
+            damage = ["hitDamage":d]
             break
         default:
-            damage = ["normal":atk]
+            damage = ["hitDamage":atk]
             break
         }
         let penetration1 = entity!.componentForClass(BasicProperty)?.hitPenetration

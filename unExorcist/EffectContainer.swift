@@ -34,8 +34,10 @@ class EffectContainer:GKComponent {
             if CGPathContainsPoint(path, nil, position, false) {
                 let damage = entity?.componentForClass(AttackComponent)?.damageOutput()
                 entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage!)
-                for (_,v) in damage!{
-                    entity?.componentForClass(BasicProperty)?.threaten! += v
+                for (k,v) in damage!{
+                    if k != "penetration" {
+                        entity?.componentForClass(BasicProperty)?.threaten! += v
+                    }
                 }
                 
                 print("target HP = \(entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(BasicProperty)?.HP) ")

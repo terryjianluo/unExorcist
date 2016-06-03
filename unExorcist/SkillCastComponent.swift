@@ -9,7 +9,7 @@
 import Foundation
 import GameplayKit
 
-class SkillTimeCountComponent: GKComponent {
+class SkillCastComponent: GKComponent {
     
     var sumTime = NSTimeInterval(0)
     var timePerEffect = NSTimeInterval(0)
@@ -17,8 +17,16 @@ class SkillTimeCountComponent: GKComponent {
     var timePerEffectCount = NSTimeInterval(0)
     var skillConfig:[String:Double]!
     
+    var skillCastRule:GKStateMachine!
+    
     init(config:[String:Double]){
         super.init()
+        
+        //通过hero的cast组件调用状态机完成技能的施放
+        //skillCastRule = GKStateMachine(states: [SkillBeginState(),NormalSkillState(),CircleSkillState(),SkillEndState()])
+        
+        
+        /*
         sumTime = NSTimeInterval(config["sumTime"]!)
         timePerEffect = NSTimeInterval(config["timePerEffect"]!)
         skillConfig = config
@@ -45,11 +53,12 @@ class SkillTimeCountComponent: GKComponent {
         default:
             break
         }
+        */
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         super.updateWithDeltaTime(seconds)
-        
+        /*
         switch skillConfig["type"] {
         case SkillType.buff.rawValue?:
             if sumTimeCount > sumTime {
@@ -81,5 +90,6 @@ class SkillTimeCountComponent: GKComponent {
         
         sumTimeCount += seconds
         timePerEffectCount += seconds
+        */
     }
 }

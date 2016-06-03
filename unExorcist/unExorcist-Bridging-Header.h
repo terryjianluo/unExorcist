@@ -4,6 +4,3 @@
 
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
-#import "Base64codeFunc.h"
-#import "AesEncode.h"
-#import "stringAes.h"

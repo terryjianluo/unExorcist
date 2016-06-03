@@ -16,27 +16,30 @@ class SkillEntity:GKEntity{
     var skillDescription: String!
     var caster:HeroEntity!
     var targetHero:HeroEntity!
-    var skillMode:String!
+    //var skillMode:String!
     var timeCount = NSTimeInterval(0)
     
-    init(cast:HeroEntity,config:[String:String],targets:[HeroEntity]) {
+    init(cast:HeroEntity,config:[String:String],target:HeroEntity) {
         super.init()
         //test dic
         let dic = ["test":Double(0)]
-        
+        targetHero = target
         caster = cast
         name = config["name"]
         skillDescription = config["description"]
-        skillMode = config["mode"]
+        //skillMode = config["mode"]
         
         let node = BasicNode(code: "Smoke")
         addComponent(node)
         
-        let time = SkillTimeCountComponent(config:dic)
-        addComponent(time)
         let buff = BuffComponent()
         addComponent(buff)
         
+        let move = Movement(targetEntity: targetHero)
+        addComponent(move)
+        
+        let castSkill = SkillCastComponent(config: dic)
+        addComponent(castSkill)
        
     }
     

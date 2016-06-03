@@ -15,11 +15,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //CoreDataManager().csv2Realm("playerProperty")
+        CoreDataManager().csv2Realm("playerProperty")
+        //CoreDataManager().csv2Realm("skillConfig")
         let a = CoreDataManager().PropertyDictionary("P0001", dataModel: PlayerProperty.self)
+        //let b = CoreDataManager().spellConfig("P0001a1", dataModel: PlayerProperty.self)
         print(a)
-        
-        
+        //print(b)
+              
         
         
     }

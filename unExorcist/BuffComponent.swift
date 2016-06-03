@@ -22,10 +22,10 @@ class BuffComponent: GKComponent{
             var delta = Double(0)
             delta += v
             switch k {
-            case "msxHP":
+            case "maxHP":
                 hero.componentForClass(BuffContainer)?.maxHP = delta
                 break
-            case "msxMP":
+            case "maxMP":
                 hero.componentForClass(BuffContainer)?.maxMP = delta
                 break
             case "ATK":

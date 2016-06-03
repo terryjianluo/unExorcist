@@ -151,3 +151,54 @@ class SkillCombo: Object {
 
 
 
+
+
+class SkillConfigration: Object {
+    
+    // Specify properties to ignore (Realm won't persist these)
+    
+    //  override static func ignoredProperties() -> [String] {
+    //    return []
+    //  }
+    
+    dynamic var id = ""
+    dynamic var name = ""
+    dynamic var skillDescription = ""
+    dynamic var team = ""
+    dynamic var coolDown = ""
+    dynamic var manaCost = ""
+    dynamic var hitDamage = ""
+    dynamic var hitDamageUp = ""
+    dynamic var spDamage = ""
+    dynamic var spDamageUp = ""
+    dynamic var sumTime = ""
+    dynamic var timePerEffect = ""
+    dynamic var sumPerEffect = ""
+    dynamic var spDamagePerEffect = ""
+    dynamic var hitDamagePerEffect = ""
+    dynamic var skillRange = ""
+    dynamic var aoeRange = ""
+    dynamic var move = ""
+    dynamic var maxHP = ""
+    dynamic var maxMP = ""
+    dynamic var ATK = ""
+    dynamic var DEF = ""
+    dynamic var MR = ""
+    dynamic var SP = ""
+    dynamic var speed = ""
+    dynamic var range = ""
+    dynamic var critical = ""
+    dynamic var spellCritical = ""
+    dynamic var hitPenetration = ""
+    dynamic var spellPenetration = ""
+    dynamic var hitRating = ""
+    dynamic var spellHitRating = ""
+    dynamic var criticalDamage = ""
+    dynamic var spellCriticalDamage = ""
+    dynamic var dodge = ""
+    dynamic var strikeSpeed = ""
+    dynamic var control = ""
+    dynamic var controlTime = ""
+
+}
+
