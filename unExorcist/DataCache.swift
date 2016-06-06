@@ -31,14 +31,12 @@ enum Phyle:Int {
     case machine = 11
 }
 
-enum SkillType:Double {
-    case buff = 1
-    case aoe = 2
-    case control = 3
-    case heal = 4
-    case dot = 5
-    case hot = 6
-    case halo = 7
-    case damage = 8
-    case move = 9
+enum SkillType:String {
+    case buff = "b"
+    case aoe = "a"
+    case control = "c"
+    case damage = "s"
+    case dot = "d"
+    case heal = "h"
+    case move = "m"
 }

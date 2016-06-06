@@ -1,7 +1,7 @@
 id,name,description,team,coolDown,manaCost,hitDamage,hitDamageUp,spDamage,spDamageUp,sumTime,timePerEffect,sumPerEffect,spDamagePerEffect,hitDamagePerEffect,skillRange,aoeRange,move,direction,maxHP,maxMP,ATK,DEF,MR,SP,speed,range,critical,spellCritical,hitPenetration,spellPenetration,hitRating,spellHitRating,criticalDamage,spellCriticalDamage,dodge,strikeSpeed,shield,control,controlTime
-P0001a1,fireBall (LV1),fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,stun,1
-P0001a2,fireBall (LV2),fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,break,0
-P0001b1,buff,buff,partner,0,75,0,0,0,0,15,0,0,0,0,180,0,0,null,10,10,10,10,10,10,10,10,0.1,0.1,10,10,0.1,0.1,10,10,10,10,0,silence,0
-P0001c1,debuff,debuff,enemy,0,75,0,0,0,0,15,0,0,0,0,180,0,0,null,10,10,10,10,10,10,10,10,0.1,0.1,10,10,0.1,0.1,10,10,10,10,0,mind,0
-P0001d1,fireBall (LV1),fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,stun,1
-P0001d1,fireBall (LV1),fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,stun,1
+P0001a1,pdcs,fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,stun,1
+P0001b1,pdcs,fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,break,0
+P0001c1,buff,b,self,0,75,0,0,0,0,15,0,0,0,0,180,0,0,null,10,10,10,10,10,10,10,10,0.1,0.1,10,10,0.1,0.1,10,10,10,10,0,silence,0
+P0001d1,debuff,b,enemy,0,75,0,0,0,0,15,0,0,0,0,180,0,0,null,10,10,10,10,10,10,10,10,0.1,0.1,10,10,0.1,0.1,10,10,10,10,0,mind,0
+P0001e1,pdcs,fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,stun,1
+P0001a2,pdcs,fire in the hole,enemy,6,300,0,0,100,0.7,0,1,4,0,15,180,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,null,0

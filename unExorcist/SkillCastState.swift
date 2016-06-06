@@ -10,10 +10,39 @@ import Foundation
 import GameplayKit
 import SpriteKit
 
+//ready->normal->circle->end->cooldown , 增加初始化skillentity
 class SkillReadyState:GKState{
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    var mySkill:SkillEntity!
+    
+    init(id:String,caster:HeroEntity){
+        super.init()
+        mySkill = SkillEntity(id: id, caster: caster)
+    }
+    
+    func castSkillCheck() {
+        let manaCost = mySkill.configData["manaCost"]
+        let heroMP = mySkill.casterEntity.componentForClass(BasicProperty)?.MP
         
+        if manaCost <= heroMP{
+            mySkill.casterEntity.componentForClass(BasicProperty)?.MP = heroMP! - manaCost!
+            stateMachine?.enterState(NormalSkillState)
+        }
+    }
+    
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        // 技能初始化显示等方法; 监听ai，等待指令施法
+    }
+    
+    override func willExitWithNextState(nextState: GKState) {
+        (nextState as! NormalSkillState).mySkill = mySkill
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        if mySkill.cast == true {
+            castSkillCheck()
+        }
     }
     
 }
@@ -21,13 +50,77 @@ class SkillReadyState:GKState{
 
 class NormalSkillState:GKState{
     
+    var mySkill:SkillEntity!
+    
+    
+    func skillInit(){
+        let moveMent = Movement(targetEntity: mySkill.target)
+        mySkill.addComponent(moveMent)
+        
+        //组件列表(加载 即时生效 无计时的效果)
+        let buff = BuffComponent(id: mySkill.configData, target: mySkill.target)
+        
+        let skillConfig = mySkill.config.valueForKey("description") as! NSString
+        let buffConfig = SkillType.buff.rawValue
+        let aoeConfig = SkillType.aoe.rawValue
+        let controlConfig = SkillType.control.rawValue
+        let damageConfg = SkillType.damage.rawValue
+        let dotConfig = SkillType.dot.rawValue
+        let healConfig = SkillType.heal.rawValue
+        let moveConfig = SkillType.move.rawValue
+        
+        if skillConfig.rangeOfString(buffConfig).location != NSNotFound{
+            mySkill.addComponent(buff)
+        }else if skillConfig.rangeOfString(aoeConfig).location != NSNotFound{
+            
+        }else if skillConfig.rangeOfString(controlConfig).location != NSNotFound{
+            
+        }else if skillConfig.rangeOfString(damageConfg).location != NSNotFound{
+            
+        }else if skillConfig.rangeOfString(dotConfig).location != NSNotFound{
+            
+        }else if skillConfig.rangeOfString(healConfig).location != NSNotFound{
+            
+        }else if skillConfig.rangeOfString(moveConfig).location != NSNotFound{
+            
+        }
+    }
+    
     override func didEnterWithPreviousState(previousState: GKState?) {
         
     }
     
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        mySkill.updateWithDeltaTime(seconds)
+    }
+    
+    override func willExitWithNextState(nextState: GKState) {
+        (nextState as! SkillEndState).mySkill = mySkill
+    }
+    
 }
 
+/*
 class CircleSkillState:GKState{
+    
+    var mySkill:SkillEntity!
+    
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        mySkill.updateWithDeltaTime(seconds)
+    }
+    
+}
+*/
+
+class SkillEndState:GKState{
+    
+    var mySkill:SkillEntity!
+    
     
     override func didEnterWithPreviousState(previousState: GKState?) {
         
@@ -37,13 +130,7 @@ class CircleSkillState:GKState{
 
 class SkillCooldowntate:GKState{
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
-        
-    }
-    
-}
-
-class SkillEndState:GKState{
+    var mySkill:SkillEntity!
     
     override func didEnterWithPreviousState(previousState: GKState?) {
         

@@ -15,10 +15,11 @@ class BuffComponent: GKComponent{
     
     var buffConfig:[String:Double]!
     var targetEntity:HeroEntity!
+    var time = NSTimeInterval(0)
     
-    init(id:String,target:HeroEntity) {
+    init(id:[String:Double],target:HeroEntity) {
         super.init()
-        buffConfig = skillConfigDic(id)
+        buffConfig = id
         targetEntity = target
     }
     
@@ -98,6 +99,7 @@ class BuffComponent: GKComponent{
         }
     }
     
+    
     func buffEnd(){
         targetEntity.componentForClass(BuffContainer)?.maxHP = 0
         targetEntity.componentForClass(BuffContainer)?.maxMP = 0
@@ -124,6 +126,17 @@ class BuffComponent: GKComponent{
         targetEntity.componentForClass(BuffContainer)?.strikeSpeed = 0 //攻速
         
         (entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        if time == 0 {
+            buff()
+        }else if (time >= buffConfig["sumTime"]) && (buffConfig["sumTime"] > 0){
+            buffEnd()
+            time = 0
+        }
+        
+        time += seconds
     }
     
     

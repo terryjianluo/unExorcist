@@ -13,16 +13,20 @@ import GameplayKit
 class SkillEntity:GKEntity{
     
     //ready->normal->circle->end->cooldown , 增加初始化skillentity
-    let skillCastStateMachine = GKStateMachine(states: [SkillReadyState(),NormalSkillState(),CircleSkillState(),SkillCooldowntate(),SkillEndState()])
+    var skillCastStateMachine:GKStateMachine!
     var casterEntity:HeroEntity!
+    var target:HeroEntity!
     
     var config:NSDictionary!
     var configData:[String:Double]!
+    
+    var cast:Bool!
     
     init(id:String,caster:HeroEntity) {
         super.init()
         casterEntity = caster
         
+        //根据id设定素材名称
         let node = BasicNode(code: "Smoke")
         addComponent(node)
         
@@ -34,7 +38,10 @@ class SkillEntity:GKEntity{
             }
         }
         
-        skillCastStateMachine.enterState(SkillReadyState)
+        skillCastStateMachine = GKStateMachine(states: [SkillReadyState(id:id,caster:caster),NormalSkillState(),SkillCooldowntate(),SkillEndState()])
+        
+        cast = false
+        
     }
     
 
