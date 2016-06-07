@@ -22,9 +22,9 @@ class DamageComponent: GKComponent{
     func damage(damageInput:[String:Double]){
         var myHP = entity!.componentForClass(BasicProperty)?.HP
         let myDodge = (entity!.componentForClass(BasicProperty)?.dodge)! + (entity!.componentForClass(BuffContainer)?.dodge)!
-        let myDef = (entity!.componentForClass(BasicProperty)?.DEF)! + (entity!.componentForClass(BuffContainer)?.DEF)! - damageInput["penetration"]!
-        let myMr = (entity!.componentForClass(BasicProperty)?.MR)! + (entity!.componentForClass(BuffContainer)?.MR)! - damageInput["penetration"]!
-        let shield = entity!.componentForClass(BasicProperty)?.shield
+        let myDef = (entity!.componentForClass(BasicProperty)?.DEF)! + (entity!.componentForClass(BuffContainer)?.DEF)! - damageInput["hitPenetration"]!
+        let myMr = (entity!.componentForClass(BasicProperty)?.MR)! + (entity!.componentForClass(BuffContainer)?.MR)! - damageInput["spellPenetration"]!
+        var shield = entity!.componentForClass(BasicProperty)?.shield
         let reducePhy = 100/(100 + myDef)
         let reduceSpell = 100/(100 + myMr)
         
@@ -36,14 +36,25 @@ class DamageComponent: GKComponent{
                 if random >= Int(myDodge*100){
                     let damage = v - shield!
                     if damage > 0 {
+                        entity!.componentForClass(BasicProperty)?.shield! = 0
+                        shield = entity!.componentForClass(BasicProperty)?.shield
                         myHP = myHP! - (damage*reducePhy)
                     }else if damage <= 0{
                         entity!.componentForClass(BasicProperty)?.shield! -= v
+                        shield = entity!.componentForClass(BasicProperty)?.shield
                     }
                 }
                 break
-            case "spell":
-                myHP = myHP! - (v*reduceSpell)
+            case "spellDamage":
+                let damage = v - shield!
+                if damage > 0 {
+                    entity!.componentForClass(BasicProperty)?.shield! = 0
+                    shield = entity!.componentForClass(BasicProperty)?.shield
+                    myHP = myHP! - (damage*reduceSpell)
+                }else if damage <= 0{
+                    entity!.componentForClass(BasicProperty)?.shield! -= v
+                    shield = entity!.componentForClass(BasicProperty)?.shield
+                }
                 break
             default:
                 break

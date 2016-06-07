@@ -38,21 +38,21 @@ class AttackComponent: GKComponent{
         switch random {
         case 1...missRating:
             //未命中
-            damage = ["miss":0]
+            damage["miss"] = 0
             break
         case (missRating + 1) ... (critical + missRating):
             //未命中
             let d = atk * criticalDamage
-            damage = ["hitDamage":d]
+            damage["hitDamage"] = d
             break
         default:
-            damage = ["hitDamage":atk]
+            damage["hitDamage"] = atk
             break
         }
         let penetration1 = entity!.componentForClass(BasicProperty)?.hitPenetration
         let penetration2 = entity!.componentForClass(BuffContainer)?.hitPenetration
         let penetration = penetration1! + penetration2!
-        damage["penetration"] = penetration
+        damage["hitPenetration"] = penetration
         print(damage)
         
         return damage
@@ -70,7 +70,7 @@ class AttackComponent: GKComponent{
         
         if (range >= distance) && ((entity as! HeroEntity).target != entity) == true {
             let effect = EffectEntity(parent:entity as! HeroEntity)
-            entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
+                        entity!.componentForClass(BasicNode)?.node.parent?.addChild((effect.componentForClass(BasicNode)?.node)!)
             entity?.componentForClass(EffectContainer)?.addEffect(effect)
             
         }else if range < distance{

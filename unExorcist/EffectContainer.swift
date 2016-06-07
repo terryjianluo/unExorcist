@@ -32,10 +32,11 @@ class EffectContainer:GKComponent {
             CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
             CGPathCloseSubpath(path)
             if CGPathContainsPoint(path, nil, position, false) {
+                
                 let damage = entity?.componentForClass(AttackComponent)?.damageOutput()
                 entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage!)
                 for (k,v) in damage!{
-                    if k != "penetration" {
+                    if k == "hitDamage" {
                         entity?.componentForClass(BasicProperty)?.threaten! += v
                     }
                 }

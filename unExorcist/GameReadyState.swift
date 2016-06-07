@@ -121,6 +121,7 @@ class GamePlayState:GKState {
                 }
             }
             entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(SkillManager)?.updateWithDeltaTime(seconds)
             entity.componentForClass(BasicProperty)?.updateTime += seconds
         }
         
@@ -139,6 +140,7 @@ class GamePlayState:GKState {
                 }
                 }
             entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(SkillManager)?.updateWithDeltaTime(seconds)
             entity.componentForClass(BasicProperty)?.updateTime += seconds
             }
         }       

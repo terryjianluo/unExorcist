@@ -26,9 +26,32 @@ class EffectEntity:GKEntity{
         self.componentForClass(BasicNode)?.node.colorBlendFactor = 1
         self.componentForClass(BasicNode)?.node.zPosition = 10
         self.componentForClass(BasicNode)?.node.position = (parent.componentForClass(BasicNode)?.node.position)!
-        let moveComponent = Movement(targetEntity: parent.target)
+        let moveComponent = Movement(targetEntity: parentEntity.target)
         //effect.agent = moveComponent
         self.addComponent(moveComponent)
     }
           
+}
+
+class SkillEffectEntity:GKEntity{
+    
+    var parentEntity:SkillEntity!
+    //var node:SKSpriteNode!
+    var agent:GKAgent2D!
+    
+    init(parent:SkillEntity) {
+        super.init()
+        parentEntity = parent
+        let spriteComponent = BasicNode(code:parentEntity.skillId) //  "Spaceship"
+        addComponent(spriteComponent)
+        //node = self.componentForClass(BasicNode)?.node
+        self.componentForClass(BasicNode)?.node.color = UIColor.redColor()
+        self.componentForClass(BasicNode)?.node.colorBlendFactor = 1
+        self.componentForClass(BasicNode)?.node.zPosition = 10
+        self.componentForClass(BasicNode)?.node.position = (parent.componentForClass(BasicNode)?.node.position)!
+        let moveComponent = Movement(targetEntity: parentEntity.target)
+        //effect.agent = moveComponent
+        self.addComponent(moveComponent)
+    }
+    
 }

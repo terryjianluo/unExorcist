@@ -8,6 +8,7 @@
 
 import Foundation
 import GameplayKit
+import UIKit
 
 class SkillManager: GKComponent {
     
@@ -44,6 +45,7 @@ class SkillManager: GKComponent {
         for skill in list {
             skill.skillCastStateMachine.updateWithDeltaTime(seconds)
         }
+        
     }
     
     

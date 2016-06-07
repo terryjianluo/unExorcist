@@ -22,13 +22,12 @@ class SkillEntity:GKEntity{
     
     var cast:Bool!
     
+    var skillId:String!
+    
     init(id:String,caster:HeroEntity) {
         super.init()
         casterEntity = caster
-        
-        //根据id设定素材名称
-        let node = BasicNode(code: "Smoke")
-        addComponent(node)
+        skillId = id
         
         //增加多种配置
         config = CoreDataManager().spellConfig(id, dataModel: SkillConfigration.self)

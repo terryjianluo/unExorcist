@@ -23,17 +23,6 @@ class BuffComponent: GKComponent{
         targetEntity = target
     }
     
-    func skillConfigDic(id:String) -> [String:Double] {
-        let dic = CoreDataManager().spellConfig(id, dataModel: SkillConfigration.self)
-        var dic1 = ["index":Double(0)]
-        for (k,v) in dic {
-            if v is Double  {
-                dic1[k as! String] = v as? Double
-            }
-        }
-        return dic1
-    }
-    
     func buff(){
         for (k,v) in buffConfig{
             var delta = Double(0)
@@ -97,6 +86,10 @@ class BuffComponent: GKComponent{
                 break
             }
         }
+        
+        // buff 仇恨增加 增加数量算法待定
+        let threaten = (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten
+        (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten = threaten! + 20
     }
     
     
@@ -125,7 +118,7 @@ class BuffComponent: GKComponent{
         targetEntity.componentForClass(BuffContainer)?.dodge = 0 //闪避
         targetEntity.componentForClass(BuffContainer)?.strikeSpeed = 0 //攻速
         
-        (entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
+        //(entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
@@ -134,6 +127,8 @@ class BuffComponent: GKComponent{
         }else if (time >= buffConfig["sumTime"]) && (buffConfig["sumTime"] > 0){
             buffEnd()
             time = 0
+        }else if buffConfig["sumTime"] < 0{
+            time = 999
         }
         
         time += seconds

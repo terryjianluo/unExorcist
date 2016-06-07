@@ -40,6 +40,9 @@
 		1826F6431BAE8B9100D724B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F6411BAE8B9100D724B2 /* LaunchScreen.storyboard */; };
 		1826F64E1BAE8B9100D724B2 /* unExorcistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F64D1BAE8B9100D724B2 /* unExorcistTests.swift */; };
 		1826F6591BAE8B9100D724B2 /* unExorcistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */; };
+		182E5EBB1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
+		182E5EBC1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
+		182E5EBD1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
 		183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DC41CE31A5C00E47267 /* Bolts.framework */; };
 		183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DCE1CE31EC200E47267 /* Parse.framework */; };
 		183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD21CE3208D00E47267 /* libsqlite3.tbd */; };
@@ -207,6 +210,7 @@
 		1826F6541BAE8B9100D724B2 /* unExorcistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unExorcistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unExorcistUITests.swift; sourceTree = "<group>"; };
 		1826F65A1BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillDamage.swift; sourceTree = "<group>"; };
 		183A1DC41CE31A5C00E47267 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		183A1DCE1CE31EC200E47267 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		183A1DD21CE3208D00E47267 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -456,6 +460,7 @@
 				181F57051CFEB6440078933C /* BuffContainer.swift */,
 				18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */,
 				181F56F91CFC410D0078933C /* BuffComponent.swift */,
+				182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
@@ -685,6 +690,7 @@
 				1890F4DC1CAA33CB0081BEE5 /* AttackRule.swift in Sources */,
 				18B7033B1CBFA71F00B5EAFF /* AOEComponent.swift in Sources */,
 				18B7035B1CC5CD8A00B5EAFF /* EffectContainer.swift in Sources */,
+				182E5EBB1D06A4FC002D31B5 /* SkillDamage.swift in Sources */,
 				181F57281D0186C40078933C /* SkillManager.swift in Sources */,
 				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
@@ -723,6 +729,7 @@
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
 				18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
+				182E5EBC1D06A4FC002D31B5 /* SkillDamage.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F57071CFEB6440078933C /* BuffContainer.swift in Sources */,
 				18B7033E1CBFD57300B5EAFF /* AOEComponent.swift in Sources */,
@@ -760,6 +767,7 @@
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
 				18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
+				182E5EBD1D06A4FC002D31B5 /* SkillDamage.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F57081CFEB6440078933C /* BuffContainer.swift in Sources */,
 				18B7033F1CBFD57400B5EAFF /* AOEComponent.swift in Sources */,
