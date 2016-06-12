@@ -165,25 +165,13 @@ class SkillActiveState:GKState{
     var mySkill:SkillEntity!
     var fx:SkillEffectEntity!
     
-    
+    //编写技能结束进入下一步骤的方法，当前dot无法刷新
     override func didEnterWithPreviousState(previousState: GKState?) {
         
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         mySkill.updateWithDeltaTime(seconds)
-    }
-    
-}
-
-
-class SkillEndState:GKState{
-    
-    var mySkill:SkillEntity!
-    
-    
-    override func didEnterWithPreviousState(previousState: GKState?) {
-        
     }
     
 }

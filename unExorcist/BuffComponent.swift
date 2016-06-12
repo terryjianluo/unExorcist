@@ -87,6 +87,8 @@ class BuffComponent: GKComponent{
             }
         }
         
+        (entity as! SkillEntity).casterEntity.componentForClass(BasicNode)?.node.parent?.addChild((entity as! SkillEntity).componentForClass(BasicNode)!.node)
+        
         // buff 仇恨增加 增加数量算法待定
         let threaten = (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten
         (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten = threaten! + 20
@@ -118,7 +120,8 @@ class BuffComponent: GKComponent{
         targetEntity.componentForClass(BuffContainer)?.dodge = 0 //闪避
         targetEntity.componentForClass(BuffContainer)?.strikeSpeed = 0 //攻速
         
-        //(entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
+        (entity as! SkillEntity).componentForClass(BasicNode)?.node.removeFromParent()
+        self.entity?.removeComponentForClass(BuffComponent)
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {

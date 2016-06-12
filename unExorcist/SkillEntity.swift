@@ -40,7 +40,7 @@ class SkillEntity:GKEntity{
             }
         }
         
-        skillCastStateMachine = GKStateMachine(states: [SkillReadyState(id:id,caster:caster),NormalSkillState(),SkillMoveState(),SkillActiveState(),SkillEndState()])
+        skillCastStateMachine = GKStateMachine(states: [SkillReadyState(id:id,caster:caster),NormalSkillState(),SkillMoveState(),SkillActiveState()])
         
         cast = false
         
@@ -56,6 +56,9 @@ class SkillEntity:GKEntity{
         
         let cd = SkillCooldownComponent()
         addComponent(cd)
+        
+        let node = BasicNode(code: artID)
+        addComponent(node)
     }
     
 

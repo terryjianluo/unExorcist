@@ -15,8 +15,6 @@ class SkillDamage: GKComponent {
     var targetEntity:HeroEntity!
     var time = NSTimeInterval(0)
     
-    //var effect:SkillEffectEntity!
-    
     init(config:[String:Double],target:HeroEntity) {
         super.init()
         skillConfig = config
@@ -106,7 +104,7 @@ class SkillDamage: GKComponent {
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         if time == 0 {
             let damage = self.damage()
-            (entity as! SkillEntity).target.componentForClass(DamageComponent)?.damage(damage)
+            targetEntity.componentForClass(DamageComponent)?.damage(damage)
             for (k,v) in damage{
                 if k == "hitDamage" {
                     (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten! += v
@@ -114,6 +112,8 @@ class SkillDamage: GKComponent {
                     (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten! += v
                 }
             }
+        }else{
+            entity?.removeComponentForClass(SkillDamage)
         }
         
         time += seconds
