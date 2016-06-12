@@ -23,6 +23,9 @@ class SkillEntity:GKEntity{
     var cast:Bool!
     
     var skillId:String!
+    var artSpeed:Float!
+    var artCollision:Bool!
+    var artID:String!
     
     init(id:String,caster:HeroEntity) {
         super.init()
@@ -37,10 +40,22 @@ class SkillEntity:GKEntity{
             }
         }
         
-        skillCastStateMachine = GKStateMachine(states: [SkillReadyState(id:id,caster:caster),NormalSkillState(),SkillCooldowntate(),SkillEndState()])
+        skillCastStateMachine = GKStateMachine(states: [SkillReadyState(id:id,caster:caster),NormalSkillState(),SkillMoveState(),SkillActiveState(),SkillEndState()])
         
         cast = false
         
+        artSpeed = Float(CoreDataManager().realmSerch(id, property: "speed", dataModel: SkillArt.self))
+        let artCollision1 = CoreDataManager().realmSerch(id, property: "collision", dataModel: SkillArt.self)
+        if artCollision1 == "yes"{
+            artCollision = true
+        }else{
+            artCollision = false
+        }
+        
+        artID = CoreDataManager().realmSerch(id, property: "fileName", dataModel: SkillArt.self)
+        
+        let cd = SkillCooldownComponent()
+        addComponent(cd)
     }
     
 

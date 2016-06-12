@@ -43,6 +43,12 @@
 		182E5EBB1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
 		182E5EBC1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
 		182E5EBD1D06A4FC002D31B5 /* SkillDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */; };
+		182E5EBF1D0D15FD002D31B5 /* skillArt.csv in Resources */ = {isa = PBXBuildFile; fileRef = 182E5EBE1D0D15FC002D31B5 /* skillArt.csv */; };
+		182E5EC01D0D15FD002D31B5 /* skillArt.csv in Resources */ = {isa = PBXBuildFile; fileRef = 182E5EBE1D0D15FC002D31B5 /* skillArt.csv */; };
+		182E5EC11D0D15FD002D31B5 /* skillArt.csv in Resources */ = {isa = PBXBuildFile; fileRef = 182E5EBE1D0D15FC002D31B5 /* skillArt.csv */; };
+		182E5EC31D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EC21D0D34F4002D31B5 /* SkillCooldownComponent.swift */; };
+		182E5EC41D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EC21D0D34F4002D31B5 /* SkillCooldownComponent.swift */; };
+		182E5EC51D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E5EC21D0D34F4002D31B5 /* SkillCooldownComponent.swift */; };
 		183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DC41CE31A5C00E47267 /* Bolts.framework */; };
 		183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DCE1CE31EC200E47267 /* Parse.framework */; };
 		183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A1DD21CE3208D00E47267 /* libsqlite3.tbd */; };
@@ -211,6 +217,8 @@
 		1826F6581BAE8B9100D724B2 /* unExorcistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unExorcistUITests.swift; sourceTree = "<group>"; };
 		1826F65A1BAE8B9100D724B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillDamage.swift; sourceTree = "<group>"; };
+		182E5EBE1D0D15FC002D31B5 /* skillArt.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skillArt.csv; sourceTree = "<group>"; };
+		182E5EC21D0D34F4002D31B5 /* SkillCooldownComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCooldownComponent.swift; sourceTree = "<group>"; };
 		183A1DC41CE31A5C00E47267 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		183A1DCE1CE31EC200E47267 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		183A1DD21CE3208D00E47267 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -399,6 +407,7 @@
 				1890F4F21CABCD440081BEE5 /* playerProperty.csv */,
 				18A69A7C1C760C0100522059 /* save.csv */,
 				181F571F1D01662F0078933C /* skillConfig.csv */,
+				182E5EBE1D0D15FC002D31B5 /* skillArt.csv */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -461,6 +470,7 @@
 				18B7033A1CBFA71F00B5EAFF /* AOEComponent.swift */,
 				181F56F91CFC410D0078933C /* BuffComponent.swift */,
 				182E5EBA1D06A4FC002D31B5 /* SkillDamage.swift */,
+				182E5EC21D0D34F4002D31B5 /* SkillCooldownComponent.swift */,
 				1890F4E21CAA35B00081BEE5 /* Movement.swift */,
 				1890F5041CB35BB90081BEE5 /* TargetComponent.swift */,
 			);
@@ -615,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182E5EBF1D0D15FD002D31B5 /* skillArt.csv in Resources */,
 				1826F6431BAE8B9100D724B2 /* LaunchScreen.storyboard in Resources */,
 				1890F4D31CA9338D0081BEE5 /* Player.xcassets in Resources */,
 				1826F6401BAE8B9100D724B2 /* Assets.xcassets in Resources */,
@@ -635,6 +646,7 @@
 			files = (
 				1890F4D41CA9338D0081BEE5 /* Player.xcassets in Resources */,
 				1890F5021CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				182E5EC01D0D15FD002D31B5 /* skillArt.csv in Resources */,
 				1890F4A81CA515CB0081BEE5 /* GameScene.sks in Resources */,
 				1890F4F41CABCD440081BEE5 /* playerProperty.csv in Resources */,
 				181F57211D01662F0078933C /* skillConfig.csv in Resources */,
@@ -648,6 +660,7 @@
 			files = (
 				1890F4D51CA9338D0081BEE5 /* Player.xcassets in Resources */,
 				1890F5031CAE79640081BEE5 /* Emitter.xcassets in Resources */,
+				182E5EC11D0D15FD002D31B5 /* skillArt.csv in Resources */,
 				1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */,
 				1890F4F51CABCD440081BEE5 /* playerProperty.csv in Resources */,
 				181F57221D01662F0078933C /* skillConfig.csv in Resources */,
@@ -694,6 +707,7 @@
 				181F57281D0186C40078933C /* SkillManager.swift in Sources */,
 				1890F4BE1CA8D8CA0081BEE5 /* AttackComponent.swift in Sources */,
 				1890F4E71CAB7C420081BEE5 /* EntityManager.swift in Sources */,
+				182E5EC31D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */,
 				1890F4A51CA514C00081BEE5 /* GameScene.swift in Sources */,
 				18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */,
 				181F570A1CFFC5D30078933C /* SkillCastState.swift in Sources */,
@@ -729,6 +743,7 @@
 				188ACD8B1CBF901A00865E0F /* EffectEntity.swift in Sources */,
 				18B7035C1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703441CBFD63200B5EAFF /* CoreDataManager.swift in Sources */,
+				182E5EC41D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */,
 				182E5EBC1D06A4FC002D31B5 /* SkillDamage.swift in Sources */,
 				1890F4E81CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F57071CFEB6440078933C /* BuffContainer.swift in Sources */,
@@ -767,6 +782,7 @@
 				188ACD8C1CBF901B00865E0F /* EffectEntity.swift in Sources */,
 				18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */,
 				18B703451CBFD63300B5EAFF /* CoreDataManager.swift in Sources */,
+				182E5EC51D0D34F4002D31B5 /* SkillCooldownComponent.swift in Sources */,
 				182E5EBD1D06A4FC002D31B5 /* SkillDamage.swift in Sources */,
 				1890F4E91CAB7C420081BEE5 /* EntityManager.swift in Sources */,
 				181F57081CFEB6440078933C /* BuffContainer.swift in Sources */,

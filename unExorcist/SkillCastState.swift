@@ -14,6 +14,7 @@ import SpriteKit
 class SkillReadyState:GKState{
     
     var mySkill:SkillEntity!
+    var fx:SkillEffectEntity!
     
     init(id:String,caster:HeroEntity){
         super.init()
@@ -33,6 +34,8 @@ class SkillReadyState:GKState{
         if (manaCost <= heroMP) && (range >= distance){
             
             mySkill.casterEntity.componentForClass(BasicProperty)?.MP = heroMP! - manaCost!
+            mySkill.casterEntity.componentForClass(BasicNode)?.node.parent?.addChild((fx.componentForClass(BasicNode)?.node)!)
+            mySkill.componentForClass(SkillCooldownComponent)?.cd = mySkill.configData["coolDown"]! as NSTimeInterval
             
             stateMachine?.enterState(NormalSkillState)
         }
@@ -45,11 +48,14 @@ class SkillReadyState:GKState{
     
     override func willExitWithNextState(nextState: GKState) {
         (nextState as! NormalSkillState).mySkill = mySkill
+        (nextState as! NormalSkillState).fx = fx
     }
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        if mySkill.cast == true {
+        if (mySkill.cast == true) && (mySkill.componentForClass(SkillCooldownComponent)?.cd == 0) {
             castSkillCheck()
+        }else{
+            mySkill.updateWithDeltaTime(seconds)
         }
     }
     
@@ -59,6 +65,7 @@ class SkillReadyState:GKState{
 class NormalSkillState:GKState{
     
     var mySkill:SkillEntity!
+    var fx:SkillEffectEntity!
     
     
     func skillInit(){
@@ -66,6 +73,7 @@ class NormalSkillState:GKState{
         //组件列表(加载 即时生效 无计时的效果)
         let buff = BuffComponent(id: mySkill.configData, target: mySkill.target)
         let damage = SkillDamage(config:  mySkill.configData, target: mySkill.target)
+        let aoe = AOEComponent()
         
         let skillConfig = mySkill.config.valueForKey("description") as! NSString
         let buffConfig = SkillType.buff.rawValue
@@ -79,7 +87,7 @@ class NormalSkillState:GKState{
         if skillConfig.rangeOfString(buffConfig).location != NSNotFound{
             mySkill.addComponent(buff)
         }else if skillConfig.rangeOfString(aoeConfig).location != NSNotFound{
-            
+            mySkill.addComponent(aoe)
         }else if skillConfig.rangeOfString(controlConfig).location != NSNotFound{
             
         }else if skillConfig.rangeOfString(damageConfg).location != NSNotFound{
@@ -94,23 +102,68 @@ class NormalSkillState:GKState{
     }
     
     override func didEnterWithPreviousState(previousState: GKState?) {
-        
-    }
-    
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        mySkill.updateWithDeltaTime(seconds)
+        skillInit()
+        if mySkill.artSpeed > 0{
+            stateMachine?.enterState(SkillMoveState)
+        }else {
+            stateMachine?.enterState(SkillActiveState)
+        }
     }
     
     override func willExitWithNextState(nextState: GKState) {
-        (nextState as! SkillEndState).mySkill = mySkill
+        if mySkill.artSpeed > 0{
+            (nextState as! SkillMoveState).mySkill = mySkill
+            (nextState as! SkillMoveState).fx = fx
+        }else {
+            (nextState as! SkillActiveState).mySkill = mySkill
+            (nextState as! SkillActiveState).fx = fx
+        }
+        
     }
     
 }
 
-/*
-class CircleSkillState:GKState{
+
+class SkillMoveState:GKState{
+    
+    //需求增加碰撞检测方法
     
     var mySkill:SkillEntity!
+    var fx:SkillEffectEntity!
+    
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        
+        
+    }
+    
+    func effectMove(seconds: NSTimeInterval){
+        let position = fx.componentForClass(BasicNode)!.node.position
+        let path = CGPathCreateMutable()
+        let positionTarget = fx.componentForClass(Movement)?.myTarget.componentForClass(BasicNode)?.node.position
+        CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
+        CGPathCloseSubpath(path)
+        if CGPathContainsPoint(path, nil, position, false) {
+            
+            stateMachine?.enterState(SkillActiveState)
+            fx.componentForClass(BasicNode)!.node.removeFromParent()
+        }else{
+            fx.componentForClass(Movement)!.updateWithDeltaTime(seconds)
+        }
+    }
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+        //mySkill.updateWithDeltaTime(seconds)
+        effectMove(seconds)
+        mySkill.componentForClass(SkillCooldownComponent)?.updateWithDeltaTime(seconds)
+    }
+    
+}
+
+class SkillActiveState:GKState{
+    
+    var mySkill:SkillEntity!
+    var fx:SkillEffectEntity!
     
     
     override func didEnterWithPreviousState(previousState: GKState?) {
@@ -122,22 +175,12 @@ class CircleSkillState:GKState{
     }
     
 }
-*/
+
 
 class SkillEndState:GKState{
     
     var mySkill:SkillEntity!
     
-    
-    override func didEnterWithPreviousState(previousState: GKState?) {
-        
-    }
-    
-}
-
-class SkillCooldowntate:GKState{
-    
-    var mySkill:SkillEntity!
     
     override func didEnterWithPreviousState(previousState: GKState?) {
         

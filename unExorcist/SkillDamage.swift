@@ -15,13 +15,13 @@ class SkillDamage: GKComponent {
     var targetEntity:HeroEntity!
     var time = NSTimeInterval(0)
     
-    var effect:SkillEffectEntity!
+    //var effect:SkillEffectEntity!
     
     init(config:[String:Double],target:HeroEntity) {
         super.init()
         skillConfig = config
         targetEntity = target
-        effect = SkillEffectEntity(parent: entity as! SkillEntity)
+        //effect = SkillEffectEntity(parent: entity as! SkillEntity)
     }
     
     func damage() -> [String:Double]{
@@ -102,33 +102,21 @@ class SkillDamage: GKComponent {
         return damage
     }
     
-    func effectRefrash(seconds: NSTimeInterval){
-        //effect manage
-        
-            let position = effect.componentForClass(BasicNode)!.node.position
-            let path = CGPathCreateMutable()
-            let positionTarget = effect.componentForClass(Movement)?.myTarget.componentForClass(BasicNode)?.node.position
-            CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
-            CGPathCloseSubpath(path)
-            if CGPathContainsPoint(path, nil, position, false) {
-                
-                let damage = effect.parentEntity.componentForClass(SkillDamage)?.damage()
-                effect.parentEntity.target.componentForClass(DamageComponent)?.damage(damage!)
-                for (k,v) in damage!{
-                    if (k == "hitDamage") || (k == "spellDamage") {
-                        entity?.componentForClass(BasicProperty)?.threaten! += v
-                    }
-                }
-                
-                effect.componentForClass(BasicNode)!.node.removeFromParent()
-            }else{
-                effect.componentForClass(Movement)!.updateWithDeltaTime(seconds)
-            }
-        
-    }
-    
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        effectRefrash(seconds)
+        if time == 0 {
+            let damage = self.damage()
+            (entity as! SkillEntity).target.componentForClass(DamageComponent)?.damage(damage)
+            for (k,v) in damage{
+                if k == "hitDamage" {
+                    (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten! += v
+                }else if k == "spellDamage"{
+                    (entity as! SkillEntity).casterEntity.componentForClass(BasicProperty)?.threaten! += v
+                }
+            }
+        }
+        
+        time += seconds
+    
     }
 }

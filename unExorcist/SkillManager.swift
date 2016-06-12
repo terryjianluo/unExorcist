@@ -10,6 +10,7 @@ import Foundation
 import GameplayKit
 import UIKit
 
+//有运动后生效、无运动生效、碰撞生效以及混合模式
 class SkillManager: GKComponent {
     
     var skillA:SkillEntity!
@@ -19,6 +20,7 @@ class SkillManager: GKComponent {
     var skillE:SkillEntity!
     
     var target:HeroEntity!
+    
     
     init(id:String) {
         super.init()
@@ -39,16 +41,17 @@ class SkillManager: GKComponent {
     
     override func updateWithDeltaTime(seconds: NSTimeInterval) {
         //施法方式为 修改Skillentity.cast =  true，并设定skillentity.target
+        target = (entity as! HeroEntity).componentForClass(TargetComponent)?.targetChoose()
+        
+        skillA.cast = true
         
         //刷新技能状态机
         let list = [skillA,skillB,skillC,skillD,skillE]
         for skill in list {
+            skill.target = target
             skill.skillCastStateMachine.updateWithDeltaTime(seconds)
         }
         
     }
-    
-    
-    
     
 }

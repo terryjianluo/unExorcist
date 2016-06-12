@@ -204,3 +204,30 @@ class SkillConfigration: Object {
 
 }
 
+
+class SkillArt: Object {
+    
+    // Specify properties to ignore (Realm won't persist these)
+    
+    //  override static func ignoredProperties() -> [String] {
+    //    return []
+    //  }
+    
+    dynamic var speed = ""
+    dynamic var collision = ""
+}
+
+class SkillGlobal: Object {
+    
+    // Specify properties to ignore (Realm won't persist these)
+    
+    //  override static func ignoredProperties() -> [String] {
+    //    return []
+    //  }
+    
+    dynamic var chn = ""
+    dynamic var cht = ""
+    dynamic var en = ""
+    dynamic var kr = ""
+    dynamic var jp = ""
+}

@@ -42,13 +42,13 @@ class SkillEffectEntity:GKEntity{
     init(parent:SkillEntity) {
         super.init()
         parentEntity = parent
-        let spriteComponent = BasicNode(code:parentEntity.skillId) //  "Spaceship"
+        let spriteComponent = BasicNode(code:parentEntity.artID) //  "Spaceship"
         addComponent(spriteComponent)
         //node = self.componentForClass(BasicNode)?.node
         self.componentForClass(BasicNode)?.node.color = UIColor.redColor()
         self.componentForClass(BasicNode)?.node.colorBlendFactor = 1
         self.componentForClass(BasicNode)?.node.zPosition = 10
-        self.componentForClass(BasicNode)?.node.position = (parent.componentForClass(BasicNode)?.node.position)!
+        self.componentForClass(BasicNode)?.node.position = (parent.casterEntity.componentForClass(BasicNode)?.node.position)!
         let moveComponent = Movement(targetEntity: parentEntity.target)
         //effect.agent = moveComponent
         self.addComponent(moveComponent)
