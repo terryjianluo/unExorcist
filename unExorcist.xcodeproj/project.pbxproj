@@ -73,12 +73,8 @@
 		1890F4A91CA515CB0081BEE5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1890F4A61CA515CB0081BEE5 /* GameScene.sks */; };
 		1890F4AD1CA52B160081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
 		1890F4AE1CA52B170081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
-		1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
 		1890F4B01CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
 		1890F4B11CA52B170081BEE5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; };
-		1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; };
-		1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AA1CA52B160081BEE5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F4AB1CA52B160081BEE5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1890F4BA1CA8D7920081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
 		1890F4BB1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
 		1890F4BC1CA8D7930081BEE5 /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F4B91CA8D7920081BEE5 /* HeroEntity.swift */; };
@@ -148,6 +144,10 @@
 		18B7035D1CC5CD8B00B5EAFF /* EffectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7035A1CC5CD8800B5EAFF /* EffectContainer.swift */; };
 		18F587311BDBBD320094D2E1 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587301BDBBD320094D2E1 /* DataCache.swift */; };
 		18F587331BDBBD670094D2E1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F587321BDBBD670094D2E1 /* CoreDataManager.swift */; };
+		18F9157D1D0FDDF7004FE612 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9157B1D0FDDF7004FE612 /* Realm.framework */; };
+		18F9157E1D0FDDF7004FE612 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9157B1D0FDDF7004FE612 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18F9157F1D0FDDF7004FE612 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9157C1D0FDDF7004FE612 /* RealmSwift.framework */; };
+		18F915801D0FDDF7004FE612 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9157C1D0FDDF7004FE612 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,9 +174,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				18F9157E1D0FDDF7004FE612 /* Realm.framework in Embed Frameworks */,
 				181F571E1D0131DB0078933C /* CryptoSwift.framework in Embed Frameworks */,
-				1890F4B51CA52B240081BEE5 /* RealmSwift.framework in Embed Frameworks */,
-				1890F4B31CA52B240081BEE5 /* Realm.framework in Embed Frameworks */,
+				18F915801D0FDDF7004FE612 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +263,8 @@
 		18F587301BDBBD320094D2E1 /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		18F587321BDBBD670094D2E1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18F587341BDBBD750094D2E1 /* unExorcist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unExorcist-Bridging-Header.h"; sourceTree = "<group>"; };
+		18F9157B1D0FDDF7004FE612 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		18F9157C1D0FDDF7004FE612 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,12 +276,12 @@
 				183A1DD71CE321E700E47267 /* AudioToolbox.framework in Frameworks */,
 				183A1DD51CE3217500E47267 /* SystemConfiguration.framework in Frameworks */,
 				181F571A1D0131C10078933C /* CryptoSwift.framework in Frameworks */,
+				18F9157D1D0FDDF7004FE612 /* Realm.framework in Frameworks */,
 				183A1DD31CE3208D00E47267 /* libsqlite3.tbd in Frameworks */,
+				18F9157F1D0FDDF7004FE612 /* RealmSwift.framework in Frameworks */,
 				183A1DCF1CE31EC200E47267 /* Parse.framework in Frameworks */,
 				181F571D1D0131DB0078933C /* CryptoSwift.framework in Frameworks */,
-				1890F4AF1CA52B170081BEE5 /* RealmSwift.framework in Frameworks */,
 				183A1DC51CE31A5C00E47267 /* Bolts.framework in Frameworks */,
-				1890F4B21CA52B240081BEE5 /* Realm.framework in Frameworks */,
 				183A1DD91CE3438A00E47267 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +390,8 @@
 			children = (
 				184F112C1C5DA91500D584EB /* CSV.swift */,
 				183A1DD21CE3208D00E47267 /* libsqlite3.tbd */,
+				18F9157B1D0FDDF7004FE612 /* Realm.framework */,
+				18F9157C1D0FDDF7004FE612 /* RealmSwift.framework */,
 				181F57191D0131C10078933C /* CryptoSwift.framework */,
 				183A1DDA1CE3439700E47267 /* StoreKit.framework */,
 				183A1DD81CE3438A00E47267 /* GameKit.framework */,
@@ -677,12 +681,14 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -947,6 +953,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/unExorcist",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = unExorcist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -975,6 +982,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/unExorcist",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = unExorcist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
