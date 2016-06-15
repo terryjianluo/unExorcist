@@ -15,7 +15,7 @@ class AOEComponent: GKComponent{
     var targets = Set<HeroEntity>()
     var time = NSTimeInterval(0)
     var skillConfig:[String:Double]!
-    var start:CGPoint
+    var start:CGPoint!
     
     init(config:[String:Double],startPoint:CGPoint) {
         super.init()
@@ -102,6 +102,7 @@ class AOEComponent: GKComponent{
     }
     
     func targetsChoose(){
+        //目标选择方法
         
     }
     

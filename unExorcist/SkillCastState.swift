@@ -73,7 +73,8 @@ class NormalSkillState:GKState{
         //组件列表(加载 即时生效 无计时的效果)
         let buff = BuffComponent(id: mySkill.configData, target: mySkill.target)
         let damage = SkillDamage(config:  mySkill.configData, target: mySkill.target)
-        let aoe = AOEComponent()
+        //临时位置输入
+        let aoe = AOEComponent(config: mySkill.configData, startPoint: (mySkill.target.componentForClass(BasicNode)?.node.position)!)
         
         let skillConfig = mySkill.config.valueForKey("description") as! NSString
         let buffConfig = SkillType.buff.rawValue
