@@ -11,9 +11,9 @@ import GameplayKit
 
 class SkillCooldownComponent: GKComponent {
     
-    var cd = NSTimeInterval(0)
+    var cd = TimeInterval(0)
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         cd -= seconds
     }
     

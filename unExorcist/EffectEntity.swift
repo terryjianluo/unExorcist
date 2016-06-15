@@ -22,13 +22,17 @@ class EffectEntity:GKEntity{
         let spriteComponent = BasicNode(code:"UIAni_1") //  "Spaceship"
         addComponent(spriteComponent)
         //node = self.componentForClass(BasicNode)?.node
-        self.componentForClass(BasicNode)?.node.color = UIColor.redColor()
+        self.componentForClass(BasicNode)?.node.color = UIColor.red()
         self.componentForClass(BasicNode)?.node.colorBlendFactor = 1
         self.componentForClass(BasicNode)?.node.zPosition = 10
         self.componentForClass(BasicNode)?.node.position = (parent.componentForClass(BasicNode)?.node.position)!
         let moveComponent = Movement(targetEntity: parentEntity.target)
         //effect.agent = moveComponent
         self.addComponent(moveComponent)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
           
 }
@@ -45,13 +49,17 @@ class SkillEffectEntity:GKEntity{
         let spriteComponent = BasicNode(code:parentEntity.artID) //  "Spaceship"
         addComponent(spriteComponent)
         //node = self.componentForClass(BasicNode)?.node
-        self.componentForClass(BasicNode)?.node.color = UIColor.redColor()
+        self.componentForClass(BasicNode)?.node.color = UIColor.red()
         self.componentForClass(BasicNode)?.node.colorBlendFactor = 1
         self.componentForClass(BasicNode)?.node.zPosition = 10
         self.componentForClass(BasicNode)?.node.position = (parent.casterEntity.componentForClass(BasicNode)?.node.position)!
         let moveComponent = Movement(targetEntity: parentEntity.target)
         //effect.agent = moveComponent
         self.addComponent(moveComponent)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }

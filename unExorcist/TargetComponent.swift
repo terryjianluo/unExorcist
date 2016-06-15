@@ -22,6 +22,10 @@ class TargetComponent:GKComponent{
         entityManager = manager
         myEntity.target = targetChoose()
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     //需增加切换目标重置攻击计时
     func targetChoose() -> HeroEntity{
         var target:HeroEntity!
@@ -48,7 +52,7 @@ class TargetComponent:GKComponent{
         return target
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         if myEntity.target != targetChoose() {
             myEntity.componentForClass(BasicProperty)?.updateTime = 0
             myEntity.target = targetChoose()

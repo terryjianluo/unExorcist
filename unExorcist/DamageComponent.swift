@@ -12,14 +12,14 @@ import GameplayKit
 
 class DamageComponent: GKComponent{
     
-    var lastAtk = NSTimeInterval(0)
+    var lastAtk = TimeInterval(0)
     
     /*init(selfEntity:HeroEntity) {
         super.init()
         myEntity = selfEntity
     }*/
     
-    func damage(damageInput:[String:Double]){
+    func damage(_ damageInput:[String:Double]){
         var myHP = entity!.componentForClass(BasicProperty)?.HP
         let myDodge = (entity!.componentForClass(BasicProperty)?.dodge)! + (entity!.componentForClass(BuffContainer)?.dodge)!
         let myDef = (entity!.componentForClass(BasicProperty)?.DEF)! + (entity!.componentForClass(BuffContainer)?.DEF)! - damageInput["hitPenetration"]!

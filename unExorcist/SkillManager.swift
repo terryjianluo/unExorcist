@@ -38,8 +38,12 @@ class SkillManager: GKComponent {
         skillE.skillCastStateMachine.enterState(SkillReadyState)
         
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         //施法方式为 修改Skillentity.cast =  true，并设定skillentity.target
         target = (entity as! HeroEntity).componentForClass(TargetComponent)?.targetChoose()
         
@@ -48,8 +52,8 @@ class SkillManager: GKComponent {
         //刷新技能状态机
         let list = [skillA,skillB,skillC,skillD,skillE]
         for skill in list {
-            skill.target = target
-            skill.skillCastStateMachine.updateWithDeltaTime(seconds)
+            skill?.target = target
+            skill?.skillCastStateMachine.update(withDeltaTime: seconds)
         }
         
     }

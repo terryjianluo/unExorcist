@@ -35,27 +35,27 @@ class SkillReadyState:GKState{
             
             mySkill.casterEntity.componentForClass(BasicProperty)?.MP = heroMP! - manaCost!
             mySkill.casterEntity.componentForClass(BasicNode)?.node.parent?.addChild((fx.componentForClass(BasicNode)?.node)!)
-            mySkill.componentForClass(SkillCooldownComponent)?.cd = mySkill.configData["coolDown"]! as NSTimeInterval
+            mySkill.componentForClass(SkillCooldownComponent)?.cd = mySkill.configData["coolDown"]! as TimeInterval
             
             stateMachine?.enterState(NormalSkillState)
         }
     }
     
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         // 技能初始化显示等方法; 监听ai，等待指令施法
     }
     
-    override func willExitWithNextState(nextState: GKState) {
+    override func willExit(withNextState nextState: GKState) {
         (nextState as! NormalSkillState).mySkill = mySkill
         (nextState as! NormalSkillState).fx = fx
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         if (mySkill.cast == true) && (mySkill.componentForClass(SkillCooldownComponent)?.cd == 0) {
             castSkillCheck()
         }else{
-            mySkill.updateWithDeltaTime(seconds)
+            mySkill.update(withDeltaTime: seconds)
         }
     }
     
@@ -76,7 +76,7 @@ class NormalSkillState:GKState{
         //临时位置输入
         let aoe = AOEComponent(config: mySkill.configData, startPoint: (mySkill.target.componentForClass(BasicNode)?.node.position)!)
         
-        let skillConfig = mySkill.config.valueForKey("description") as! NSString
+        let skillConfig = mySkill.config.value(forKey: "description") as! NSString
         let buffConfig = SkillType.buff.rawValue
         let aoeConfig = SkillType.aoe.rawValue
         let controlConfig = SkillType.control.rawValue
@@ -85,24 +85,24 @@ class NormalSkillState:GKState{
         let healConfig = SkillType.heal.rawValue
         let moveConfig = SkillType.move.rawValue
         
-        if skillConfig.rangeOfString(buffConfig).location != NSNotFound{
+        if skillConfig.range(of: buffConfig).location != NSNotFound{
             mySkill.addComponent(buff)
-        }else if skillConfig.rangeOfString(aoeConfig).location != NSNotFound{
+        }else if skillConfig.range(of: aoeConfig).location != NSNotFound{
             mySkill.addComponent(aoe)
-        }else if skillConfig.rangeOfString(controlConfig).location != NSNotFound{
+        }else if skillConfig.range(of: controlConfig).location != NSNotFound{
             
-        }else if skillConfig.rangeOfString(damageConfg).location != NSNotFound{
+        }else if skillConfig.range(of: damageConfg).location != NSNotFound{
             mySkill.addComponent(damage)            
-        }else if skillConfig.rangeOfString(dotConfig).location != NSNotFound{
+        }else if skillConfig.range(of: dotConfig).location != NSNotFound{
             
-        }else if skillConfig.rangeOfString(healConfig).location != NSNotFound{
+        }else if skillConfig.range(of: healConfig).location != NSNotFound{
             
-        }else if skillConfig.rangeOfString(moveConfig).location != NSNotFound{
+        }else if skillConfig.range(of: moveConfig).location != NSNotFound{
             
         }
     }
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         skillInit()
         if mySkill.artSpeed > 0{
             stateMachine?.enterState(SkillMoveState)
@@ -111,7 +111,7 @@ class NormalSkillState:GKState{
         }
     }
     
-    override func willExitWithNextState(nextState: GKState) {
+    override func willExit(withNextState nextState: GKState) {
         if mySkill.artSpeed > 0{
             (nextState as! SkillMoveState).mySkill = mySkill
             (nextState as! SkillMoveState).fx = fx
@@ -133,30 +133,30 @@ class SkillMoveState:GKState{
     var fx:SkillEffectEntity!
     
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         
         
     }
     
-    func effectMove(seconds: NSTimeInterval){
+    func effectMove(_ seconds: TimeInterval){
         let position = fx.componentForClass(BasicNode)!.node.position
-        let path = CGPathCreateMutable()
+        let path = CGMutablePath()
         let positionTarget = fx.componentForClass(Movement)?.myTarget.componentForClass(BasicNode)?.node.position
-        CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
-        CGPathCloseSubpath(path)
-        if CGPathContainsPoint(path, nil, position, false) {
+        path.addArc(nil, x: positionTarget!.x, y: positionTarget!.y, radius: 15, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: false)
+        path.closeSubpath()
+        if path.containsPoint(nil, point: position, eoFill: false) {
             
             stateMachine?.enterState(SkillActiveState)
             fx.componentForClass(BasicNode)!.node.removeFromParent()
         }else{
-            fx.componentForClass(Movement)!.updateWithDeltaTime(seconds)
+            fx.componentForClass(Movement)!.update(withDeltaTime: seconds)
         }
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         //mySkill.updateWithDeltaTime(seconds)
         effectMove(seconds)
-        mySkill.componentForClass(SkillCooldownComponent)?.updateWithDeltaTime(seconds)
+        mySkill.componentForClass(SkillCooldownComponent)?.update(withDeltaTime: seconds)
     }
     
 }
@@ -167,12 +167,12 @@ class SkillActiveState:GKState{
     var fx:SkillEffectEntity!
     
     //编写技能结束进入下一步骤的方法，当前dot无法刷新
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        mySkill.updateWithDeltaTime(seconds)
+    override func update(withDeltaTime seconds: TimeInterval) {
+        mySkill.update(withDeltaTime: seconds)
     }
     
 }

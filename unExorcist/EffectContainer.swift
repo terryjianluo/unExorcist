@@ -16,22 +16,22 @@ class EffectContainer:GKComponent {
     
     var effects = Set<EffectEntity>()
     
-    func addEffect(effect:EffectEntity){
+    func addEffect(_ effect:EffectEntity){
         effects.insert(effect)
     }
     
-    func removeEffect(effect:EffectEntity){
+    func removeEffect(_ effect:EffectEntity){
         effects.remove(effect)
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         for fx in effects {
             let position = fx.componentForClass(BasicNode)!.node.position
-            let path = CGPathCreateMutable()
+            let path = CGMutablePath()
             let positionTarget = fx.componentForClass(Movement)?.myTarget.componentForClass(BasicNode)?.node.position
-            CGPathAddArc(path, nil, positionTarget!.x, positionTarget!.y, 15, 0, CGFloat(2*M_PI), false)
-            CGPathCloseSubpath(path)
-            if CGPathContainsPoint(path, nil, position, false) {
+            path.addArc(nil, x: positionTarget!.x, y: positionTarget!.y, radius: 15, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: false)
+            path.closeSubpath()
+            if path.containsPoint(nil, point: position, eoFill: false) {
                 
                 let damage = entity?.componentForClass(AttackComponent)?.damageOutput()
                 entity!.componentForClass(TargetComponent)?.targetChoose().componentForClass(DamageComponent)?.damage(damage!)
@@ -45,7 +45,7 @@ class EffectContainer:GKComponent {
                 effects.remove(fx)
                 fx.componentForClass(BasicNode)!.node.removeFromParent()
             }else{
-                fx.componentForClass(Movement)!.updateWithDeltaTime(seconds)
+                fx.componentForClass(Movement)!.update(withDeltaTime: seconds)
             }
         }
     }

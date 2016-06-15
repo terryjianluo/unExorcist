@@ -580,6 +580,7 @@
 					1826F6311BAE8B9100D724B2 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = T525M2T996;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -594,10 +595,12 @@
 					};
 					1826F6481BAE8B9100D724B2 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1826F6311BAE8B9100D724B2;
 					};
 					1826F6531BAE8B9100D724B2 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1826F6311BAE8B9100D724B2;
 					};
 				};
@@ -967,6 +970,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "unExorcist/unExorcist-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -995,6 +999,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "unExorcist/unExorcist-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1015,6 +1020,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
 			};
 			name = Debug;
@@ -1035,6 +1041,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unExorcist.app/unExorcist";
 			};
 			name = Release;
@@ -1054,6 +1061,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = unExorcist;
 				USES_XCTRUNNER = YES;
 			};
@@ -1074,6 +1082,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShadowPower.unExorcistUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = unExorcist;
 				USES_XCTRUNNER = YES;
 			};

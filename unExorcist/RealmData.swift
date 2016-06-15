@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class GameRecord: Object {
+class GameRecord: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -49,7 +49,7 @@ class GameRecord: Object {
     }
 }
 
-class Pakage: Object {
+class Pakage: RealmSwift.Object {
     
 // Specify properties to ignore (Realm won't persist these)
     
@@ -65,7 +65,7 @@ class Pakage: Object {
     }
 }
 
-class PlayerProperty: Object {
+class PlayerProperty: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -113,7 +113,7 @@ class PlayerProperty: Object {
 
 }
 
-class HeroEquip: Object {
+class HeroEquip: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -131,7 +131,7 @@ class HeroEquip: Object {
     dynamic var ring = ""
 }
 
-class SkillCombo: Object {
+class SkillCombo: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -153,7 +153,7 @@ class SkillCombo: Object {
 
 
 
-class SkillConfigration: Object {
+class SkillConfigration: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -205,7 +205,7 @@ class SkillConfigration: Object {
 }
 
 
-class SkillArt: Object {
+class SkillArt: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     
@@ -217,7 +217,7 @@ class SkillArt: Object {
     dynamic var collision = ""
 }
 
-class SkillGlobal: Object {
+class SkillGlobal: RealmSwift.Object {
     
     // Specify properties to ignore (Realm won't persist these)
     

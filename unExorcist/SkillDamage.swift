@@ -13,13 +13,17 @@ class SkillDamage: GKComponent {
     
     var skillConfig:[String:Double]!
     var targetEntity:HeroEntity!
-    var time = NSTimeInterval(0)
+    var time = TimeInterval(0)
     
     init(config:[String:Double],target:HeroEntity) {
         super.init()
         skillConfig = config
         targetEntity = target
         //effect = SkillEffectEntity(parent: entity as! SkillEntity)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func damage() -> [String:Double]{
@@ -101,7 +105,7 @@ class SkillDamage: GKComponent {
     }
     
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         if time == 0 {
             let damage = self.damage()
             targetEntity.componentForClass(DamageComponent)?.damage(damage)
@@ -113,7 +117,7 @@ class SkillDamage: GKComponent {
                 }
             }
         }else{
-            entity?.removeComponentForClass(SkillDamage)
+            entity?.removeComponent(SkillDamage)
         }
         
         time += seconds

@@ -22,6 +22,10 @@ class Movement: GKAgent2D ,GKAgentDelegate{
         //rotation = tanValue()
         move()
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func move(){
         let seek = GKGoal(toSeekAgent: myTarget.agent)
@@ -37,13 +41,13 @@ class Movement: GKAgent2D ,GKAgentDelegate{
         
     }
     
-    func agentDidUpdate(agent: GKAgent) {
+    func agentDidUpdate(_ agent: GKAgent) {
         let spriteComponent = entity?.componentForClass(BasicNode.self)
         spriteComponent!.node.position = CGPoint(x: CGFloat(position.x), y: CGFloat(position.y))
         spriteComponent!.node.zRotation = CGFloat((agent as! GKAgent2D).rotation)
     }
     
-    func agentWillUpdate(agent: GKAgent) {
+    func agentWillUpdate(_ agent: GKAgent) {
         let spriteComponent = entity?.componentForClass(BasicNode.self)
         position = float2(x: Float(spriteComponent!.node.position.x), y: Float(spriteComponent!.node.position.y))
         //rotation = Float((spriteComponent?.node.zRotation)!)

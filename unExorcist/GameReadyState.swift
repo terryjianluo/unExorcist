@@ -20,7 +20,7 @@ class GameReadyState:GKState {
         gameScene = scene
     }
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         countDown()
         playerInit()
     }
@@ -67,22 +67,22 @@ class GameReadyState:GKState {
         countNumber.position = CGPoint(x: entityManager.scene.size.width/2, y: entityManager.scene.size.height/2)
         entityManager.scene.addChild(countNumber)
         
-        let countActionDown = SKAction.scaleTo(0.1, duration: 0.5)
-        let countActionUp = SKAction.scaleTo(1, duration: 0.5)
+        let countActionDown = SKAction.scale(to: 0.1, duration: 0.5)
+        let countActionUp = SKAction.scale(to: 1, duration: 0.5)
         
-        let countNumberChange3 = SKAction.runBlock({
+        let countNumberChange3 = SKAction.run({
             countNumber.text = "3"
         })
-        let countNumberChange2 = SKAction.runBlock({
+        let countNumberChange2 = SKAction.run({
             countNumber.text = "2"
         })
-        let countNumberChange1 = SKAction.runBlock({
+        let countNumberChange1 = SKAction.run({
             countNumber.text = "1"
         })
-        let countNumberChangeGo = SKAction.runBlock({
+        let countNumberChangeGo = SKAction.run({
             countNumber.text = "Go"
         })
-        countNumber.runAction(SKAction.sequence([countActionDown,countNumberChange3,countActionUp,countActionDown,countNumberChange2,countActionUp,countActionDown,countNumberChange1,countActionUp,countActionDown,countNumberChangeGo,SKAction.runBlock({
+        countNumber.run(SKAction.sequence([countActionDown,countNumberChange3,countActionUp,countActionDown,countNumberChange2,countActionUp,countActionDown,countNumberChange1,countActionUp,countActionDown,countNumberChangeGo,SKAction.run({
             countNumber.removeFromParent()
             self.stateMachine?.enterState(GamePlayState)
         })]))
@@ -97,12 +97,12 @@ class GamePlayState:GKState {
         entityManager = manager
     }
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         //Need write fight method
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
-        super.updateWithDeltaTime(seconds)
+    override func update(withDeltaTime seconds: TimeInterval) {
+        super.update(withDeltaTime: seconds)
         if (entityManager.enemysDie.count == 5 || entityManager.teammatesDie.count == 5) == true{
             self.stateMachine?.enterState(GameOverState)
         }else{
@@ -114,14 +114,14 @@ class GamePlayState:GKState {
                 entity.componentForClass(AttackComponent)?.damage()
             }else{
                 //entity attack method
-                let strikeSpeed = ((entity.componentForClass(BasicProperty)?.strikeSpeed)! + (entity.componentForClass(BuffContainer)?.strikeSpeed)!) as NSTimeInterval
+                let strikeSpeed = ((entity.componentForClass(BasicProperty)?.strikeSpeed)! + (entity.componentForClass(BuffContainer)?.strikeSpeed)!) as TimeInterval
                 if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
                     entity.componentForClass(AttackComponent)?.damage()
                     entity.componentForClass(BasicProperty)?.updateTime = 0
                 }
             }
-            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
-            entity.componentForClass(SkillManager)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(EffectContainer)?.update(withDeltaTime: seconds)
+            entity.componentForClass(SkillManager)?.update(withDeltaTime: seconds)
             entity.componentForClass(BasicProperty)?.updateTime += seconds
         }
         
@@ -133,14 +133,14 @@ class GamePlayState:GKState {
                 entity.componentForClass(AttackComponent)?.damage()
             }else{
                 //entity attack method
-                let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as NSTimeInterval
+                let strikeSpeed = (entity.componentForClass(BasicProperty)?.strikeSpeed)! as TimeInterval
                 if entity.componentForClass(BasicProperty)?.updateTime > strikeSpeed{
                     entity.componentForClass(AttackComponent)?.damage()
                     entity.componentForClass(BasicProperty)?.updateTime = 0
                 }
                 }
-            entity.componentForClass(EffectContainer)?.updateWithDeltaTime(seconds)
-            entity.componentForClass(SkillManager)?.updateWithDeltaTime(seconds)
+            entity.componentForClass(EffectContainer)?.update(withDeltaTime: seconds)
+            entity.componentForClass(SkillManager)?.update(withDeltaTime: seconds)
             entity.componentForClass(BasicProperty)?.updateTime += seconds
             }
         }       
@@ -154,7 +154,7 @@ class GameOverState:GKState {
         entityManager = manager
     }
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         print("Game Over!!")
         if entityManager.teammatesDie.count == 5{
             print("Lose")
@@ -166,7 +166,7 @@ class GameOverState:GKState {
 
 class GameCheckOut: GKState {
     
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         //Scene 转场
     }
     

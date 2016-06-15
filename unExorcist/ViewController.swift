@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func serverTest(sender: UIButton) {
+    @IBAction func serverTest(_ sender: UIButton) {
         let testData = PFObject(className: "testData")
         testData["score"] = 10
         testData["name"] = "Terry"

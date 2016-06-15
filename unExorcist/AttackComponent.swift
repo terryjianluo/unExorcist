@@ -12,7 +12,7 @@ import GameplayKit
 
 class AttackComponent: GKComponent{
     
-    var lastAtk = NSTimeInterval(0)
+    var lastAtk = TimeInterval(0)
     
     func damageOutput() -> [String:Double]{
         var damage:[String:Double]!

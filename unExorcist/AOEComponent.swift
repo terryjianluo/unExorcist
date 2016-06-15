@@ -13,7 +13,7 @@ import UIKit
 class AOEComponent: GKComponent{
     
     var targets = Set<HeroEntity>()
-    var time = NSTimeInterval(0)
+    var time = TimeInterval(0)
     var skillConfig:[String:Double]!
     var start:CGPoint!
     
@@ -21,6 +21,10 @@ class AOEComponent: GKComponent{
         super.init()
         skillConfig = config
         start = startPoint
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func damage() -> [String:Double]{
@@ -107,7 +111,7 @@ class AOEComponent: GKComponent{
     }
     
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         if time == 0 {
             targetsChoose()
             let damage = self.damage()
@@ -123,7 +127,7 @@ class AOEComponent: GKComponent{
                 }
             }
         }else{
-            entity?.removeComponentForClass(AOEComponent)
+            entity?.removeComponent(AOEComponent)
         }
         
         time += seconds

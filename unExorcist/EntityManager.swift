@@ -24,7 +24,7 @@ class EntityManager {
         self.scene = scene
     }
     
-    func addTeamMate(entity: HeroEntity) {
+    func addTeamMate(_ entity: HeroEntity) {
         teammates.insert(entity)
         
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
@@ -32,7 +32,7 @@ class EntityManager {
         }
     }
     
-    func addEnemy(entity: HeroEntity) {
+    func addEnemy(_ entity: HeroEntity) {
         enemys.insert(entity)
         
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
@@ -40,10 +40,10 @@ class EntityManager {
             }
     }
     
-    func removeTeamMate(entity: HeroEntity) {
+    func removeTeamMate(_ entity: HeroEntity) {
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
             //spriteNode.removeFromParent()
-            spriteNode.color = UIColor.grayColor()
+            spriteNode.color = UIColor.gray()
             spriteNode.colorBlendFactor = 0.8
         }
         
@@ -52,10 +52,10 @@ class EntityManager {
         entity.componentForClass(BasicProperty)?.team = "partnerDie"
     }
     
-    func removeEnemy(entity: HeroEntity) {
+    func removeEnemy(_ entity: HeroEntity) {
         if let spriteNode = entity.componentForClass(BasicNode.self)?.node {
             //spriteNode.removeFromParent()
-            spriteNode.color = UIColor.grayColor()
+            spriteNode.color = UIColor.gray()
             spriteNode.colorBlendFactor = 0.8
         }
         

@@ -65,49 +65,53 @@ class BasicProperty: GKComponent {
     var team:String!
     
     //攻速刷新时间
-    var updateTime = NSTimeInterval(0)
+    var updateTime = TimeInterval(0)
     
     init(id:String,team:String) {
         super.init()
-        self.name = propertyDic(id).valueForKey("name") as! String
-        self.level = propertyDic(id).valueForKey("level") as! Int
-        self.HP = propertyDic(id).valueForKey("HP") as! Double
-        self.MP = propertyDic(id).valueForKey("MP") as! Double
+        self.name = propertyDic(id).value(forKey: "name") as! String
+        self.level = propertyDic(id).value(forKey: "level") as! Int
+        self.HP = propertyDic(id).value(forKey: "HP") as! Double
+        self.MP = propertyDic(id).value(forKey: "MP") as! Double
         self.maxHP = HP
         self.maxMP = MP
-        self.ATK = propertyDic(id).valueForKey("ATK") as! Double
-        self.DEF = propertyDic(id).valueForKey("DEF") as! Double
-        self.MR = propertyDic(id).valueForKey("MR") as! Double
-        self.SP = propertyDic(id).valueForKey("SP") as! Double
-        self.speed = propertyDic(id).valueForKey("speed") as! Double
-        self.range = propertyDic(id).valueForKey("range") as! Double
-        self.critical = propertyDic(id).valueForKey("critical") as! Double
-        self.spellCritical = propertyDic(id).valueForKey("spellCritical") as! Double
-        self.hitPenetration = propertyDic(id).valueForKey("hitPenetration") as! Double
-        self.spellPenetration = propertyDic(id).valueForKey("spellPenetration") as! Double
-        self.hitRating = propertyDic(id).valueForKey("hitRating") as! Double
-        self.spellHitRating = propertyDic(id).valueForKey("spellHitRating") as! Double
-        self.criticalDamage = propertyDic(id).valueForKey("criticalDamage") as! Double
-        self.spellCriticalDamage = propertyDic(id).valueForKey("spellCriticalDamage") as! Double
-        self.dodge = propertyDic(id).valueForKey("dodge") as! Double
-        self.strikeSpeed = propertyDic(id).valueForKey("strikeSpeed") as! Double
+        self.ATK = propertyDic(id).value(forKey: "ATK") as! Double
+        self.DEF = propertyDic(id).value(forKey: "DEF") as! Double
+        self.MR = propertyDic(id).value(forKey: "MR") as! Double
+        self.SP = propertyDic(id).value(forKey: "SP") as! Double
+        self.speed = propertyDic(id).value(forKey: "speed") as! Double
+        self.range = propertyDic(id).value(forKey: "range") as! Double
+        self.critical = propertyDic(id).value(forKey: "critical") as! Double
+        self.spellCritical = propertyDic(id).value(forKey: "spellCritical") as! Double
+        self.hitPenetration = propertyDic(id).value(forKey: "hitPenetration") as! Double
+        self.spellPenetration = propertyDic(id).value(forKey: "spellPenetration") as! Double
+        self.hitRating = propertyDic(id).value(forKey: "hitRating") as! Double
+        self.spellHitRating = propertyDic(id).value(forKey: "spellHitRating") as! Double
+        self.criticalDamage = propertyDic(id).value(forKey: "criticalDamage") as! Double
+        self.spellCriticalDamage = propertyDic(id).value(forKey: "spellCriticalDamage") as! Double
+        self.dodge = propertyDic(id).value(forKey: "dodge") as! Double
+        self.strikeSpeed = propertyDic(id).value(forKey: "strikeSpeed") as! Double
         self.shield = 0
-        self.powerRank = propertyDic(id).valueForKey("powerRank") as! Int
-        self.threaten = propertyDic(id).valueForKey("threaten") as! Double
-        self.assist = propertyDic(id).valueForKey("assist") as! Double
-        self.phyle = propertyDic(id).valueForKey("phyle") as! Int
-        self.career = propertyDic(id).valueForKey("career") as! Int
+        self.powerRank = propertyDic(id).value(forKey: "powerRank") as! Int
+        self.threaten = propertyDic(id).value(forKey: "threaten") as! Double
+        self.assist = propertyDic(id).value(forKey: "assist") as! Double
+        self.phyle = propertyDic(id).value(forKey: "phyle") as! Int
+        self.career = propertyDic(id).value(forKey: "career") as! Int
         
-        self.HPup = propertyDic(id).valueForKey("HPup") as! Double
-        self.MPup = propertyDic(id).valueForKey("MPup") as! Double
-        self.ATKup = propertyDic(id).valueForKey("ATKup") as! Double
-        self.DEFup = propertyDic(id).valueForKey("DEFup") as! Double
+        self.HPup = propertyDic(id).value(forKey: "HPup") as! Double
+        self.MPup = propertyDic(id).value(forKey: "MPup") as! Double
+        self.ATKup = propertyDic(id).value(forKey: "ATKup") as! Double
+        self.DEFup = propertyDic(id).value(forKey: "DEFup") as! Double
         
         self.team = team
         
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    func propertyDic(id:String) -> NSDictionary{
+    func propertyDic(_ id:String) -> NSDictionary{
         let dic = CoreDataManager().PropertyDictionary(id, dataModel: PlayerProperty.self)
         return dic
     }

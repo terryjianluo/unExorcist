@@ -61,5 +61,9 @@ class BuffContainer:GKComponent{
         dodge = initNum //闪避
         strikeSpeed = initNum //攻速
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }
